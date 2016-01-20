@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>PhotoHouse: Исходный файл PhotoHouse/Model/PrintData/PrintData.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PhotoHouse
+   &#160;<span id="projectnumber">1.7 (17)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7795acbb99ddf39f185c94575b2288fc.html">PhotoHouse</a></li><li class="navelem"><a class="el" href="dir_272b79b4cfc705096eed6e643141e8cb.html">Model</a></li><li class="navelem"><a class="el" href="dir_216acaf42e355fe794f06d7374c6325c.html">PrintData</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PrintData.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  PrintData.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  PhotoHouse</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Дмитрий Мартынов on 1/14/15.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2015 Дмитрий Мартынов. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#import &quot;StoreItem.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_template.html">Template</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_print_image.html">PrintImage</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="interface_print_data.html">   34</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_print_data.html">PrintData</a> : NSObject</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;- (PhotoHousePrint) <a class="code" href="interface_print_data.html#adabe1f36345d047f63075a1de0872ae7">purchaseID</a>; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;- (NSString *) <a class="code" href="interface_print_data.html#a34f9842a77e003efdba2d1fe646739e9">namePurchase</a>;    </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;- (NSString *) <a class="code" href="interface_print_data.html#a51aa2101e6f3843a3e9893a4b5ad7de4">nameType</a>;        </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;- (NSString *) <a class="code" href="interface_print_data.html#a7499ed6f0999cc594a3142b86241edcf">nameCategory</a>;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;- (NSUInteger) <a class="code" href="interface_print_data.html#a3b094dd8686199230b9394adda1125c8">count</a>;           </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;- (NSUInteger) <a class="code" href="interface_print_data.html#af17ff0ce1d2a1d2a736601ea7ca737a8">price</a>;           </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;- (NSArray *) <a class="code" href="interface_print_data.html#ac78fe197d39c9f90db676327b595efd7">imagesPreview</a>;    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;- (NSArray *) <a class="code" href="interface_print_data.html#a39afdbcbee951fd00c0861ce54015449">images</a>;           </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;- (NSArray *) <a class="code" href="interface_print_data.html#ac51eba85214393d09328808da9d89cef">mergedImages</a>;     </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;- (NSArray *) <a class="code" href="interface_print_data.html#adbf1e963cf485e00cfd95aa4a04b9fb3">uploadURLs</a>;       </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;- (NSArray *) <a class="code" href="interface_print_data.html#a987583b6e84e1dcf9c062c5f18cb3253">imagesNames</a>;      </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;- (UIImage *) <a class="code" href="interface_print_data.html#ac1183ca13e71af5fbdccd11dd2cee003">iconShopCart</a>;     </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;- (UIImage *) <a class="code" href="interface_print_data.html#a2d5fcd6704fe21a38cbbad486702178b">gridImage</a>;        </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;- (UIImage *) <a class="code" href="interface_print_data.html#a4dc141a91c0f36166a88b8e8c6b4249c">showCaseImage</a>;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;- (NSDictionary *)<a class="code" href="interface_print_data.html#aeef281915b61fd9066cd21431132b267">props</a>;        </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;- (NSInteger) <a class="code" href="interface_print_data.html#a8470f14d912d207e6e2cdc7a0569f55c">unique_print</a>;     </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;- (<a class="code" href="interface_store_item.html">StoreItem</a> *) <a class="code" href="interface_print_data.html#af844a1631d6a520d8bfbd6153dd7ad09">storeItem</a>;      </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;- (void) changeProp:(NSObject *)object;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;- (void) <a class="code" href="interface_print_data.html#a587b94f6b756bd75fa3c081b4e6c21a0">removeAllImages</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;- (void) removeImagesWithUrls:(NSArray *)urls;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;- (void) changeCount:(NSInteger)count;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;- (void) addPrintImagesFromPhotoLibrary:(NSArray *)array;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;- (void) updateUserTemplate:(<a class="code" href="interface_template.html">Template</a> *)userTemplate;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;- (void) createAndAddMergedImageWithPrintImage:(UIImage *)image;<span class="comment">// NS_DEPRECATED_IOS(2_0, 7_0, &quot;Use -createMergedImageWithPreview:. This methos only for UTest&quot;);</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;- (void) createMergedImageWithPreview:(UIImage *)previewImage andCompleteBlock:(<span class="keywordtype">void</span>(^)(NSArray *<a class="code" href="interface_print_data.html#a39afdbcbee951fd00c0861ce54015449">images</a>))completeBlock;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;- (id) initWithHistoryOrderItemsDictionary:(NSDictionary *)order_items;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;- (id) initWithStoreItem:(<a class="code" href="interface_store_item.html">StoreItem</a> *)storeItem andUniqueNum:(NSInteger)unique;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;- (void) replacePreviewPrintImage:(<a class="code" href="interface_print_image.html">PrintImage</a> *)printImage;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_print_data_html_af17ff0ce1d2a1d2a736601ea7ca737a8"><div class="ttname"><a href="interface_print_data.html#af17ff0ce1d2a1d2a736601ea7ca737a8">-[PrintData price]</a></div><div class="ttdeci">NSUInteger price()</div><div class="ttdoc">Цена покупки </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00090">PrintData.m:90</a></div></div>
+<div class="ttc" id="interface_print_data_html_ac1183ca13e71af5fbdccd11dd2cee003"><div class="ttname"><a href="interface_print_data.html#ac1183ca13e71af5fbdccd11dd2cee003">-[PrintData iconShopCart]</a></div><div class="ttdeci">UIImage * iconShopCart()</div><div class="ttdoc">Картинка для Корзины </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00112">PrintData.m:112</a></div></div>
+<div class="ttc" id="interface_print_data_html_adabe1f36345d047f63075a1de0872ae7"><div class="ttname"><a href="interface_print_data.html#adabe1f36345d047f63075a1de0872ae7">-[PrintData purchaseID]</a></div><div class="ttdeci">PhotoHousePrint purchaseID()</div><div class="ttdoc">Тип покупки, приходит от сервера </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00074">PrintData.m:74</a></div></div>
+<div class="ttc" id="interface_print_data_html_a4dc141a91c0f36166a88b8e8c6b4249c"><div class="ttname"><a href="interface_print_data.html#a4dc141a91c0f36166a88b8e8c6b4249c">-[PrintData showCaseImage]</a></div><div class="ttdeci">UIImage * showCaseImage()</div><div class="ttdoc">Картинка для превью в витрине(ShowCase) </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00124">PrintData.m:124</a></div></div>
+<div class="ttc" id="interface_print_data_html_a2d5fcd6704fe21a38cbbad486702178b"><div class="ttname"><a href="interface_print_data.html#a2d5fcd6704fe21a38cbbad486702178b">-[PrintData gridImage]</a></div><div class="ttdeci">UIImage * gridImage()</div><div class="ttdoc">Картинка с сеткой для редактора </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00118">PrintData.m:118</a></div></div>
+<div class="ttc" id="interface_print_data_html"><div class="ttname"><a href="interface_print_data.html">PrintData</a></div><div class="ttdoc">Покупка пользователя. Представляет собой сфорированную покупку для отправки на сервер PhotoHouse Вы м...</div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8h_source.html#l00034">PrintData.h:34</a></div></div>
+<div class="ttc" id="interface_print_data_html_aeef281915b61fd9066cd21431132b267"><div class="ttname"><a href="interface_print_data.html#aeef281915b61fd9066cd21431132b267">-[PrintData props]</a></div><div class="ttdeci">NSDictionary * props()</div><div class="ttdoc">Props для отправки на сервер </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00085">PrintData.m:85</a></div></div>
+<div class="ttc" id="interface_print_data_html_ac78fe197d39c9f90db676327b595efd7"><div class="ttname"><a href="interface_print_data.html#ac78fe197d39c9f90db676327b595efd7">-[PrintData imagesPreview]</a></div><div class="ttdeci">NSArray * imagesPreview()</div><div class="ttdoc">Картинки, без скленых </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00163">PrintData.m:163</a></div></div>
+<div class="ttc" id="interface_store_item_html"><div class="ttname"><a href="interface_store_item.html">StoreItem</a></div><div class="ttdef"><b>Definition:</b> <a href="_store_item_8h_source.html#l00050">StoreItem.h:50</a></div></div>
+<div class="ttc" id="interface_print_data_html_ac51eba85214393d09328808da9d89cef"><div class="ttname"><a href="interface_print_data.html#ac51eba85214393d09328808da9d89cef">-[PrintData mergedImages]</a></div><div class="ttdeci">NSArray * mergedImages()</div><div class="ttdoc">Массив PrintImage, только скренные картинки </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00179">PrintData.m:179</a></div></div>
+<div class="ttc" id="interface_print_data_html_a587b94f6b756bd75fa3c081b4e6c21a0"><div class="ttname"><a href="interface_print_data.html#a587b94f6b756bd75fa3c081b4e6c21a0">-[PrintData removeAllImages]</a></div><div class="ttdeci">void removeAllImages()</div><div class="ttdoc">Удаляем все картинки </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00202">PrintData.m:202</a></div></div>
+<div class="ttc" id="interface_print_data_html_a987583b6e84e1dcf9c062c5f18cb3253"><div class="ttname"><a href="interface_print_data.html#a987583b6e84e1dcf9c062c5f18cb3253">-[PrintData imagesNames]</a></div><div class="ttdeci">NSArray * imagesNames()</div><div class="ttdoc">Массив адресов картинок в библиотеке и адреса загрузки </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00169">PrintData.m:169</a></div></div>
+<div class="ttc" id="interface_print_data_html_a3b094dd8686199230b9394adda1125c8"><div class="ttname"><a href="interface_print_data.html#a3b094dd8686199230b9394adda1125c8">-[PrintData count]</a></div><div class="ttdeci">NSUInteger count()</div><div class="ttdoc">Количество копий, изменяется в корзине </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00095">PrintData.m:95</a></div></div>
+<div class="ttc" id="interface_print_data_html_a7499ed6f0999cc594a3142b86241edcf"><div class="ttname"><a href="interface_print_data.html#a7499ed6f0999cc594a3142b86241edcf">-[PrintData nameCategory]</a></div><div class="ttdeci">NSString * nameCategory()</div><div class="ttdoc">Имя категории, Альбомы, Сувениры и подарки и тд </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00157">PrintData.m:157</a></div></div>
+<div class="ttc" id="interface_print_image_html"><div class="ttname"><a href="interface_print_image.html">PrintImage</a></div><div class="ttdoc">Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00028">PrintImage.h:28</a></div></div>
+<div class="ttc" id="interface_print_data_html_a39afdbcbee951fd00c0861ce54015449"><div class="ttname"><a href="interface_print_data.html#a39afdbcbee951fd00c0861ce54015449">-[PrintData images]</a></div><div class="ttdeci">NSArray * images()</div><div class="ttdoc">Все картинки и скленные и обычные </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00100">PrintData.m:100</a></div></div>
+<div class="ttc" id="interface_print_data_html_a51aa2101e6f3843a3e9893a4b5ad7de4"><div class="ttname"><a href="interface_print_data.html#a51aa2101e6f3843a3e9893a4b5ad7de4">-[PrintData nameType]</a></div><div class="ttdeci">NSString * nameType()</div><div class="ttdoc">Имя типа,. </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00151">PrintData.m:151</a></div></div>
+<div class="ttc" id="interface_print_data_html_a8470f14d912d207e6e2cdc7a0569f55c"><div class="ttname"><a href="interface_print_data.html#a8470f14d912d207e6e2cdc7a0569f55c">-[PrintData unique_print]</a></div><div class="ttdeci">NSInteger unique_print()</div><div class="ttdoc">Уникальный идентификатор, для поиска в CoreDataShopCart. </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00130">PrintData.m:130</a></div></div>
+<div class="ttc" id="interface_print_data_html_adbf1e963cf485e00cfd95aa4a04b9fb3"><div class="ttname"><a href="interface_print_data.html#adbf1e963cf485e00cfd95aa4a04b9fb3">-[PrintData uploadURLs]</a></div><div class="ttdeci">NSArray * uploadURLs()</div><div class="ttdoc">Массив адресов загрузки </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00106">PrintData.m:106</a></div></div>
+<div class="ttc" id="interface_print_data_html_af844a1631d6a520d8bfbd6153dd7ad09"><div class="ttname"><a href="interface_print_data.html#af844a1631d6a520d8bfbd6153dd7ad09">-[PrintData storeItem]</a></div><div class="ttdeci">StoreItem * storeItem()</div><div class="ttdoc">Информация о покупке StoreItem. </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00146">PrintData.m:146</a></div></div>
+<div class="ttc" id="interface_template_html"><div class="ttname"><a href="interface_template.html">Template</a></div><div class="ttdoc">Класс конструктора альбомов </div><div class="ttdef"><b>Definition:</b> <a href="_template_8h_source.html#l00030">Template.h:30</a></div></div>
+<div class="ttc" id="interface_print_data_html_a34f9842a77e003efdba2d1fe646739e9"><div class="ttname"><a href="interface_print_data.html#a34f9842a77e003efdba2d1fe646739e9">-[PrintData namePurchase]</a></div><div class="ttdeci">NSString * namePurchase()</div><div class="ttdoc">Название покупки, кружка, футболка и тд </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00080">PrintData.m:80</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

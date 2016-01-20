@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>PhotoHouse: Исходный файл PhotoHouse/Model/Server/PHouseApi_v1/ModelDatas/GetAllOrdes/PersonOrderInfo.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PhotoHouse
+   &#160;<span id="projectnumber">1.7 (17)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7795acbb99ddf39f185c94575b2288fc.html">PhotoHouse</a></li><li class="navelem"><a class="el" href="dir_272b79b4cfc705096eed6e643141e8cb.html">Model</a></li><li class="navelem"><a class="el" href="dir_0ba200e9eadd89410156fa00e471cd0e.html">Server</a></li><li class="navelem"><a class="el" href="dir_9aec1d47da620c7d2efde5cd92660c8a.html">PHouseApi_v1</a></li><li class="navelem"><a class="el" href="dir_138f6eac48d1aaa31a6a66c351efe5b0.html">ModelDatas</a></li><li class="navelem"><a class="el" href="dir_72ec6dfc5cc6b017ede3f394ee99b840.html">GetAllOrdes</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PersonOrderInfo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  PersonOrderInfo.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  PhotoHouse</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Дмитрий Мартынов on 1/20/15.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2015 Дмитрий Мартынов. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    StatusOrderTypeWait = 1,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    StatusOrderTypeTick,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    StatusOrderTypePrint,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    StatusOrderTypeDelivery,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    StatusOrderTypeComplete,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    StatusOrderTypeCancel,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    StatusOrderTypePayment</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;} StatusOrderType;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="interface_person_order_info.html">   22</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_person_order_info.html">PersonOrderInfo</a> : NSObject</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="interface_person_order_info.html#a1a4b20bbf3fb191b934a7f62e0939e33">   23</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_person_order_info.html#a1a4b20bbf3fb191b934a7f62e0939e33">user_id</a>;          </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="interface_person_order_info.html#af9e7cc4a67a77a48a740373a24305294">   24</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_person_order_info.html#af9e7cc4a67a77a48a740373a24305294">order_id</a>;         </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="interface_person_order_info.html#a7b125c4d1b3f875dfa5facf80bd36081">   25</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_person_order_info.html#a7b125c4d1b3f875dfa5facf80bd36081">studio_id</a>;        </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="interface_person_order_info.html#a65b62042448abe7871fe49eddb11ba05">   26</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_person_order_info.html#a65b62042448abe7871fe49eddb11ba05">status</a>;           </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="interface_person_order_info.html#a67dcbee43e460fe6f6b940393bef955c">   27</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_person_order_info.html#a67dcbee43e460fe6f6b940393bef955c">status_id</a>;        </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="interface_person_order_info.html#a43572f1eeedeb8bc512962449045c9bf">   28</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_person_order_info.html#a43572f1eeedeb8bc512962449045c9bf">total_cost</a>;       </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="interface_person_order_info.html#a06083bcc27455fd375fc23a3d64e7d7c">   29</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_person_order_info.html#a06083bcc27455fd375fc23a3d64e7d7c">dateString</a>;       </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="interface_person_order_info.html#a33d75e798bc3ffab13c310ce60cbc2ae">   30</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_person_order_info.html#a33d75e798bc3ffab13c310ce60cbc2ae">fullName</a>;         </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="interface_person_order_info.html#a8991ac3909bff26933e5835a9ce5eba1">   31</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_person_order_info.html#a8991ac3909bff26933e5835a9ce5eba1">phone</a>;            </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="interface_person_order_info.html#a8a6d203b51b6b7251da1547f2d6b4586">   32</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_person_order_info.html#a8a6d203b51b6b7251da1547f2d6b4586">address</a>;          </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="interface_person_order_info.html#a17849aa4153445c1583cbd3bcc1041eb">   33</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_person_order_info.html#a17849aa4153445c1583cbd3bcc1041eb">deliveryComment</a>;  </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;- (UIImage *) <a class="code" href="interface_person_order_info.html#aba6edba3465fe95fe8920ef1a8547156">statusImage</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;- (id) initWithOrderInfo:(NSDictionary *)orderInfo;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_person_order_info_html_af9e7cc4a67a77a48a740373a24305294"><div class="ttname"><a href="interface_person_order_info.html#af9e7cc4a67a77a48a740373a24305294">PersonOrderInfo::order_id</a></div><div class="ttdeci">NSString * order_id</div><div class="ttdoc">Идентификатор заказа </div><div class="ttdef"><b>Definition:</b> <a href="_person_order_info_8h_source.html#l00024">PersonOrderInfo.h:24</a></div></div>
+<div class="ttc" id="interface_person_order_info_html"><div class="ttname"><a href="interface_person_order_info.html">PersonOrderInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="_person_order_info_8h_source.html#l00022">PersonOrderInfo.h:22</a></div></div>
+<div class="ttc" id="interface_person_order_info_html_a17849aa4153445c1583cbd3bcc1041eb"><div class="ttname"><a href="interface_person_order_info.html#a17849aa4153445c1583cbd3bcc1041eb">PersonOrderInfo::deliveryComment</a></div><div class="ttdeci">NSString * deliveryComment</div><div class="ttdoc">Комментарии о доставке </div><div class="ttdef"><b>Definition:</b> <a href="_person_order_info_8h_source.html#l00033">PersonOrderInfo.h:33</a></div></div>
+<div class="ttc" id="interface_person_order_info_html_a43572f1eeedeb8bc512962449045c9bf"><div class="ttname"><a href="interface_person_order_info.html#a43572f1eeedeb8bc512962449045c9bf">PersonOrderInfo::total_cost</a></div><div class="ttdeci">NSString * total_cost</div><div class="ttdoc">Полная стоимость заказа </div><div class="ttdef"><b>Definition:</b> <a href="_person_order_info_8h_source.html#l00028">PersonOrderInfo.h:28</a></div></div>
+<div class="ttc" id="interface_person_order_info_html_a67dcbee43e460fe6f6b940393bef955c"><div class="ttname"><a href="interface_person_order_info.html#a67dcbee43e460fe6f6b940393bef955c">PersonOrderInfo::status_id</a></div><div class="ttdeci">NSString * status_id</div><div class="ttdoc">Цифра статуса </div><div class="ttdef"><b>Definition:</b> <a href="_person_order_info_8h_source.html#l00027">PersonOrderInfo.h:27</a></div></div>
+<div class="ttc" id="interface_person_order_info_html_a1a4b20bbf3fb191b934a7f62e0939e33"><div class="ttname"><a href="interface_person_order_info.html#a1a4b20bbf3fb191b934a7f62e0939e33">PersonOrderInfo::user_id</a></div><div class="ttdeci">NSString * user_id</div><div class="ttdoc">Идентификатор пользователя </div><div class="ttdef"><b>Definition:</b> <a href="_person_order_info_8h_source.html#l00023">PersonOrderInfo.h:23</a></div></div>
+<div class="ttc" id="interface_person_order_info_html_a06083bcc27455fd375fc23a3d64e7d7c"><div class="ttname"><a href="interface_person_order_info.html#a06083bcc27455fd375fc23a3d64e7d7c">PersonOrderInfo::dateString</a></div><div class="ttdeci">NSString * dateString</div><div class="ttdoc">Дата заказа </div><div class="ttdef"><b>Definition:</b> <a href="_person_order_info_8h_source.html#l00029">PersonOrderInfo.h:29</a></div></div>
+<div class="ttc" id="interface_person_order_info_html_a65b62042448abe7871fe49eddb11ba05"><div class="ttname"><a href="interface_person_order_info.html#a65b62042448abe7871fe49eddb11ba05">PersonOrderInfo::status</a></div><div class="ttdeci">NSString * status</div><div class="ttdoc">Текст статуса </div><div class="ttdef"><b>Definition:</b> <a href="_person_order_info_8h_source.html#l00026">PersonOrderInfo.h:26</a></div></div>
+<div class="ttc" id="interface_person_order_info_html_aba6edba3465fe95fe8920ef1a8547156"><div class="ttname"><a href="interface_person_order_info.html#aba6edba3465fe95fe8920ef1a8547156">-[PersonOrderInfo statusImage]</a></div><div class="ttdeci">UIImage * statusImage()</div><div class="ttdoc">Картинка статуса заказа </div><div class="ttdef"><b>Definition:</b> <a href="_person_order_info_8m_source.html#l00039">PersonOrderInfo.m:39</a></div></div>
+<div class="ttc" id="interface_person_order_info_html_a8991ac3909bff26933e5835a9ce5eba1"><div class="ttname"><a href="interface_person_order_info.html#a8991ac3909bff26933e5835a9ce5eba1">PersonOrderInfo::phone</a></div><div class="ttdeci">NSString * phone</div><div class="ttdoc">Телефон для связи </div><div class="ttdef"><b>Definition:</b> <a href="_person_order_info_8h_source.html#l00031">PersonOrderInfo.h:31</a></div></div>
+<div class="ttc" id="interface_person_order_info_html_a7b125c4d1b3f875dfa5facf80bd36081"><div class="ttname"><a href="interface_person_order_info.html#a7b125c4d1b3f875dfa5facf80bd36081">PersonOrderInfo::studio_id</a></div><div class="ttdeci">NSString * studio_id</div><div class="ttdoc">??? </div><div class="ttdef"><b>Definition:</b> <a href="_person_order_info_8h_source.html#l00025">PersonOrderInfo.h:25</a></div></div>
+<div class="ttc" id="interface_person_order_info_html_a33d75e798bc3ffab13c310ce60cbc2ae"><div class="ttname"><a href="interface_person_order_info.html#a33d75e798bc3ffab13c310ce60cbc2ae">PersonOrderInfo::fullName</a></div><div class="ttdeci">NSString * fullName</div><div class="ttdoc">Полное имя </div><div class="ttdef"><b>Definition:</b> <a href="_person_order_info_8h_source.html#l00030">PersonOrderInfo.h:30</a></div></div>
+<div class="ttc" id="interface_person_order_info_html_a8a6d203b51b6b7251da1547f2d6b4586"><div class="ttname"><a href="interface_person_order_info.html#a8a6d203b51b6b7251da1547f2d6b4586">PersonOrderInfo::address</a></div><div class="ttdeci">NSString * address</div><div class="ttdoc">Адресс доставки </div><div class="ttdef"><b>Definition:</b> <a href="_person_order_info_8h_source.html#l00032">PersonOrderInfo.h:32</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:32. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

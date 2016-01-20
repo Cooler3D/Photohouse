@@ -1,0 +1,561 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>PhotoHouse: Класс PropType</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PhotoHouse
+   &#160;<span id="projectnumber">1.7 (17)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&#160;указатель&#160;классов</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&#160;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&#160;классов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Методы экземпляра</a> &#124;
+<a href="#properties">Свойства</a> &#124;
+<a href="class_prop_type-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс PropType</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Объект типа покупки. Определяем найстроки покупки. Все цвета, размеры, стили и др хранятся в этом объекте. Использует ТИПЫ:<br />
+<a class="el" href="interface_prop_size.html">PropSize</a> - размер<br />
+<a class="el" href="interface_prop_style.html">PropStyle</a> - стиль<br />
+<a class="el" href="interface_prop_color.html">PropColor</a> - цвет<br />
+<a class="el" href="interface_prop_uturn.html">PropUturn</a> - развороты<br />
+<a class="el" href="interface_prop_cover.html">PropCover</a> - обложку<br />
+.  
+ <a href="interface_prop_type.html#details">Подробнее...</a></p>
+
+<p><code>#import &lt;<a class="el" href="_prop_type_8h_source.html">PropType.h</a>&gt;</code></p>
+
+<p>Базовые классы:NSObject.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Методы экземпляра</h2></td></tr>
+<tr class="memitem:accd76f280b5282388d55eeb078489246"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_prop_type.html#accd76f280b5282388d55eeb078489246">initWithDictionary:</a></td></tr>
+<tr class="memdesc:accd76f280b5282388d55eeb078489246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализируем по ответу от сервера  <a href="#accd76f280b5282388d55eeb078489246">Подробнее...</a><br /></td></tr>
+<tr class="separator:accd76f280b5282388d55eeb078489246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af17ec10908b71dac14300f4d910b4884"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_prop_type.html#af17ec10908b71dac14300f4d910b4884">initTypeName:andPrice:andSizes:andUturns:andCovers:andColors:andStyles:andTemplates:</a></td></tr>
+<tr class="memdesc:af17ec10908b71dac14300f4d910b4884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Иницализируем из <a class="el" href="interface_core_data_store.html">CoreDataStore</a>, <a class="el" href="interface_core_data_shop_cart.html">CoreDataShopCart</a>.  <a href="#af17ec10908b71dac14300f4d910b4884">Подробнее...</a><br /></td></tr>
+<tr class="separator:af17ec10908b71dac14300f4d910b4884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae04369fac339397e981fd8f8c01ffb57"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_prop_type.html#ae04369fac339397e981fd8f8c01ffb57">initTypeName:andPrice:andSizeName:andUturnName:andCoverName:andColorName:andStyleName:andUserTemplate:</a></td></tr>
+<tr class="memdesc:ae04369fac339397e981fd8f8c01ffb57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Иницализируем по истории  <a href="#ae04369fac339397e981fd8f8c01ffb57">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae04369fac339397e981fd8f8c01ffb57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46b833239dac8cdca3bc4cd6d97489e1"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_prop_type.html#a46b833239dac8cdca3bc4cd6d97489e1">initTypeName:andPrice:andSizeName:andUturnName:andCoverName:andColorName:andStyleName:andUserTemplate:andSizes:andUturns:andCovers:andColors:andStyles:</a></td></tr>
+<tr class="memdesc:a46b833239dac8cdca3bc4cd6d97489e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Иницализируем из корзины <a class="el" href="interface_core_data_shop_cart.html">CoreDataShopCart</a>.  <a href="#a46b833239dac8cdca3bc4cd6d97489e1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a46b833239dac8cdca3bc4cd6d97489e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf7a1d16b16a88b82f39c4b50a489270"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_prop_type.html#abf7a1d16b16a88b82f39c4b50a489270">updateUserTemplate:</a></td></tr>
+<tr class="memdesc:abf7a1d16b16a88b82f39c4b50a489270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляем значение пользовательского шаблона  <a href="#abf7a1d16b16a88b82f39c4b50a489270">Подробнее...</a><br /></td></tr>
+<tr class="separator:abf7a1d16b16a88b82f39c4b50a489270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Свойства</h2></td></tr>
+<tr class="memitem:a7ef9cc55fa05ce95606e8551d16f345f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ef9cc55fa05ce95606e8551d16f345f"></a>
+NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_prop_type.html#a7ef9cc55fa05ce95606e8551d16f345f">name</a></td></tr>
+<tr class="memdesc:a7ef9cc55fa05ce95606e8551d16f345f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя типа (default, design, constructor и др) <br /></td></tr>
+<tr class="separator:a7ef9cc55fa05ce95606e8551d16f345f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefd162c748aa6fca67153dfbef4ddf4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefd162c748aa6fca67153dfbef4ddf4a"></a>
+NSInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_prop_type.html#aefd162c748aa6fca67153dfbef4ddf4a">price</a></td></tr>
+<tr class="memdesc:aefd162c748aa6fca67153dfbef4ddf4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Цена в зависимости от типа и параметров <br /></td></tr>
+<tr class="separator:aefd162c748aa6fca67153dfbef4ddf4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a916b161137043a4e7c9f86a8ef58c190"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a916b161137043a4e7c9f86a8ef58c190"></a>
+NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_prop_type.html#a916b161137043a4e7c9f86a8ef58c190">sizes</a></td></tr>
+<tr class="memdesc:a916b161137043a4e7c9f86a8ef58c190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Массив размеров <br /></td></tr>
+<tr class="separator:a916b161137043a4e7c9f86a8ef58c190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f11e488545149f5a51f8c041f3c3e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48f11e488545149f5a51f8c041f3c3e6"></a>
+NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_prop_type.html#a48f11e488545149f5a51f8c041f3c3e6">uturns</a></td></tr>
+<tr class="memdesc:a48f11e488545149f5a51f8c041f3c3e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Массив разворотов <br /></td></tr>
+<tr class="separator:a48f11e488545149f5a51f8c041f3c3e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0307cdbb27c26aa950995982869ac98c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0307cdbb27c26aa950995982869ac98c"></a>
+NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_prop_type.html#a0307cdbb27c26aa950995982869ac98c">covers</a></td></tr>
+<tr class="memdesc:a0307cdbb27c26aa950995982869ac98c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Массив обложек <br /></td></tr>
+<tr class="separator:a0307cdbb27c26aa950995982869ac98c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecb5a65908b193f811fdbbdb898587da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aecb5a65908b193f811fdbbdb898587da"></a>
+NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_prop_type.html#aecb5a65908b193f811fdbbdb898587da">colors</a></td></tr>
+<tr class="memdesc:aecb5a65908b193f811fdbbdb898587da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Массив цветов <br /></td></tr>
+<tr class="separator:aecb5a65908b193f811fdbbdb898587da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e36d28687fca498ce20fa181fb29346"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e36d28687fca498ce20fa181fb29346"></a>
+NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_prop_type.html#a9e36d28687fca498ce20fa181fb29346">styles</a></td></tr>
+<tr class="memdesc:a9e36d28687fca498ce20fa181fb29346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Массив стилей <br /></td></tr>
+<tr class="separator:a9e36d28687fca498ce20fa181fb29346"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fed7512dadd3dc1de995a12109b85de"><td class="memItemLeft" align="right" valign="top">NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_prop_type.html#a9fed7512dadd3dc1de995a12109b85de">templates</a></td></tr>
+<tr class="memdesc:a9fed7512dadd3dc1de995a12109b85de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Для тестов, в пямыти не держим все шаблоны !!!  <a href="#a9fed7512dadd3dc1de995a12109b85de">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9fed7512dadd3dc1de995a12109b85de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5542545e9255e3fad50b97758694cf55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5542545e9255e3fad50b97758694cf55"></a>
+<a class="el" href="interface_prop_size.html">PropSize</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_prop_type.html#a5542545e9255e3fad50b97758694cf55">selectPropSize</a></td></tr>
+<tr class="memdesc:a5542545e9255e3fad50b97758694cf55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбранный размер(альбом, футболка) <br /></td></tr>
+<tr class="separator:a5542545e9255e3fad50b97758694cf55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e084b22347988d03bd3ec9f1576e6eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e084b22347988d03bd3ec9f1576e6eb"></a>
+<a class="el" href="interface_prop_cover.html">PropCover</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_prop_type.html#a9e084b22347988d03bd3ec9f1576e6eb">selectPropCover</a></td></tr>
+<tr class="memdesc:a9e084b22347988d03bd3ec9f1576e6eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбранный обложка(альбом) <br /></td></tr>
+<tr class="separator:a9e084b22347988d03bd3ec9f1576e6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa97992a62fbd650f81b36d337b65546a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa97992a62fbd650f81b36d337b65546a"></a>
+<a class="el" href="interface_prop_color.html">PropColor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_prop_type.html#aa97992a62fbd650f81b36d337b65546a">selectPropColor</a></td></tr>
+<tr class="memdesc:aa97992a62fbd650f81b36d337b65546a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбранный цвет(кружка) <br /></td></tr>
+<tr class="separator:aa97992a62fbd650f81b36d337b65546a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47ba01774e1025f68027f7caf39089b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47ba01774e1025f68027f7caf39089b6"></a>
+<a class="el" href="interface_prop_uturn.html">PropUturn</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_prop_type.html#a47ba01774e1025f68027f7caf39089b6">selectPropUturn</a></td></tr>
+<tr class="memdesc:a47ba01774e1025f68027f7caf39089b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбранный развороты(альбом) <br /></td></tr>
+<tr class="separator:a47ba01774e1025f68027f7caf39089b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172dae0869ec43a1256f3badd21b94a2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a172dae0869ec43a1256f3badd21b94a2"></a>
+<a class="el" href="interface_prop_style.html">PropStyle</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_prop_type.html#a172dae0869ec43a1256f3badd21b94a2">selectPropStyle</a></td></tr>
+<tr class="memdesc:a172dae0869ec43a1256f3badd21b94a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбранный стиль(альбом) <br /></td></tr>
+<tr class="separator:a172dae0869ec43a1256f3badd21b94a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87e574e9f16fde1a7a67576e479deaab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87e574e9f16fde1a7a67576e479deaab"></a>
+<a class="el" href="interface_template.html">Template</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_prop_type.html#a87e574e9f16fde1a7a67576e479deaab">selectTemplate</a></td></tr>
+<tr class="memdesc:a87e574e9f16fde1a7a67576e479deaab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбранный шаблон <br /></td></tr>
+<tr class="separator:a87e574e9f16fde1a7a67576e479deaab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac111b52a6ec0627076ec55a7eb5056a2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac111b52a6ec0627076ec55a7eb5056a2"></a>
+<a class="el" href="interface_template.html">Template</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_prop_type.html#ac111b52a6ec0627076ec55a7eb5056a2">userTemplate</a></td></tr>
+<tr class="memdesc:ac111b52a6ec0627076ec55a7eb5056a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пользовательский альбом, который хранится в корзине, ждесь НЕ все развороты, и установленны картинки пользователя <br /></td></tr>
+<tr class="separator:ac111b52a6ec0627076ec55a7eb5056a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Объект типа покупки. Определяем найстроки покупки. Все цвета, размеры, стили и др хранятся в этом объекте. Использует ТИПЫ:<br />
+<a class="el" href="interface_prop_size.html">PropSize</a> - размер<br />
+<a class="el" href="interface_prop_style.html">PropStyle</a> - стиль<br />
+<a class="el" href="interface_prop_color.html">PropColor</a> - цвет<br />
+<a class="el" href="interface_prop_uturn.html">PropUturn</a> - развороты<br />
+<a class="el" href="interface_prop_cover.html">PropCover</a> - обложку<br />
+. </p>
+
+<p>См. определение в файле <a class="el" href="_prop_type_8h_source.html">PropType.h</a> строка <a class="el" href="_prop_type_8h_source.html#l00031">31</a></p>
+</div><h2 class="groupheader">Документация метода</h2>
+<a class="anchor" id="ae04369fac339397e981fd8f8c01ffb57"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initTypeName: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>name</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andPrice:</td>
+          <td></td>
+          <td class="paramtype">(NSInteger)&#160;</td>
+          <td class="paramname"><em>price</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andSizeName:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>sizeName</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andUturnName:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>uturnName</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andCoverName:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>coverName</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andColorName:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>colorName</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andStyleName:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>styleName</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andUserTemplate:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_template.html">Template</a> *)&#160;</td>
+          <td class="paramname"><em>userTemplate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Иницализируем по истории </p>
+<p>Инициализируем по истории заказов </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>имя типа, по нему будет опредеяться название </td></tr>
+    <tr><td class="paramname">price</td><td>цена </td></tr>
+    <tr><td class="paramname">sizeName</td><td>строка с размером </td></tr>
+    <tr><td class="paramname">uturnName</td><td>строка с выбранными разворотами </td></tr>
+    <tr><td class="paramname">coverName</td><td>строка с выбранной обложкой в заказе </td></tr>
+    <tr><td class="paramname">styleName</td><td>название стиля </td></tr>
+    <tr><td class="paramname">userTemplate</td><td>альбом пользователя </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="_prop_type_8m_source.html">PropType.m</a> строка <a class="el" href="_prop_type_8m_source.html#l00110">110</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a46b833239dac8cdca3bc4cd6d97489e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initTypeName: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>name</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andPrice:</td>
+          <td></td>
+          <td class="paramtype">(NSInteger)&#160;</td>
+          <td class="paramname"><em>price</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andSizeName:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>sizeName</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andUturnName:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>uturnName</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andCoverName:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>coverName</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andColorName:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>colorName</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andStyleName:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>styleName</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andUserTemplate:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_template.html">Template</a> *)&#160;</td>
+          <td class="paramname"><em>userTemplate</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andSizes:</td>
+          <td></td>
+          <td class="paramtype">(NSArray *)&#160;</td>
+          <td class="paramname"><em>sizes</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andUturns:</td>
+          <td></td>
+          <td class="paramtype">(NSArray *)&#160;</td>
+          <td class="paramname"><em>uturns</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andCovers:</td>
+          <td></td>
+          <td class="paramtype">(NSArray *)&#160;</td>
+          <td class="paramname"><em>covers</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andColors:</td>
+          <td></td>
+          <td class="paramtype">(NSArray *)&#160;</td>
+          <td class="paramname"><em>colors</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andStyles:</td>
+          <td></td>
+          <td class="paramtype">(NSArray *)&#160;</td>
+          <td class="paramname"><em>styles</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Иницализируем из корзины <a class="el" href="interface_core_data_shop_cart.html">CoreDataShopCart</a>. </p>
+<p>Инициализируем по корзине (<a class="el" href="interface_core_data_shop_cart.html">CoreDataShopCart</a>), показываем все размеры и выбранны размер. Передаем оба варианта для сравнения </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>имя типа, по нему будет опредеяться название </td></tr>
+    <tr><td class="paramname">price</td><td>цена </td></tr>
+    <tr><td class="paramname">sizeName</td><td>строка с размером </td></tr>
+    <tr><td class="paramname">uturnName</td><td>строка с выбранными разворотами </td></tr>
+    <tr><td class="paramname">coverName</td><td>строка с выбранной обложкой в заказе </td></tr>
+    <tr><td class="paramname">styleName</td><td>название стиля </td></tr>
+    <tr><td class="paramname">userTemplate</td><td>альбом пользователя </td></tr>
+    <tr><td class="paramname">sizes</td><td>массив с размерами <a class="el" href="interface_prop_size.html">PropSize</a> </td></tr>
+    <tr><td class="paramname">uturns</td><td>массив с разворотами если есть <a class="el" href="interface_prop_uturn.html">PropUturn</a> </td></tr>
+    <tr><td class="paramname">covers</td><td>массив с типами обложек <a class="el" href="interface_prop_cover.html">PropCover</a> </td></tr>
+    <tr><td class="paramname">colors</td><td>массив с цветом типа <a class="el" href="interface_prop_color.html">PropColor</a> </td></tr>
+    <tr><td class="paramname">styles</td><td>массив с стилями <a class="el" href="interface_prop_style.html">PropStyle</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="_prop_type_8m_source.html">PropType.m</a> строка <a class="el" href="_prop_type_8m_source.html#l00132">132</a></p>
+
+</div>
+</div>
+<a class="anchor" id="af17ec10908b71dac14300f4d910b4884"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initTypeName: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>name</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andPrice:</td>
+          <td></td>
+          <td class="paramtype">(NSInteger)&#160;</td>
+          <td class="paramname"><em>price</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andSizes:</td>
+          <td></td>
+          <td class="paramtype">(NSArray *)&#160;</td>
+          <td class="paramname"><em>sizes</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andUturns:</td>
+          <td></td>
+          <td class="paramtype">(NSArray *)&#160;</td>
+          <td class="paramname"><em>uturns</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andCovers:</td>
+          <td></td>
+          <td class="paramtype">(NSArray *)&#160;</td>
+          <td class="paramname"><em>covers</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andColors:</td>
+          <td></td>
+          <td class="paramtype">(NSArray *)&#160;</td>
+          <td class="paramname"><em>colors</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andStyles:</td>
+          <td></td>
+          <td class="paramtype">(NSArray *)&#160;</td>
+          <td class="paramname"><em>styles</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andTemplates:</td>
+          <td></td>
+          <td class="paramtype">(NSArray *)&#160;</td>
+          <td class="paramname"><em>templates</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Иницализируем из <a class="el" href="interface_core_data_store.html">CoreDataStore</a>, <a class="el" href="interface_core_data_shop_cart.html">CoreDataShopCart</a>. </p>
+<p>Инициализируем при считывании из CoreData </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>имя типа, по нему будет опредеяться название </td></tr>
+    <tr><td class="paramname">price</td><td>цена </td></tr>
+    <tr><td class="paramname">sizes</td><td>массив с размерами <a class="el" href="interface_prop_size.html">PropSize</a> </td></tr>
+    <tr><td class="paramname">uturns</td><td>массив с разворотами если есть <a class="el" href="interface_prop_uturn.html">PropUturn</a> </td></tr>
+    <tr><td class="paramname">covers</td><td>массив с типами обложек <a class="el" href="interface_prop_cover.html">PropCover</a> </td></tr>
+    <tr><td class="paramname">colors</td><td>массив с цветом типа <a class="el" href="interface_prop_color.html">PropColor</a> </td></tr>
+    <tr><td class="paramname">styles</td><td>массив с стилями <a class="el" href="interface_prop_style.html">PropStyle</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="_prop_type_8m_source.html">PropType.m</a> строка <a class="el" href="_prop_type_8m_source.html#l00041">41</a></p>
+
+</div>
+</div>
+<a class="anchor" id="accd76f280b5282388d55eeb078489246"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initWithDictionary: </td>
+          <td></td>
+          <td class="paramtype">(NSDictionary *)&#160;</td>
+          <td class="paramname"><em>dictionaryType</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Инициализируем по ответу от сервера </p>
+<p>Инициализируем после прихода от сервера </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dictionaryType</td><td>словарь со значениями, требуется передавать такое {"name":"heart","price":590,"size":{"10":"0"}} </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="_prop_type_8m_source.html">PropType.m</a> строка <a class="el" href="_prop_type_8m_source.html#l00071">71</a></p>
+
+</div>
+</div>
+<a class="anchor" id="abf7a1d16b16a88b82f39c4b50a489270"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) updateUserTemplate: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_template.html">Template</a> *)&#160;</td>
+          <td class="paramname"><em>userTemplate</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обновляем значение пользовательского шаблона </p>
+<p>Обновляем пользовательский шаблон с фотографиями пользователя </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userTemplate</td><td>пользовательский шаблон и фотографиями поьзователя </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>Для синхронизации с <a class="el" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> используйте метод updateTemplateOrPropsPrintData <div class="fragment"><div class="line"><a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> *coreShop = [<a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> alloc] init];</div>
+<div class="line">[coreShop updateTemplateOrPropsPrintData:];</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>См. определение в файле <a class="el" href="_prop_type_8m_source.html">PropType.m</a> строка <a class="el" href="_prop_type_8m_source.html#l00396">396</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Полный список свойств</h2>
+<a class="anchor" id="a9fed7512dadd3dc1de995a12109b85de"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSArray*) templates</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Для тестов, в пямыти не держим все шаблоны !!! </p>
+<dl class="section warning"><dt>Предупреждения</dt><dd>только для UnitTest(UnitTestOnly) </dd></dl>
+
+<p>См. определение в файле <a class="el" href="_prop_type_8h_source.html">PropType.h</a> строка <a class="el" href="_prop_type_8h_source.html#l00040">40</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>PhotoHouse/Model/PrintData/StoreItem/Types/<a class="el" href="_prop_type_8h_source.html">PropType.h</a></li>
+<li>PhotoHouse/Model/PrintData/StoreItem/Types/<a class="el" href="_prop_type_8m_source.html">PropType.m</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:33. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

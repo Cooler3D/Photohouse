@@ -1,0 +1,546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>PhotoHouse: Класс PrintData</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PhotoHouse
+   &#160;<span id="projectnumber">1.7 (17)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&#160;указатель&#160;классов</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&#160;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&#160;классов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Методы экземпляра</a> &#124;
+<a href="class_print_data-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс PrintData</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Покупка пользователя.<br />
+Представляет собой сфорированную покупку для отправки на сервер PhotoHouse Вы можете добавлять картинки, удалять, Менять параметры.<br />
+Также менять цвет, размер, обложку, и др параметры иесли у них есть выбор.<br />
+Вместе с эти объектом используется:<br />
+<a class="el" href="interface_store_item.html">StoreItem</a> - идетификатор покупки, при выборе в магазине StoreViewController, хранятся в <a class="el" href="interface_core_data_store.html">CoreDataStore</a><br />
+<a class="el" href="interface_template.html" title="Класс конструктора альбомов ">Template</a> - шаблон для конструктора альбомов<br />
+.  
+ <a href="interface_print_data.html#details">Подробнее...</a></p>
+
+<p><code>#import &lt;<a class="el" href="_print_data_8h_source.html">PrintData.h</a>&gt;</code></p>
+
+<p>Базовые классы:NSObject.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Методы экземпляра</h2></td></tr>
+<tr class="memitem:adabe1f36345d047f63075a1de0872ae7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adabe1f36345d047f63075a1de0872ae7"></a>
+(PhotoHousePrint)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#adabe1f36345d047f63075a1de0872ae7">purchaseID</a></td></tr>
+<tr class="memdesc:adabe1f36345d047f63075a1de0872ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тип покупки, приходит от сервера <br /></td></tr>
+<tr class="separator:adabe1f36345d047f63075a1de0872ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f9842a77e003efdba2d1fe646739e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34f9842a77e003efdba2d1fe646739e9"></a>
+(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#a34f9842a77e003efdba2d1fe646739e9">namePurchase</a></td></tr>
+<tr class="memdesc:a34f9842a77e003efdba2d1fe646739e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Название покупки, кружка, футболка и тд <br /></td></tr>
+<tr class="separator:a34f9842a77e003efdba2d1fe646739e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51aa2101e6f3843a3e9893a4b5ad7de4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51aa2101e6f3843a3e9893a4b5ad7de4"></a>
+(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#a51aa2101e6f3843a3e9893a4b5ad7de4">nameType</a></td></tr>
+<tr class="memdesc:a51aa2101e6f3843a3e9893a4b5ad7de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя типа,. <br /></td></tr>
+<tr class="separator:a51aa2101e6f3843a3e9893a4b5ad7de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7499ed6f0999cc594a3142b86241edcf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7499ed6f0999cc594a3142b86241edcf"></a>
+(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#a7499ed6f0999cc594a3142b86241edcf">nameCategory</a></td></tr>
+<tr class="memdesc:a7499ed6f0999cc594a3142b86241edcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя категории, Альбомы, Сувениры и подарки и тд <br /></td></tr>
+<tr class="separator:a7499ed6f0999cc594a3142b86241edcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b094dd8686199230b9394adda1125c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b094dd8686199230b9394adda1125c8"></a>
+(NSUInteger)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#a3b094dd8686199230b9394adda1125c8">count</a></td></tr>
+<tr class="memdesc:a3b094dd8686199230b9394adda1125c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Количество копий, изменяется в корзине <br /></td></tr>
+<tr class="separator:a3b094dd8686199230b9394adda1125c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af17ff0ce1d2a1d2a736601ea7ca737a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af17ff0ce1d2a1d2a736601ea7ca737a8"></a>
+(NSUInteger)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#af17ff0ce1d2a1d2a736601ea7ca737a8">price</a></td></tr>
+<tr class="memdesc:af17ff0ce1d2a1d2a736601ea7ca737a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Цена покупки <br /></td></tr>
+<tr class="separator:af17ff0ce1d2a1d2a736601ea7ca737a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac78fe197d39c9f90db676327b595efd7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac78fe197d39c9f90db676327b595efd7"></a>
+(NSArray *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#ac78fe197d39c9f90db676327b595efd7">imagesPreview</a></td></tr>
+<tr class="memdesc:ac78fe197d39c9f90db676327b595efd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Картинки, без скленых <br /></td></tr>
+<tr class="separator:ac78fe197d39c9f90db676327b595efd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39afdbcbee951fd00c0861ce54015449"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39afdbcbee951fd00c0861ce54015449"></a>
+(NSArray *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#a39afdbcbee951fd00c0861ce54015449">images</a></td></tr>
+<tr class="memdesc:a39afdbcbee951fd00c0861ce54015449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Все картинки и скленные и обычные <br /></td></tr>
+<tr class="separator:a39afdbcbee951fd00c0861ce54015449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac51eba85214393d09328808da9d89cef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac51eba85214393d09328808da9d89cef"></a>
+(NSArray *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#ac51eba85214393d09328808da9d89cef">mergedImages</a></td></tr>
+<tr class="memdesc:ac51eba85214393d09328808da9d89cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Массив <a class="el" href="interface_print_image.html" title="Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...">PrintImage</a>, только скренные картинки <br /></td></tr>
+<tr class="separator:ac51eba85214393d09328808da9d89cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbf1e963cf485e00cfd95aa4a04b9fb3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbf1e963cf485e00cfd95aa4a04b9fb3"></a>
+(NSArray *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#adbf1e963cf485e00cfd95aa4a04b9fb3">uploadURLs</a></td></tr>
+<tr class="memdesc:adbf1e963cf485e00cfd95aa4a04b9fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Массив адресов загрузки <br /></td></tr>
+<tr class="separator:adbf1e963cf485e00cfd95aa4a04b9fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a987583b6e84e1dcf9c062c5f18cb3253"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a987583b6e84e1dcf9c062c5f18cb3253"></a>
+(NSArray *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#a987583b6e84e1dcf9c062c5f18cb3253">imagesNames</a></td></tr>
+<tr class="memdesc:a987583b6e84e1dcf9c062c5f18cb3253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Массив адресов картинок в библиотеке и адреса загрузки <br /></td></tr>
+<tr class="separator:a987583b6e84e1dcf9c062c5f18cb3253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1183ca13e71af5fbdccd11dd2cee003"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1183ca13e71af5fbdccd11dd2cee003"></a>
+(UIImage *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#ac1183ca13e71af5fbdccd11dd2cee003">iconShopCart</a></td></tr>
+<tr class="memdesc:ac1183ca13e71af5fbdccd11dd2cee003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Картинка для Корзины <br /></td></tr>
+<tr class="separator:ac1183ca13e71af5fbdccd11dd2cee003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d5fcd6704fe21a38cbbad486702178b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d5fcd6704fe21a38cbbad486702178b"></a>
+(UIImage *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#a2d5fcd6704fe21a38cbbad486702178b">gridImage</a></td></tr>
+<tr class="memdesc:a2d5fcd6704fe21a38cbbad486702178b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Картинка с сеткой для редактора <br /></td></tr>
+<tr class="separator:a2d5fcd6704fe21a38cbbad486702178b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dc141a91c0f36166a88b8e8c6b4249c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4dc141a91c0f36166a88b8e8c6b4249c"></a>
+(UIImage *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#a4dc141a91c0f36166a88b8e8c6b4249c">showCaseImage</a></td></tr>
+<tr class="memdesc:a4dc141a91c0f36166a88b8e8c6b4249c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Картинка для превью в витрине(ShowCase) <br /></td></tr>
+<tr class="separator:a4dc141a91c0f36166a88b8e8c6b4249c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeef281915b61fd9066cd21431132b267"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeef281915b61fd9066cd21431132b267"></a>
+(NSDictionary *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#aeef281915b61fd9066cd21431132b267">props</a></td></tr>
+<tr class="memdesc:aeef281915b61fd9066cd21431132b267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Props для отправки на сервер <br /></td></tr>
+<tr class="separator:aeef281915b61fd9066cd21431132b267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8470f14d912d207e6e2cdc7a0569f55c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8470f14d912d207e6e2cdc7a0569f55c"></a>
+(NSInteger)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#a8470f14d912d207e6e2cdc7a0569f55c">unique_print</a></td></tr>
+<tr class="memdesc:a8470f14d912d207e6e2cdc7a0569f55c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уникальный идентификатор, для поиска в <a class="el" href="interface_core_data_shop_cart.html">CoreDataShopCart</a>. <br /></td></tr>
+<tr class="separator:a8470f14d912d207e6e2cdc7a0569f55c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af844a1631d6a520d8bfbd6153dd7ad09"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af844a1631d6a520d8bfbd6153dd7ad09"></a>
+(<a class="el" href="interface_store_item.html">StoreItem</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#af844a1631d6a520d8bfbd6153dd7ad09">storeItem</a></td></tr>
+<tr class="memdesc:af844a1631d6a520d8bfbd6153dd7ad09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Информация о покупке <a class="el" href="interface_store_item.html">StoreItem</a>. <br /></td></tr>
+<tr class="separator:af844a1631d6a520d8bfbd6153dd7ad09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd25bba5303dce8cc3f1011d8abad29"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#a5cd25bba5303dce8cc3f1011d8abad29">changeProp:</a></td></tr>
+<tr class="memdesc:a5cd25bba5303dce8cc3f1011d8abad29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Меняем параметра, цвета, размера, стиля  <a href="#a5cd25bba5303dce8cc3f1011d8abad29">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5cd25bba5303dce8cc3f1011d8abad29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a587b94f6b756bd75fa3c081b4e6c21a0"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#a587b94f6b756bd75fa3c081b4e6c21a0">removeAllImages</a></td></tr>
+<tr class="memdesc:a587b94f6b756bd75fa3c081b4e6c21a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляем все картинки  <a href="#a587b94f6b756bd75fa3c081b4e6c21a0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a587b94f6b756bd75fa3c081b4e6c21a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc41765b50b9db2e00c239179fa44f58"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#afc41765b50b9db2e00c239179fa44f58">removeImagesWithUrls:</a></td></tr>
+<tr class="memdesc:afc41765b50b9db2e00c239179fa44f58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удалаяем картинки  <a href="#afc41765b50b9db2e00c239179fa44f58">Подробнее...</a><br /></td></tr>
+<tr class="separator:afc41765b50b9db2e00c239179fa44f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62ea977ed7789cf69da661c68afc83e6"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#a62ea977ed7789cf69da661c68afc83e6">changeCount:</a></td></tr>
+<tr class="memdesc:a62ea977ed7789cf69da661c68afc83e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Менаяем кол-во копий из корзины  <a href="#a62ea977ed7789cf69da661c68afc83e6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a62ea977ed7789cf69da661c68afc83e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab988aef07b986329d571d29c42d1ef21"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#ab988aef07b986329d571d29c42d1ef21">addPrintImagesFromPhotoLibrary:</a></td></tr>
+<tr class="memdesc:ab988aef07b986329d571d29c42d1ef21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляем новые картинки  <a href="#ab988aef07b986329d571d29c42d1ef21">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab988aef07b986329d571d29c42d1ef21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae241c97e89696155a194d2a97d29372d"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#ae241c97e89696155a194d2a97d29372d">updateUserTemplate:</a></td></tr>
+<tr class="memdesc:ae241c97e89696155a194d2a97d29372d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляем пользовательский шаблон <a class="el" href="interface_template.html" title="Класс конструктора альбомов ">Template</a>.  <a href="#ae241c97e89696155a194d2a97d29372d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae241c97e89696155a194d2a97d29372d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af20402f7107ee15871ccf2866eee105e"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#af20402f7107ee15871ccf2866eee105e">createAndAddMergedImageWithPrintImage:</a></td></tr>
+<tr class="memdesc:af20402f7107ee15871ccf2866eee105e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаем скленные картинки (UnitTestOnly)  <a href="#af20402f7107ee15871ccf2866eee105e">Подробнее...</a><br /></td></tr>
+<tr class="separator:af20402f7107ee15871ccf2866eee105e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0510bb83d6533f39afa5f18c6d81857"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#af0510bb83d6533f39afa5f18c6d81857">createMergedImageWithPreview:andCompleteBlock:</a></td></tr>
+<tr class="memdesc:af0510bb83d6533f39afa5f18c6d81857"><td class="mdescLeft">&#160;</td><td class="mdescRight">Склееваем пользовательскую картинку с объектом(Кружка,Футболка и тд)  <a href="#af0510bb83d6533f39afa5f18c6d81857">Подробнее...</a><br /></td></tr>
+<tr class="separator:af0510bb83d6533f39afa5f18c6d81857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5252c686decac2f45b1b45e02f47287"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#ac5252c686decac2f45b1b45e02f47287">initWithHistoryOrderItemsDictionary:</a></td></tr>
+<tr class="memdesc:ac5252c686decac2f45b1b45e02f47287"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализация по истории заказов  <a href="#ac5252c686decac2f45b1b45e02f47287">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac5252c686decac2f45b1b45e02f47287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af855811243fa598b55fdd8038477aec2"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#af855811243fa598b55fdd8038477aec2">initWithStoreItem:andUniqueNum:</a></td></tr>
+<tr class="memdesc:af855811243fa598b55fdd8038477aec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Иницализируем из сохраненных из CoreDataShoCart.  <a href="#af855811243fa598b55fdd8038477aec2">Подробнее...</a><br /></td></tr>
+<tr class="separator:af855811243fa598b55fdd8038477aec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0198a75a91d07bd833862a701a82bce6"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#a0198a75a91d07bd833862a701a82bce6">replacePreviewPrintImage:</a></td></tr>
+<tr class="memdesc:a0198a75a91d07bd833862a701a82bce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заменяем оригинальную <a class="el" href="interface_print_image.html" title="Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...">PrintImage</a> на ту с коротой будем работать в ShowCaseViewController или ConstructorViewController.  <a href="#a0198a75a91d07bd833862a701a82bce6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0198a75a91d07bd833862a701a82bce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Покупка пользователя.<br />
+Представляет собой сфорированную покупку для отправки на сервер PhotoHouse Вы можете добавлять картинки, удалять, Менять параметры.<br />
+Также менять цвет, размер, обложку, и др параметры иесли у них есть выбор.<br />
+Вместе с эти объектом используется:<br />
+<a class="el" href="interface_store_item.html">StoreItem</a> - идетификатор покупки, при выборе в магазине StoreViewController, хранятся в <a class="el" href="interface_core_data_store.html">CoreDataStore</a><br />
+<a class="el" href="interface_template.html" title="Класс конструктора альбомов ">Template</a> - шаблон для конструктора альбомов<br />
+. </p>
+<dl class="section warning"><dt>Предупреждения</dt><dd>Большинство методов в данном объекте работает только с объектом. Т.к сам объект это сформированная покупка хранится в <a class="el" href="interface_core_data_shop_cart.html">CoreDataShopCart</a>. Вам нужно дополнительно обращаться <a class="el" href="interface_core_data_shop_cart.html">CoreDataShopCart</a>. Т.к может идти активный процесс сохранения. <div class="fragment"><div class="line"><a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> *coreCart = [[<a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> alloc] init];</div>
+</div><!-- fragment --> </dd></dl>
+<dl class="section author"><dt>Автор</dt><dd>Дмитрий Мартынов <a href="#" onclick="location.href='mai'+'lto:'+'dim'+'as'+'t85'+'@i'+'nbo'+'x.'+'ru'; return false;">dimas<span style="display: none;">.nosp@m.</span>t85@<span style="display: none;">.nosp@m.</span>inbox<span style="display: none;">.nosp@m.</span>.ru</a> </dd></dl>
+
+<p>См. определение в файле <a class="el" href="_print_data_8h_source.html">PrintData.h</a> строка <a class="el" href="_print_data_8h_source.html#l00034">34</a></p>
+</div><h2 class="groupheader">Документация метода</h2>
+<a class="anchor" id="ab988aef07b986329d571d29c42d1ef21"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) addPrintImagesFromPhotoLibrary: </td>
+          <td></td>
+          <td class="paramtype">(NSArray *)&#160;</td>
+          <td class="paramname"><em>array</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляем новые картинки </p>
+<p>Добавляем картинки к текущим, нужно передавть чтобы не повторялись </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>массив <a class="el" href="interface_print_image.html" title="Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...">PrintImage</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="_print_data_8m_source.html">PrintData.m</a> строка <a class="el" href="_print_data_8m_source.html#l00184">184</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a62ea977ed7789cf69da661c68afc83e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) changeCount: </td>
+          <td></td>
+          <td class="paramtype">(NSInteger)&#160;</td>
+          <td class="paramname"><em>count</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Менаяем кол-во копий из корзины </p>
+<p>Меняем кол-во копий, используется в корзине при смене количества </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>кол-во копий </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="_print_data_8m_source.html">PrintData.m</a> строка <a class="el" href="_print_data_8m_source.html#l00141">141</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a5cd25bba5303dce8cc3f1011d8abad29"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) changeProp: </td>
+          <td></td>
+          <td class="paramtype">(NSObject *)&#160;</td>
+          <td class="paramname"><em>object</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Меняем параметра, цвета, размера, стиля </p>
+<p>Меняем один из параметров в Props (Стиль, Обложка, Размер, Кол-во разворотов) </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>может быть как <a class="el" href="interface_prop_style.html">PropStyle</a>, PropsCover, <a class="el" href="interface_prop_color.html">PropColor</a>, <a class="el" href="interface_prop_size.html">PropSize</a>, <a class="el" href="interface_prop_uturn.html">PropUturn</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="_print_data_8m_source.html">PrintData.m</a> строка <a class="el" href="_print_data_8m_source.html#l00136">136</a></p>
+
+</div>
+</div>
+<a class="anchor" id="af20402f7107ee15871ccf2866eee105e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) createAndAddMergedImageWithPrintImage: </td>
+          <td></td>
+          <td class="paramtype">(UIImage *)&#160;</td>
+          <td class="paramname"><em>image</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создаем скленные картинки (UnitTestOnly) </p>
+<p>Создаем склеенные картинки и сохраняем в <a class="el" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> (UnitTestOnly) </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">printImage</td><td>текущая <a class="el" href="interface_print_image.html" title="Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...">PrintImage</a> для которой требуется сохранить </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd>'-createMergedImageWithPreview:andCompleteBlock:' </dd></dl>
+
+<p>См. определение в файле <a class="el" href="_print_data_8m_source.html">PrintData.m</a> строка <a class="el" href="_print_data_8m_source.html#l00280">280</a></p>
+
+</div>
+</div>
+<a class="anchor" id="af0510bb83d6533f39afa5f18c6d81857"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) createMergedImageWithPreview: </td>
+          <td></td>
+          <td class="paramtype">(UIImage *)&#160;</td>
+          <td class="paramname"><em>previewImage</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andCompleteBlock:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(NSArray *<a class="el" href="interface_print_data.html#a39afdbcbee951fd00c0861ce54015449">images</a>))&#160;</td>
+          <td class="paramname"><em>completeBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Склееваем пользовательскую картинку с объектом(Кружка,Футболка и тд) </p>
+<p>Склееваем картинки(пользовательскую и объекта) на основе исходной и сохраняем в <a class="el" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">previewImage</td><td>исходная картинка, которая будет наноситься на объекты </td></tr>
+    <tr><td class="paramname">completeBlock</td><td>блок для выполнения </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac5252c686decac2f45b1b45e02f47287"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initWithHistoryOrderItemsDictionary: </td>
+          <td></td>
+          <td class="paramtype">(NSDictionary *)&#160;</td>
+          <td class="paramname"><em>order_items</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">{</div>
+<div class="line">    NSInteger _unique_print</div>
+</div><!-- fragment -->
+<p>Инициализация по истории заказов </p>
+<p>Инициализируем объект по истории заказов </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">order_items</td><td>передаем данные ответа от сервера order_item </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="_print_data_8m_source.html">PrintData.m</a> строка <a class="el" href="_print_data_8m_source.html#l00047">47</a></p>
+
+</div>
+</div>
+<a class="anchor" id="af855811243fa598b55fdd8038477aec2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initWithStoreItem: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_store_item.html">StoreItem</a> *)&#160;</td>
+          <td class="paramname"><em>storeItem</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andUniqueNum:</td>
+          <td></td>
+          <td class="paramtype">(NSInteger)&#160;</td>
+          <td class="paramname"><em>unique</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Иницализируем из сохраненных из CoreDataShoCart. </p>
+<p>Инициализируем при выборе через магазин или <a class="el" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">storeItem</td><td>передаем класс уже выбранные компонент </td></tr>
+    <tr><td class="paramname">unique</td><td>уникальный идентификатор, если 0, то сам сгенерирует сам </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="_print_data_8m_source.html">PrintData.m</a> строка <a class="el" href="_print_data_8m_source.html#l00059">59</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a587b94f6b756bd75fa3c081b4e6c21a0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) removeAllImages </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаляем все картинки </p>
+<p>Удалаем изображения из объекта </p><dl class="section warning"><dt>Предупреждения</dt><dd>Картинки не удаляются из <a class="el" href="interface_core_data_shop_cart.html">CoreDataShopCart</a>, нужно обращаться к removeImages <div class="fragment"><div class="line"><a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> *coreCart = [[<a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> alloc] init];</div>
+<div class="line">[coreCart removeImages:];</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>См. определение в файле <a class="el" href="_print_data_8m_source.html">PrintData.m</a> строка <a class="el" href="_print_data_8m_source.html#l00202">202</a></p>
+
+</div>
+</div>
+<a class="anchor" id="afc41765b50b9db2e00c239179fa44f58"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) removeImagesWithUrls: </td>
+          <td></td>
+          <td class="paramtype">(NSArray *)&#160;</td>
+          <td class="paramname"><em>urls</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удалаяем картинки </p>
+<p>Удаляем картинки по адресам, удаляется из объекта </p><dl class="section warning"><dt>Предупреждения</dt><dd>Картинки удаляются только из объекта <a class="el" href="interface_print_data.html" title="Покупка пользователя. Представляет собой сфорированную покупку для отправки на сервер PhotoHouse Вы м...">PrintData</a>, для удаления из <a class="el" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> используйте метод removeImages <div class="fragment"><div class="line"><a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> *coreCart = [[<a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> alloc] init];</div>
+<div class="line">[coreCart removeImages:];</div>
+</div><!-- fragment --> </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">urls</td><td>массив urlLibrary для картинок </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Блок поиска удаляемой картинки в массиве сохраненных в объекте, возвращаем индекс. Если -1, то не найдено. Если &gt;= 0, то значение в массиве </p>
+
+<p>См. определение в файле <a class="el" href="_print_data_8m_source.html">PrintData.m</a> строка <a class="el" href="_print_data_8m_source.html#l00208">208</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a0198a75a91d07bd833862a701a82bce6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) replacePreviewPrintImage: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_print_image.html">PrintImage</a> *)&#160;</td>
+          <td class="paramname"><em>printImage</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заменяем оригинальную <a class="el" href="interface_print_image.html" title="Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...">PrintImage</a> на ту с коротой будем работать в ShowCaseViewController или ConstructorViewController. </p>
+<p>Заменяем Сохраненную <a class="el" href="interface_print_image.html" title="Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...">PrintImage</a> в массиве картинкок или добавляем, Заменение происходит после сохранения оригинала в <a class="el" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">printImage</td><td>текущая printImage </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="_print_data_8m_source.html">PrintData.m</a> строка <a class="el" href="_print_data_8m_source.html#l00251">251</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ae241c97e89696155a194d2a97d29372d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) updateUserTemplate: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_template.html">Template</a> *)&#160;</td>
+          <td class="paramname"><em>userTemplate</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обновляем пользовательский шаблон <a class="el" href="interface_template.html" title="Класс конструктора альбомов ">Template</a>. </p>
+<p>Обновляем пользовательский шаблон с фотографиями пользователя <a class="el" href="interface_template.html" title="Класс конструктора альбомов ">Template</a> </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userTemplate</td><td>пользовательский шаблон и фотографиями поьзователя </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="_print_data_8m_source.html">PrintData.m</a> строка <a class="el" href="_print_data_8m_source.html#l00238">238</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>PhotoHouse/Model/PrintData/<a class="el" href="_print_data_8h_source.html">PrintData.h</a></li>
+<li>PhotoHouse/Model/PrintData/<a class="el" href="_print_data_8m_source.html">PrintData.m</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:33. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

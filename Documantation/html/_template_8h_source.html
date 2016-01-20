@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>PhotoHouse: Исходный файл PhotoHouse/Model/PrintData/Album/Template.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PhotoHouse
+   &#160;<span id="projectnumber">1.7 (17)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7795acbb99ddf39f185c94575b2288fc.html">PhotoHouse</a></li><li class="navelem"><a class="el" href="dir_272b79b4cfc705096eed6e643141e8cb.html">Model</a></li><li class="navelem"><a class="el" href="dir_216acaf42e355fe794f06d7374c6325c.html">PrintData</a></li><li class="navelem"><a class="el" href="dir_caaeffae1ae632314fc19d6a166e8b7a.html">Album</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Template.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  Template.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  AlbumConstructor</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Дмитрий Мартынов on 4/9/15.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2015 Individual. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">extern</span> NSString *<span class="keyword">const</span> TemplateDownloadComplateNotification;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">extern</span> NSString *<span class="keyword">const</span> TemplateDownloadProgressNotification;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">extern</span> NSString *<span class="keyword">const</span> TemplateDownloadErrorNotification;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">extern</span> NSString *<span class="keyword">const</span> TemplateKey;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">extern</span> NSString *<span class="keyword">const</span> TemplateProgressKey;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">extern</span> NSString *<span class="keyword">const</span> TemplateErrorKey;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_layout.html">Layout</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="interface_template.html">   30</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_template.html">Template</a> : NSObject</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="interface_template.html#a6865cd573c106165c738fe817cf9c076">   31</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_template.html#a6865cd573c106165c738fe817cf9c076">fontName</a>;     </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="interface_template.html#a55849af04650a667b29a2625f1901dea">   32</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_template.html#a55849af04650a667b29a2625f1901dea">name</a>;         </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="interface_template.html#a9351aa490a6bf9b7bd343114a012c47f">   33</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_template.html#a9351aa490a6bf9b7bd343114a012c47f">id_template</a>;  </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="interface_template.html#af751ae58210d7ef4f8c612b35dd8e351">   34</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_template.html#af751ae58210d7ef4f8c612b35dd8e351">size</a>;         </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="interface_template.html#aa2a7e27f58ef65d6efe58ca2b4f21ae2">   35</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSArray *<a class="code" href="interface_template.html#aa2a7e27f58ef65d6efe58ca2b4f21ae2">layouts</a>;       </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="interface_template.html#a14dc95ef75007965a54e1090e9e77157">   37</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) <a class="code" href="interface_layout.html">Layout</a> *<a class="code" href="interface_template.html#a14dc95ef75007965a54e1090e9e77157">layoutCover</a>;    </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="interface_template.html#a9501925a394874cbe36ae7ac18cc5b3d">   38</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSArray *<a class="code" href="interface_template.html#a9501925a394874cbe36ae7ac18cc5b3d">layoutPages</a>;   </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;- (id) initTemplateDictionary:(NSDictionary *)dictionary;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;- (id) initTemplateName:(NSString *)name andFontName:(NSString *)fontName andIdTemplate:(NSString *)id_template andSize:(NSString *)size andLayouts:(NSArray *)layouts;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;- (BOOL) <a class="code" href="interface_template.html#a1e1806ed737c77d5decb90a993909403">hasImageDesign</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;- (NSArray *) <a class="code" href="interface_template.html#aa9b8b7a5f9572c8aa07a625e99258cff">getUserLayoutsDictionaries</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;- (NSDictionary *) <a class="code" href="interface_template.html#a1dbca208a79929685425baa009fa4ff3">getUserTemplateDictionary</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;- (void) <a class="code" href="interface_template.html#af9796d045865cf02f4447f3585b60819">downloadImages</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_template_html_a1dbca208a79929685425baa009fa4ff3"><div class="ttname"><a href="interface_template.html#a1dbca208a79929685425baa009fa4ff3">-[Template getUserTemplateDictionary]</a></div><div class="ttdeci">NSDictionary * getUserTemplateDictionary()</div><div class="ttdoc">Получаем словарь пользовательского шаблона </div><div class="ttdef"><b>Definition:</b> <a href="_template_8m_source.html#l00273">Template.m:273</a></div></div>
+<div class="ttc" id="interface_template_html_aa2a7e27f58ef65d6efe58ca2b4f21ae2"><div class="ttname"><a href="interface_template.html#aa2a7e27f58ef65d6efe58ca2b4f21ae2">Template::layouts</a></div><div class="ttdeci">NSArray * layouts</div><div class="ttdoc">Массив разворотов Layout. </div><div class="ttdef"><b>Definition:</b> <a href="_template_8h_source.html#l00035">Template.h:35</a></div></div>
+<div class="ttc" id="interface_template_html_af751ae58210d7ef4f8c612b35dd8e351"><div class="ttname"><a href="interface_template.html#af751ae58210d7ef4f8c612b35dd8e351">Template::size</a></div><div class="ttdeci">NSString * size</div><div class="ttdoc">Размер шаблона 15х20, 20х20. </div><div class="ttdef"><b>Definition:</b> <a href="_template_8h_source.html#l00034">Template.h:34</a></div></div>
+<div class="ttc" id="interface_template_html_a9351aa490a6bf9b7bd343114a012c47f"><div class="ttname"><a href="interface_template.html#a9351aa490a6bf9b7bd343114a012c47f">Template::id_template</a></div><div class="ttdeci">NSString * id_template</div><div class="ttdoc">Идентификатор шаблона </div><div class="ttdef"><b>Definition:</b> <a href="_template_8h_source.html#l00033">Template.h:33</a></div></div>
+<div class="ttc" id="interface_layout_html"><div class="ttname"><a href="interface_layout.html">Layout</a></div><div class="ttdoc">Одна страница в альбоме </div><div class="ttdef"><b>Definition:</b> <a href="_layout_8h_source.html#l00024">Layout.h:24</a></div></div>
+<div class="ttc" id="interface_template_html_a14dc95ef75007965a54e1090e9e77157"><div class="ttname"><a href="interface_template.html#a14dc95ef75007965a54e1090e9e77157">Template::layoutCover</a></div><div class="ttdeci">Layout * layoutCover</div><div class="ttdoc">Layout Обложка </div><div class="ttdef"><b>Definition:</b> <a href="_template_8h_source.html#l00037">Template.h:37</a></div></div>
+<div class="ttc" id="interface_template_html_aa9b8b7a5f9572c8aa07a625e99258cff"><div class="ttname"><a href="interface_template.html#aa9b8b7a5f9572c8aa07a625e99258cff">-[Template getUserLayoutsDictionaries]</a></div><div class="ttdeci">NSArray * getUserLayoutsDictionaries()</div><div class="ttdoc">Получаем массив словерей для заказа </div><div class="ttdef"><b>Definition:</b> <a href="_template_8m_source.html#l00263">Template.m:263</a></div></div>
+<div class="ttc" id="interface_template_html_a9501925a394874cbe36ae7ac18cc5b3d"><div class="ttname"><a href="interface_template.html#a9501925a394874cbe36ae7ac18cc5b3d">Template::layoutPages</a></div><div class="ttdeci">NSArray * layoutPages</div><div class="ttdoc">Массив разворотов, здесь не обложки </div><div class="ttdef"><b>Definition:</b> <a href="_template_8h_source.html#l00038">Template.h:38</a></div></div>
+<div class="ttc" id="interface_template_html_af9796d045865cf02f4447f3585b60819"><div class="ttname"><a href="interface_template.html#af9796d045865cf02f4447f3585b60819">-[Template downloadImages]</a></div><div class="ttdeci">void downloadImages()</div><div class="ttdoc">Начинаем загрузку картинок верстки </div><div class="ttdef"><b>Definition:</b> <a href="_template_8m_source.html#l00285">Template.m:285</a></div></div>
+<div class="ttc" id="interface_template_html_a6865cd573c106165c738fe817cf9c076"><div class="ttname"><a href="interface_template.html#a6865cd573c106165c738fe817cf9c076">Template::fontName</a></div><div class="ttdeci">NSString * fontName</div><div class="ttdoc">Имя шрифта </div><div class="ttdef"><b>Definition:</b> <a href="_template_8h_source.html#l00031">Template.h:31</a></div></div>
+<div class="ttc" id="interface_template_html_a1e1806ed737c77d5decb90a993909403"><div class="ttname"><a href="interface_template.html#a1e1806ed737c77d5decb90a993909403">-[Template hasImageDesign]</a></div><div class="ttdeci">BOOL hasImageDesign()</div><div class="ttdoc">Проверяем есть ли картинки верстки </div><div class="ttdef"><b>Definition:</b> <a href="_template_8m_source.html#l00249">Template.m:249</a></div></div>
+<div class="ttc" id="interface_template_html_a55849af04650a667b29a2625f1901dea"><div class="ttname"><a href="interface_template.html#a55849af04650a667b29a2625f1901dea">Template::name</a></div><div class="ttdeci">NSString * name</div><div class="ttdoc">Имя шаблона </div><div class="ttdef"><b>Definition:</b> <a href="_template_8h_source.html#l00032">Template.h:32</a></div></div>
+<div class="ttc" id="interface_template_html"><div class="ttname"><a href="interface_template.html">Template</a></div><div class="ttdoc">Класс конструктора альбомов </div><div class="ttdef"><b>Definition:</b> <a href="_template_8h_source.html#l00030">Template.h:30</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

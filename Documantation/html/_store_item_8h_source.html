@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>PhotoHouse: Исходный файл PhotoHouse/Model/PrintData/StoreItem/StoreItem.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PhotoHouse
+   &#160;<span id="projectnumber">1.7 (17)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7795acbb99ddf39f185c94575b2288fc.html">PhotoHouse</a></li><li class="navelem"><a class="el" href="dir_272b79b4cfc705096eed6e643141e8cb.html">Model</a></li><li class="navelem"><a class="el" href="dir_216acaf42e355fe794f06d7374c6325c.html">PrintData</a></li><li class="navelem"><a class="el" href="dir_6d5262f7644c4e0038d1ab2d7c905aed.html">StoreItem</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">StoreItem.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  StoreItem.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  PhotoHouse</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Дмитрий Мартынов on 12/23/14.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2014 Дмитрий Мартынов. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_prop_type.html">PropType</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_delivery_city.html">DeliveryCity</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    StoreTypePhotoPrint = 2,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    StoreTypeSovenir    = 3,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    StoreTypeCoverCase  = 4,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    StoreTypePhotoAlbum = 1,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    StoreTypeSpecial    = 5 </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;} StoreType;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    PhotoHousePrintMug          = 1,    </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    PhotoHousePrintTShirt       = 2,    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    PhotoHousePrintMouseMag     = 3,    </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    PhotoHousePrintPuzzle       = 4,    </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    PhotoHousePrintIPhone4      = 5,    </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    PhotoHousePrintIPhone5      = 6,    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    PhotoHousePrintPhoto8_10    = 7,    </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    PhotoHousePrintPhoto10_15   = 8,    </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    PhotoHousePrintPhoto10_13   = 9,    </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    PhotoHousePrintPhoto13_18   = 10,   </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    PhotoHousePrintPhoto15_21   = 11,   </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    PhotoHousePrintPhoto20_30   = 12,   </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    PhotoHousePrintAlbum        = 13,   </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    PhotoHousePrintMagnit       = 14,   </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    PhotoHousePrintBrelok       = 15,   </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    PhotoHousePrintClock        = 16,   </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    PhotoHousePrintHolst        = 17,   </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    PhotoHousePrintPlate        = 18,   </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    PhotoHousePrintDelivery     = 20,   </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    PhotoHousePrintIPhone6      = 21    </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;} PhotoHousePrint;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="interface_store_item.html">   50</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_store_item.html">StoreItem</a> : NSObject</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="interface_store_item.html#ad0610709be0389772ba8c511c0defeef">   51</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_store_item.html#ad0610709be0389772ba8c511c0defeef">purchaseID</a>;       </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="interface_store_item.html#a80d6e83eda273e2cd26817ab703d8d67">   52</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_store_item.html#a80d6e83eda273e2cd26817ab703d8d67">typeStore</a>;        </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="interface_store_item.html#aebf514816d86aa9487285da02ecfee2d">   53</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_store_item.html#aebf514816d86aa9487285da02ecfee2d">descriptionStore</a>; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="interface_store_item.html#a61d7e37013bf805852ca54478a60e0de">   54</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_store_item.html#a61d7e37013bf805852ca54478a60e0de">namePurchase</a>;     </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="interface_store_item.html#a4b39f2fa92ab9b0a129b22033f6af68c">   55</a></span>&#160;<span class="keyword">@property</span> (assign, nonatomic, readonly) NSUInteger <a class="code" href="interface_store_item.html#a4b39f2fa92ab9b0a129b22033f6af68c">categoryID</a>;      </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="interface_store_item.html#a7fe01a4049ac737a2cbb89e118c655e7">   56</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_store_item.html#a7fe01a4049ac737a2cbb89e118c655e7">categoryName</a>;     </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="interface_store_item.html#aee3c878574dcc73aac1dbfe1396887a6">   57</a></span>&#160;<span class="keyword">@property</span> (assign, nonatomic, readonly, getter = isAvailable) BOOL <a class="code" href="interface_store_item.html#aee3c878574dcc73aac1dbfe1396887a6">available</a>;   </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="interface_store_item.html#ab182f56bebe8998ab6aa99d0942449c7">   58</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSArray *<a class="code" href="interface_store_item.html#ab182f56bebe8998ab6aa99d0942449c7">types</a>;             </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="interface_store_item.html#a0488e013a489d829609e69d903d27c42">   59</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) <a class="code" href="interface_prop_type.html">PropType</a> *<a class="code" href="interface_store_item.html#a0488e013a489d829609e69d903d27c42">propType</a>;         </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="interface_store_item.html#a3ec7d79f007e901d4f08e0dc9b6ccf49">   60</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) <a class="code" href="interface_delivery_city.html">DeliveryCity</a> *<a class="code" href="interface_store_item.html#a3ec7d79f007e901d4f08e0dc9b6ccf49">delivery</a>;     </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="interface_store_item.html#acb3e3a60205df1845f7156361589fddc">   62</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) UIImage *<a class="code" href="interface_store_item.html#acb3e3a60205df1845f7156361589fddc">iconStoreImage</a>;    </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="interface_store_item.html#a5f9dbd20d7919a54be87e4ac7be65dff">   63</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) UIImage *<a class="code" href="interface_store_item.html#a5f9dbd20d7919a54be87e4ac7be65dff">iconShopCart</a>;      </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="interface_store_item.html#a9b000fae3f8b839efe496d22a5211c51">   64</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) UIImage *<a class="code" href="interface_store_item.html#a9b000fae3f8b839efe496d22a5211c51">gridImage</a>;         </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;- (NSUInteger) <a class="code" href="interface_store_item.html#a0d55e29d1b7201a767fd9c9ca4fa11c8">price</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;- (id) initWithDictionary:(NSDictionary *)item;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;- (id) initStoreWithPurchaseID:(NSString *)purchaseID</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                  andTypeStore:(NSString *)typeStore</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;           andDescriptionStory:(NSString *)descriptionStore</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;               andNamePurchase:(NSString *)namePurchase</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                 andCategoryID:(NSString *)categoryID</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;               andCategoryName:(NSString *)categoryName</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                  andAvailable:(BOOL)available</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                      andTypes:(NSArray *)types;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;- (id) initWithHistoryOrderItems:(NSDictionary *)order_items;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;- (id) initDelivetyCity:(<a class="code" href="interface_delivery_city.html">DeliveryCity</a> *)delivery;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_store_item_html_a80d6e83eda273e2cd26817ab703d8d67"><div class="ttname"><a href="interface_store_item.html#a80d6e83eda273e2cd26817ab703d8d67">StoreItem::typeStore</a></div><div class="ttdeci">NSString * typeStore</div><div class="ttdoc">Тип </div><div class="ttdef"><b>Definition:</b> <a href="_store_item_8h_source.html#l00052">StoreItem.h:52</a></div></div>
+<div class="ttc" id="interface_store_item_html_aee3c878574dcc73aac1dbfe1396887a6"><div class="ttname"><a href="interface_store_item.html#aee3c878574dcc73aac1dbfe1396887a6">StoreItem::available</a></div><div class="ttdeci">BOOL available</div><div class="ttdoc">Отображать ли покупку в магазине </div><div class="ttdef"><b>Definition:</b> <a href="_store_item_8h_source.html#l00057">StoreItem.h:57</a></div></div>
+<div class="ttc" id="interface_delivery_city_html"><div class="ttname"><a href="interface_delivery_city.html">DeliveryCity</a></div><div class="ttdef"><b>Definition:</b> <a href="_delivery_city_8h_source.html#l00010">DeliveryCity.h:10</a></div></div>
+<div class="ttc" id="interface_store_item_html_ab182f56bebe8998ab6aa99d0942449c7"><div class="ttname"><a href="interface_store_item.html#ab182f56bebe8998ab6aa99d0942449c7">StoreItem::types</a></div><div class="ttdeci">NSArray * types</div><div class="ttdoc">Массив типов PropType для выбора </div><div class="ttdef"><b>Definition:</b> <a href="_store_item_8h_source.html#l00058">StoreItem.h:58</a></div></div>
+<div class="ttc" id="interface_store_item_html_a0d55e29d1b7201a767fd9c9ca4fa11c8"><div class="ttname"><a href="interface_store_item.html#a0d55e29d1b7201a767fd9c9ca4fa11c8">-[StoreItem price]</a></div><div class="ttdeci">NSUInteger price()</div><div class="ttdoc">Получаем цену </div><div class="ttdef"><b>Definition:</b> <a href="_store_item_8m_source.html#l00110">StoreItem.m:110</a></div></div>
+<div class="ttc" id="interface_store_item_html_a4b39f2fa92ab9b0a129b22033f6af68c"><div class="ttname"><a href="interface_store_item.html#a4b39f2fa92ab9b0a129b22033f6af68c">StoreItem::categoryID</a></div><div class="ttdeci">NSUInteger categoryID</div><div class="ttdoc">Идентификатор категории </div><div class="ttdef"><b>Definition:</b> <a href="_store_item_8h_source.html#l00055">StoreItem.h:55</a></div></div>
+<div class="ttc" id="interface_store_item_html_a3ec7d79f007e901d4f08e0dc9b6ccf49"><div class="ttname"><a href="interface_store_item.html#a3ec7d79f007e901d4f08e0dc9b6ccf49">StoreItem::delivery</a></div><div class="ttdeci">DeliveryCity * delivery</div><div class="ttdoc">Данные о доставке,. </div><div class="ttdef"><b>Definition:</b> <a href="_store_item_8h_source.html#l00060">StoreItem.h:60</a></div></div>
+<div class="ttc" id="interface_prop_type_html"><div class="ttname"><a href="interface_prop_type.html">PropType</a></div><div class="ttdoc">Объект типа покупки. Определяем найстроки покупки. Все цвета, размеры, стили и др хранятся в этом объ...</div><div class="ttdef"><b>Definition:</b> <a href="_prop_type_8h_source.html#l00031">PropType.h:31</a></div></div>
+<div class="ttc" id="interface_store_item_html"><div class="ttname"><a href="interface_store_item.html">StoreItem</a></div><div class="ttdef"><b>Definition:</b> <a href="_store_item_8h_source.html#l00050">StoreItem.h:50</a></div></div>
+<div class="ttc" id="interface_store_item_html_acb3e3a60205df1845f7156361589fddc"><div class="ttname"><a href="interface_store_item.html#acb3e3a60205df1845f7156361589fddc">StoreItem::iconStoreImage</a></div><div class="ttdeci">UIImage * iconStoreImage</div><div class="ttdoc">Иконка для магазина, большая </div><div class="ttdef"><b>Definition:</b> <a href="_store_item_8h_source.html#l00062">StoreItem.h:62</a></div></div>
+<div class="ttc" id="interface_store_item_html_a61d7e37013bf805852ca54478a60e0de"><div class="ttname"><a href="interface_store_item.html#a61d7e37013bf805852ca54478a60e0de">StoreItem::namePurchase</a></div><div class="ttdeci">NSString * namePurchase</div><div class="ttdoc">Имя покупки, футболка, кружка и тд </div><div class="ttdef"><b>Definition:</b> <a href="_store_item_8h_source.html#l00054">StoreItem.h:54</a></div></div>
+<div class="ttc" id="interface_store_item_html_a7fe01a4049ac737a2cbb89e118c655e7"><div class="ttname"><a href="interface_store_item.html#a7fe01a4049ac737a2cbb89e118c655e7">StoreItem::categoryName</a></div><div class="ttdeci">NSString * categoryName</div><div class="ttdoc">Категория к которой пренадлежит покупка, Сувериры и подврки, Альбомы и тд </div><div class="ttdef"><b>Definition:</b> <a href="_store_item_8h_source.html#l00056">StoreItem.h:56</a></div></div>
+<div class="ttc" id="interface_store_item_html_a5f9dbd20d7919a54be87e4ac7be65dff"><div class="ttname"><a href="interface_store_item.html#a5f9dbd20d7919a54be87e4ac7be65dff">StoreItem::iconShopCart</a></div><div class="ttdeci">UIImage * iconShopCart</div><div class="ttdoc">Иконка для Корзины, маленькая </div><div class="ttdef"><b>Definition:</b> <a href="_store_item_8h_source.html#l00063">StoreItem.h:63</a></div></div>
+<div class="ttc" id="interface_store_item_html_aebf514816d86aa9487285da02ecfee2d"><div class="ttname"><a href="interface_store_item.html#aebf514816d86aa9487285da02ecfee2d">StoreItem::descriptionStore</a></div><div class="ttdeci">NSString * descriptionStore</div><div class="ttdoc">Описание покупки </div><div class="ttdef"><b>Definition:</b> <a href="_store_item_8h_source.html#l00053">StoreItem.h:53</a></div></div>
+<div class="ttc" id="interface_store_item_html_a0488e013a489d829609e69d903d27c42"><div class="ttname"><a href="interface_store_item.html#a0488e013a489d829609e69d903d27c42">StoreItem::propType</a></div><div class="ttdeci">PropType * propType</div><div class="ttdoc">Выбранный PropType. </div><div class="ttdef"><b>Definition:</b> <a href="_store_item_8h_source.html#l00059">StoreItem.h:59</a></div></div>
+<div class="ttc" id="interface_store_item_html_ad0610709be0389772ba8c511c0defeef"><div class="ttname"><a href="interface_store_item.html#ad0610709be0389772ba8c511c0defeef">StoreItem::purchaseID</a></div><div class="ttdeci">NSString * purchaseID</div><div class="ttdoc">Идентификатор покупки </div><div class="ttdef"><b>Definition:</b> <a href="_store_item_8h_source.html#l00051">StoreItem.h:51</a></div></div>
+<div class="ttc" id="interface_store_item_html_a9b000fae3f8b839efe496d22a5211c51"><div class="ttname"><a href="interface_store_item.html#a9b000fae3f8b839efe496d22a5211c51">StoreItem::gridImage</a></div><div class="ttdeci">UIImage * gridImage</div><div class="ttdoc">Картинка сетки для редактора </div><div class="ttdef"><b>Definition:</b> <a href="_store_item_8h_source.html#l00064">StoreItem.h:64</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

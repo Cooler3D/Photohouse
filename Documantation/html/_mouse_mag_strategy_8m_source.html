@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>PhotoHouse: Исходный файл PhotoHouse/Model/PrintData/Strategy/ObjectsStrategy/MouseMagStrategy.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PhotoHouse
+   &#160;<span id="projectnumber">1.7 (17)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7795acbb99ddf39f185c94575b2288fc.html">PhotoHouse</a></li><li class="navelem"><a class="el" href="dir_272b79b4cfc705096eed6e643141e8cb.html">Model</a></li><li class="navelem"><a class="el" href="dir_216acaf42e355fe794f06d7374c6325c.html">PrintData</a></li><li class="navelem"><a class="el" href="dir_837a7fc2c2acd894cad795da9eea787c.html">Strategy</a></li><li class="navelem"><a class="el" href="dir_2d61d40fde8e74720683b29dbc3a055c.html">ObjectsStrategy</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">MouseMagStrategy.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  MouseMagStrategy.m</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  PhotoHouse</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Дмитрий Мартынов on 2/11/15.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2015 Дмитрий Мартынов. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &quot;MouseMagStrategy.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">@implementation </span><a class="code" href="interface_mouse_mag_strategy.html">MouseMagStrategy</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;-(UIImage *)<a class="code" href="interface_base_strategy.html#ac54531498deacea67f82eb114ee7f74b">showcaseImage</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> [UIImage imageNamed:@&quot;mat_back&quot;];</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;-(NSArray *)createAndAddMergedImage:(UIImage *)previewImage</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    UIImage *imageMatTop = [UIImage imageNamed:@&quot;mat_top&quot;];</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">//NSLog(@&quot;sizeTShirt: %@&quot;, NSStringFromCGSize(imageTShirtTop.size));</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    UIImageView *shadowImageView = [[UIImageView alloc] initWithImage:imageMatTop];</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// Размеры фона</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    CGSize <span class="keyword">const</span> matSize = CGSizeMake(507, 572);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// Позиция вырезенная в футболке</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    CGRect <span class="keyword">const</span> matRectForImage = CGRectMake(0, 0, matSize.width, 424);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// Процентные отношения для объкта</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    CGRect <span class="keyword">const</span> persentRect = CGRectMake(CGRectGetMinX(matRectForImage) / matSize.width,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                          CGRectGetMinY(matRectForImage) / matSize.height,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                          CGRectGetWidth(matRectForImage)/ matSize.width,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                          CGRectGetHeight(matRectForImage) / matSize.height);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    CGRect <span class="keyword">const</span> rectCanvas = CGRectMake(imageMatTop.size.width * CGRectGetMinX(persentRect),</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                         imageMatTop.size.height * CGRectGetMinY(persentRect),</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                         imageMatTop.size.width * CGRectGetWidth(persentRect),</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                         imageMatTop.size.height * CGRectGetHeight(persentRect));</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    CGFloat aspectRatioWfromH = CGRectGetWidth(rectCanvas) / CGRectGetHeight(rectCanvas);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    CGRect cropRect = [[UIImage alloc] sizeImage:previewImage withDelitelHeight:aspectRatioWfromH];</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    UIImage *cropimage = [[UIImage alloc] cropImageFrom:previewImage WithRect:cropRect];</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// Редактированная картинка</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// Средний слой</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    UIImageView *imageView = [[UIImageView alloc] initWithImage:cropimage];</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    [imageView setFrame:rectCanvas];</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">// Задний слой</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// Обычная белая футболка</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    UIImage *imageBack = [UIImage imageNamed:@&quot;mat_back&quot;];</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    UIImageView *objectImageView = [[UIImageView alloc] initWithImage:imageBack];</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    __block UIImage *merge;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        merge = [[UIImage alloc] mergeImageView:imageView withLowerImageView:objectImageView andUpperImageView:shadowImageView];</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    });</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="interface_print_image.html">PrintImage</a> *merged = [[<a class="code" href="interface_print_image.html">PrintImage</a> alloc] initMergeImage:merge withName:@&quot;merge_mat&quot;];</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> [NSArray arrayWithObject:merged];</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;-(void)createMergedImageWithPreview:(UIImage *)previewImage andCompleteBlock:(<span class="keywordtype">void</span> (^)(NSArray *))completeBlock</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">if</span> (completeBlock) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        completeBlock([<span class="keyword">self</span> createAndAddMergedImage:previewImage]);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_mouse_mag_strategy_html"><div class="ttname"><a href="interface_mouse_mag_strategy.html">MouseMagStrategy</a></div><div class="ttdef"><b>Definition:</b> <a href="_mouse_mag_strategy_8h_source.html#l00011">MouseMagStrategy.h:11</a></div></div>
+<div class="ttc" id="interface_base_strategy_html_ac54531498deacea67f82eb114ee7f74b"><div class="ttname"><a href="interface_base_strategy.html#ac54531498deacea67f82eb114ee7f74b">-[BaseStrategy showcaseImage]</a></div><div class="ttdeci">UIImage * showcaseImage()</div><div class="ttdoc">Витрина магазина иконка </div><div class="ttdef"><b>Definition:</b> <a href="_base_strategy_8m_source.html#l00080">BaseStrategy.m:80</a></div></div>
+<div class="ttc" id="interface_print_image_html"><div class="ttname"><a href="interface_print_image.html">PrintImage</a></div><div class="ttdoc">Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00028">PrintImage.h:28</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>PhotoHouse: Исходный файл PhotoHouse/Model/PrintData/EditImageSetting.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PhotoHouse
+   &#160;<span id="projectnumber">1.7 (17)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7795acbb99ddf39f185c94575b2288fc.html">PhotoHouse</a></li><li class="navelem"><a class="el" href="dir_272b79b4cfc705096eed6e643141e8cb.html">Model</a></li><li class="navelem"><a class="el" href="dir_216acaf42e355fe794f06d7374c6325c.html">PrintData</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">EditImageSetting.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  EditImageConfigurator.m</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  PhotoHouse</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Дмитрий Мартынов on 11/18/14.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2014 Дмитрий Мартынов. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &quot;EditImageSetting.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;NSString *<span class="keyword">const</span> DEFAUL_FILTER = <span class="stringliteral">@&quot;CLDefaultEmptyFilter&quot;</span>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;CGFloat <span class="keyword">const</span> DEFAULT_SATURATION = 1.f;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;CGFloat <span class="keyword">const</span> DEFAULT_BRIGHTNESS = 0.f;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;CGFloat <span class="keyword">const</span> DEFAULT_CONSTRAST  = 1.f;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">@implementation </span><a class="code" href="interface_edit_image_setting.html">EditImageSetting</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// Init</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="interface_edit_image_setting.html#a95e54577a4381167fe1012aae5810b36">   21</a></span>&#160;- (id) initFilterName:(NSString*)filterName</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        andSaturation:(CGFloat)saturation</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        andBrightness:(CGFloat)brightness</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;          andContrast:(CGFloat)contrast</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;          andCropRect:(CGRect)cropRect</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;     andRectToVisible:(CGRect)rectToVisible</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;andAutoResizingEnabled:(BOOL)autoResizeEnabled</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  andImageOrientation:(UIImageOrientation) orientation {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        _filterName         = <a class="code" href="interface_edit_image_setting.html#ad0a6698e20bb40881bb03051998403fd">filterName</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        _saturationValue    = saturation;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        _brightnessValue    = brightness;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        _contrastValue      = contrast;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        _cropRect           = <a class="code" href="interface_edit_image_setting.html#a03932ed5fd2a9dd7a505ede3b5c0c7dc">cropRect</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        _rectToVisibleEditor= rectToVisible;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        _imageOrientation   = orientation;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="interface_edit_image_setting.html#aa69eed32e27e72f505042b7711bc640b">   50</a></span>&#160;- (id) initSettingWithImage:(UIImage *)image;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        _cropRect           = CGRectMake(0, 0, image.size.width, image.size.height);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        _rectToVisibleEditor= CGRectZero;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        _imageOrientation   = image.imageOrientation;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        [<span class="keyword">self</span> <a class="code" href="interface_edit_image_setting.html#a494c7fe77292c7f40b32c59e4a9cb2a7">changeSetupDefault</a>];</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="interface_edit_image_setting.html#a177e904354641a567842e269d5a163fa">   63</a></span>&#160;-(BOOL)<a class="code" href="interface_edit_image_setting.html#a177e904354641a567842e269d5a163fa">isDidEditing</a></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (_saturationValue == DEFAULT_SATURATION &amp;&amp; _brightnessValue == DEFAULT_BRIGHTNESS &amp;&amp; _contrastValue == DEFAULT_CONSTRAST &amp;&amp; [_filterName isEqualToString:DEFAUL_FILTER]) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> NO;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> YES;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="interface_edit_image_setting.html#a494c7fe77292c7f40b32c59e4a9cb2a7">   74</a></span>&#160;- (void) <a class="code" href="interface_edit_image_setting.html#a494c7fe77292c7f40b32c59e4a9cb2a7">changeSetupDefault</a></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    _filterName         = DEFAUL_FILTER;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    _saturationValue    = DEFAULT_SATURATION;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    _brightnessValue    = DEFAULT_BRIGHTNESS;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    _contrastValue      = DEFAULT_CONSTRAST;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#pragma mark - Change</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="interface_edit_image_setting.html#a83226486569b2b287677517d1c49e05e">   84</a></span>&#160;- (void) changeFilter:(NSString *)filterName</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    _filterName = <a class="code" href="interface_edit_image_setting.html#ad0a6698e20bb40881bb03051998403fd">filterName</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">// Изменяем Saturation</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="interface_edit_image_setting.html#a43267ba07ca8d5c5bb5ebf961d99a9df">   90</a></span>&#160;- (void) changeSaturation:(CGFloat)satiration</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    _saturationValue = satiration;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">// Изменяем Brightness</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="interface_edit_image_setting.html#a67b828eaff0d631da73d500b7d917577">   96</a></span>&#160;- (void) changeBrightness:(CGFloat)brightness</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    _brightnessValue = brightness;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">// Изменяем Contrast</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="interface_edit_image_setting.html#ad81b0d6ccff49b0aaa1259346df97f30">  102</a></span>&#160;- (void) changeContrast:(CGFloat)contrast</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    _contrastValue = contrast;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">// Изменяем CropRest</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="interface_edit_image_setting.html#a9d52e953bafd88b4e1ebce93113f9600">  108</a></span>&#160;- (void) changeCropRect:(CGRect)cropRect</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    _cropRect = <a class="code" href="interface_edit_image_setting.html#a03932ed5fd2a9dd7a505ede3b5c0c7dc">cropRect</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">// Изменяем CropVisible</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="interface_edit_image_setting.html#a6536f7581cda6365874a147de212920d">  114</a></span>&#160;- (void) changeCropVisible:(CGRect)cropVisible</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    _rectToVisibleEditor = cropVisible;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">// Изменяем autoResised</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="interface_edit_image_setting.html#acffd474e018fa5472d984918a4915f0b">  120</a></span>&#160;- (void) changeAutoResize:(BOOL)resize</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    _isAutoResizing = resize;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">// Изменяем Orientation</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="interface_edit_image_setting.html#ae035c4879e9395404767cd96bcd3387e">  126</a></span>&#160;- (void) changeOrientation:(UIImageOrientation)orintation</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;{</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    _imageOrientation = orintation;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_edit_image_setting_html_a177e904354641a567842e269d5a163fa"><div class="ttname"><a href="interface_edit_image_setting.html#a177e904354641a567842e269d5a163fa">-[EditImageSetting isDidEditing]</a></div><div class="ttdeci">BOOL isDidEditing()</div><div class="ttdoc">Редактировалась ли картинка или нет </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8m_source.html#l00063">EditImageSetting.m:63</a></div></div>
+<div class="ttc" id="interface_edit_image_setting_html"><div class="ttname"><a href="interface_edit_image_setting.html">EditImageSetting</a></div><div class="ttdoc">Объект настройки редактора фотографии. Содержит в себе настройки фильтра, поворота, яркости, контраста, освещенности. Данный объект не применяет фильтры, контрасты к картинке </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00025">EditImageSetting.h:25</a></div></div>
+<div class="ttc" id="interface_edit_image_setting_html_a494c7fe77292c7f40b32c59e4a9cb2a7"><div class="ttname"><a href="interface_edit_image_setting.html#a494c7fe77292c7f40b32c59e4a9cb2a7">-[EditImageSetting changeSetupDefault]</a></div><div class="ttdeci">void changeSetupDefault()</div><div class="ttdoc">Устанавливаем значения по-умолчанию </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8m_source.html#l00074">EditImageSetting.m:74</a></div></div>
+<div class="ttc" id="interface_edit_image_setting_html_ad0a6698e20bb40881bb03051998403fd"><div class="ttname"><a href="interface_edit_image_setting.html#ad0a6698e20bb40881bb03051998403fd">EditImageSetting::filterName</a></div><div class="ttdeci">NSString * filterName</div><div class="ttdoc">Фильтр примененный к картинке </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00027">EditImageSetting.h:27</a></div></div>
+<div class="ttc" id="interface_edit_image_setting_html_a03932ed5fd2a9dd7a505ede3b5c0c7dc"><div class="ttname"><a href="interface_edit_image_setting.html#a03932ed5fd2a9dd7a505ede3b5c0c7dc">EditImageSetting::cropRect</a></div><div class="ttdeci">CGRect cropRect</div><div class="ttdoc">Rect по которому вырезаем оригинальную картинку для отправки на сервер </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00033">EditImageSetting.h:33</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

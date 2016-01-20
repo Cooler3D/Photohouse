@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>PhotoHouse: Исходный файл PhotoHouse/Model/Server/PHouseApi_v1/Responses/ResponseGetBanners.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PhotoHouse
+   &#160;<span id="projectnumber">1.7 (17)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7795acbb99ddf39f185c94575b2288fc.html">PhotoHouse</a></li><li class="navelem"><a class="el" href="dir_272b79b4cfc705096eed6e643141e8cb.html">Model</a></li><li class="navelem"><a class="el" href="dir_0ba200e9eadd89410156fa00e471cd0e.html">Server</a></li><li class="navelem"><a class="el" href="dir_9aec1d47da620c7d2efde5cd92660c8a.html">PHouseApi_v1</a></li><li class="navelem"><a class="el" href="dir_ea0e090411e9eb999a4cb159b82ee0c3.html">Responses</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ResponseGetBanners.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  GetBannersResponse.m</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  PhotoHouse</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Дмитрий Мартынов on 12/22/14.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2014 Дмитрий Мартынов. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &quot;ResponseGetBanners.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#import &quot;Banner.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#import &quot;CoreDataStoreBanner.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;NSString *<span class="keyword">const</span> BANNERS_KEY = <span class="stringliteral">@&quot;banners&quot;</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;NSString *<span class="keyword">const</span> INTERVAL_KEY = <span class="stringliteral">@&quot;interval&quot;</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">@implementation </span><a class="code" href="interface_response_get_banners.html">ResponseGetBanners</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;-(id)initWitParseData:(NSData *)data</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        [<span class="keyword">self</span> parse:data];</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;- (void) parse:(NSData *)response {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// Check</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    NSDictionary *result = [<span class="keyword">self</span> hasErrorResponce:response];</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>.<a class="code" href="interface_p_h_response.html#accd3c499087a6204c1cfac47f21d30ce">error</a> != nil) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        NSLog(<span class="stringliteral">@&quot;error: %@&quot;</span>, <span class="keyword">self</span>.<a class="code" href="interface_p_h_response.html#accd3c499087a6204c1cfac47f21d30ce">error</a>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// Read</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    NSArray *banners = [result objectForKey:BANNERS_KEY];</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    [<span class="keyword">self</span> readRanners:banners];</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    _interval = [[result objectForKey:INTERVAL_KEY] integerValue];</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;-(void)saveBanners</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="interface_core_data_store_banner.html">CoreDataStoreBanner</a> *coreBanner = [[<a class="code" href="interface_core_data_store_banner.html">CoreDataStoreBanner</a> alloc] init];</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    [coreBanner <a class="code" href="interface_core_data_store_banner.html#ab643045116d0eabedc735df1f7b85bcf">saveBanners</a>:[<span class="keyword">self</span> bannersOnlyWithImages] <a class="code" href="interface_core_data_store_banner.html#ab643045116d0eabedc735df1f7b85bcf">andSwitchTimeInterval</a>:_interval];</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;- (NSArray *) bannersOnlyWithImages</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    NSMutableArray *array = [NSMutableArray array];</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="interface_banner.html">Banner</a> *banner in _banners) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">if</span> ([banner hasImage]) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            [array addObject:banner];</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    _banners = [NSArray arrayWithArray:array];</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> _banners;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;- (void) readRanners:(NSArray *)banners {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> ([banners isKindOfClass:[NSNull <span class="keyword">class</span>]]) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    NSMutableArray *array = [NSMutableArray array];</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">for</span> (NSDictionary *banner in banners) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="interface_banner.html">Banner</a> *b = [[<a class="code" href="interface_banner.html">Banner</a> alloc] initWitDictionary:banner];</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        [array addObject:b];</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    _banners = [array copy];</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_response_get_banners_html"><div class="ttname"><a href="interface_response_get_banners.html">ResponseGetBanners</a></div><div class="ttdef"><b>Definition:</b> <a href="_response_get_banners_8h_source.html#l00011">ResponseGetBanners.h:11</a></div></div>
+<div class="ttc" id="interface_core_data_store_banner_html"><div class="ttname"><a href="interface_core_data_store_banner.html">CoreDataStoreBanner</a></div><div class="ttdef"><b>Definition:</b> <a href="_core_data_store_banner_8h_source.html#l00011">CoreDataStoreBanner.h:11</a></div></div>
+<div class="ttc" id="interface_banner_html"><div class="ttname"><a href="interface_banner.html">Banner</a></div><div class="ttdef"><b>Definition:</b> <a href="_banner_8h_source.html#l00013">Banner.h:13</a></div></div>
+<div class="ttc" id="interface_core_data_store_banner_html_ab643045116d0eabedc735df1f7b85bcf"><div class="ttname"><a href="interface_core_data_store_banner.html#ab643045116d0eabedc735df1f7b85bcf">-[CoreDataStoreBanner saveBanners:andSwitchTimeInterval:]</a></div><div class="ttdeci">void saveBanners:andSwitchTimeInterval:(NSArray *banners,[andSwitchTimeInterval] NSInteger interval)</div><div class="ttdoc">Сохраняем баннеры </div><div class="ttdef"><b>Definition:</b> <a href="_core_data_store_banner_8m_source.html#l00020">CoreDataStoreBanner.m:20</a></div></div>
+<div class="ttc" id="interface_p_h_response_html_accd3c499087a6204c1cfac47f21d30ce"><div class="ttname"><a href="interface_p_h_response.html#accd3c499087a6204c1cfac47f21d30ce">PHResponse::error</a></div><div class="ttdeci">NSError * error</div><div class="ttdoc">Ошибка в процессе чтения данных от сервера, может быть как ошибка чтения, там и ошибка ответа ...</div><div class="ttdef"><b>Definition:</b> <a href="_p_h_response_8h_source.html#l00037">PHResponse.h:37</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:32. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

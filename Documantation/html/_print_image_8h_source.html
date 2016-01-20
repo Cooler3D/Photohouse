@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>PhotoHouse: Исходный файл PhotoHouse/Model/PrintData/PrintImage.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PhotoHouse
+   &#160;<span id="projectnumber">1.7 (17)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7795acbb99ddf39f185c94575b2288fc.html">PhotoHouse</a></li><li class="navelem"><a class="el" href="dir_272b79b4cfc705096eed6e643141e8cb.html">Model</a></li><li class="navelem"><a class="el" href="dir_216acaf42e355fe794f06d7374c6325c.html">PrintData</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PrintImage.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  PrintImage.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  PhotoHouse</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Дмитрий Мартынов on 1/20/15.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2015 Дмитрий Мартынов. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#import &lt;AssetsLibrary/AssetsLibrary.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#import &quot;EditImageSetting.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    ImageLibraryPhone,  </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    ImageLibrarySocial  </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;} ImageLibrary;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="interface_print_image.html">   28</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_print_image.html">PrintImage</a> : NSObject</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="interface_print_image.html#a196d4ca3458eabee5fd9d56b3cf9b5f2">   29</a></span>&#160;<span class="keyword">@property</span> (assign, nonatomic, readonly) CGSize <a class="code" href="interface_print_image.html#a196d4ca3458eabee5fd9d56b3cf9b5f2">originalImageSize</a>;   </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="interface_print_image.html#aff9b7189611e69f9676a428c59632b4b">   30</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSData *<a class="code" href="interface_print_image.html#aff9b7189611e69f9676a428c59632b4b">imageLargeData</a>;     </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="interface_print_image.html#a6d7171db6a426214e05f85f3455095fa">   31</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) UIImage *<a class="code" href="interface_print_image.html#a6d7171db6a426214e05f85f3455095fa">previewImage</a>;      </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="interface_print_image.html#a709bb4ec4350b27525c109e5dc6a29cb">   32</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) UIImage *<a class="code" href="interface_print_image.html#a709bb4ec4350b27525c109e5dc6a29cb">photoPrintImage</a>;   </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="interface_print_image.html#afecbccda56e3425d56017699810a8e56">   33</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) UIImage *<a class="code" href="interface_print_image.html#afecbccda56e3425d56017699810a8e56">iconPreviewImage</a>;  </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="interface_print_image.html#af0b819e675acfd32e7420882a0c5b76e">   34</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) NSString *<a class="code" href="interface_print_image.html#af0b819e675acfd32e7420882a0c5b76e">urlLibrary</a>;       </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">   35</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) <a class="code" href="interface_edit_image_setting.html">EditImageSetting</a> *<a class="code" href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">editedImageSetting</a>;   </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="interface_print_image.html#a216e902f4191955c5b2607e17014f8b3">   36</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic) NSURL *<a class="code" href="interface_print_image.html#a216e902f4191955c5b2607e17014f8b3">uploadURL</a>;                     </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="interface_print_image.html#adfaf2ba838472b37b8fd939bed56d7b8">   37</a></span>&#160;<span class="keyword">@property</span> (assign, nonatomic) NSUInteger <a class="code" href="interface_print_image.html#adfaf2ba838472b37b8fd939bed56d7b8">unique_imageID</a>;            </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="interface_print_image.html#a6590e67ff852e508e710bf06daf29eeb">   38</a></span>&#160;<span class="keyword">@property</span> (assign, nonatomic) NSUInteger <a class="code" href="interface_print_image.html#a6590e67ff852e508e710bf06daf29eeb">index</a>;                     </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="interface_print_image.html#af3ef09ed2183bea4054634bd8fb28efc">   39</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic, readonly) ALAsset *<a class="code" href="interface_print_image.html#af3ef09ed2183bea4054634bd8fb28efc">assetImage</a>;        </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="interface_print_image.html#af5e7961a35837044fbab4d0b8daf76d7">   40</a></span>&#160;<span class="keyword">@property</span> (assign, nonatomic, readonly) BOOL <a class="code" href="interface_print_image.html#af5e7961a35837044fbab4d0b8daf76d7">isMergedImage</a>;         </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="interface_print_image.html#a650612db61ba0f157d7a784238e6a956">   41</a></span>&#160;<span class="keyword">@property</span> (assign, nonatomic) ImageLibrary <a class="code" href="interface_print_image.html#a650612db61ba0f157d7a784238e6a956">imageLibrary</a>;            </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;- (void) updatePreviewImage:(UIImage *)image;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;- (void) <a class="code" href="interface_print_image.html#aeac6d4b1b77d35804f9b27e4d8af1a16">clearImageLargeData</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;- (void) addOriginalSocilaImage:(UIImage *)originalSocialImage orOriginalAsset:(ALAsset *)asset;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;- (BOOL) <a class="code" href="interface_print_image.html#a605657d4a8a5c7eccccfbb532e854078">isDidEdited</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;- (id) initWithALAsset:(ALAsset *)asset withName:(NSString *)imageUrlName;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;- (id) initWithPreviewImage:(UIImage *)image withName:(NSString *)imageUrlName andEditSetting:(<a class="code" href="interface_edit_image_setting.html">EditImageSetting</a> *)editSetting originalSize:(CGSize)originalSize;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;- (id) initLargeImageData:(NSData *)imageData andPreviewImage:(UIImage *)previewImage withName:(NSString *)imageUrlName andEditSetting:(<a class="code" href="interface_edit_image_setting.html">EditImageSetting</a> *)editSetting;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;- (id) initMergeImage:(UIImage *)image withName:(NSString *)imageUrlName;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;- (id) initWithHistoryOrderDictionary:(NSDictionary *)imageDictionary;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;- (void) cropPhotPrintWithGrigImage:(UIImage *)gridImage;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;- (void) cropImageWithCropSize:(CGSize)cropSize;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;- (void) cropImageForObjects:(UIImage *)gridImage;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;- (void) <a class="code" href="interface_print_image.html#ad7d136372d4e00e7768a70838cf5c8b2">cropImageForDesingAlbum</a>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_print_image_html_adfaf2ba838472b37b8fd939bed56d7b8"><div class="ttname"><a href="interface_print_image.html#adfaf2ba838472b37b8fd939bed56d7b8">PrintImage::unique_imageID</a></div><div class="ttdeci">NSUInteger unique_imageID</div><div class="ttdoc">Уникальный идентификатор картинки </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00037">PrintImage.h:37</a></div></div>
+<div class="ttc" id="interface_print_image_html_a605657d4a8a5c7eccccfbb532e854078"><div class="ttname"><a href="interface_print_image.html#a605657d4a8a5c7eccccfbb532e854078">-[PrintImage isDidEdited]</a></div><div class="ttdeci">BOOL isDidEdited()</div><div class="ttdoc">Редактировали ли ? </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8m_source.html#l00239">PrintImage.m:239</a></div></div>
+<div class="ttc" id="interface_edit_image_setting_html"><div class="ttname"><a href="interface_edit_image_setting.html">EditImageSetting</a></div><div class="ttdoc">Объект настройки редактора фотографии. Содержит в себе настройки фильтра, поворота, яркости, контраста, освещенности. Данный объект не применяет фильтры, контрасты к картинке </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00025">EditImageSetting.h:25</a></div></div>
+<div class="ttc" id="interface_print_image_html_aeac6d4b1b77d35804f9b27e4d8af1a16"><div class="ttname"><a href="interface_print_image.html#aeac6d4b1b77d35804f9b27e4d8af1a16">-[PrintImage clearImageLargeData]</a></div><div class="ttdeci">void clearImageLargeData()</div><div class="ttdoc">Очищаем данные картинки </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8m_source.html#l00135">PrintImage.m:135</a></div></div>
+<div class="ttc" id="interface_print_image_html_a709bb4ec4350b27525c109e5dc6a29cb"><div class="ttname"><a href="interface_print_image.html#a709bb4ec4350b27525c109e5dc6a29cb">PrintImage::photoPrintImage</a></div><div class="ttdeci">UIImage * photoPrintImage</div><div class="ttdoc">Данная картинка только для "Фотопечати" и "Альбомов", Содержит копию PreviewImage без всего ...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00032">PrintImage.h:32</a></div></div>
+<div class="ttc" id="interface_print_image_html_a6590e67ff852e508e710bf06daf29eeb"><div class="ttname"><a href="interface_print_image.html#a6590e67ff852e508e710bf06daf29eeb">PrintImage::index</a></div><div class="ttdeci">NSUInteger index</div><div class="ttdoc">Очередность картинки для дизайнерского альбома,. </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00038">PrintImage.h:38</a></div></div>
+<div class="ttc" id="interface_print_image_html_af3ef09ed2183bea4054634bd8fb28efc"><div class="ttname"><a href="interface_print_image.html#af3ef09ed2183bea4054634bd8fb28efc">PrintImage::assetImage</a></div><div class="ttdeci">ALAsset * assetImage</div><div class="ttdoc">Картинка из библиотеки телефона </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00039">PrintImage.h:39</a></div></div>
+<div class="ttc" id="interface_print_image_html_aff9b7189611e69f9676a428c59632b4b"><div class="ttname"><a href="interface_print_image.html#aff9b7189611e69f9676a428c59632b4b">PrintImage::imageLargeData</a></div><div class="ttdeci">NSData * imageLargeData</div><div class="ttdoc">Данные картинки, можно отправлять </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00030">PrintImage.h:30</a></div></div>
+<div class="ttc" id="interface_print_image_html_a6d7171db6a426214e05f85f3455095fa"><div class="ttname"><a href="interface_print_image.html#a6d7171db6a426214e05f85f3455095fa">PrintImage::previewImage</a></div><div class="ttdeci">UIImage * previewImage</div><div class="ttdoc">Картинка 640 по большей стороне, с ней будем изменять </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00031">PrintImage.h:31</a></div></div>
+<div class="ttc" id="interface_print_image_html_a650612db61ba0f157d7a784238e6a956"><div class="ttname"><a href="interface_print_image.html#a650612db61ba0f157d7a784238e6a956">PrintImage::imageLibrary</a></div><div class="ttdeci">ImageLibrary imageLibrary</div><div class="ttdoc">Тип картинки, память телефона или соц.сети </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00041">PrintImage.h:41</a></div></div>
+<div class="ttc" id="interface_print_image_html_afecbccda56e3425d56017699810a8e56"><div class="ttname"><a href="interface_print_image.html#afecbccda56e3425d56017699810a8e56">PrintImage::iconPreviewImage</a></div><div class="ttdeci">UIImage * iconPreviewImage</div><div class="ttdoc">Иконка для ToolBar. </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00033">PrintImage.h:33</a></div></div>
+<div class="ttc" id="interface_print_image_html_a830c1a62ed682afe29fbdcaa9bab2983"><div class="ttname"><a href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">PrintImage::editedImageSetting</a></div><div class="ttdeci">EditImageSetting * editedImageSetting</div><div class="ttdoc">Настройки редактрованной фотографии </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00035">PrintImage.h:35</a></div></div>
+<div class="ttc" id="interface_print_image_html_a196d4ca3458eabee5fd9d56b3cf9b5f2"><div class="ttname"><a href="interface_print_image.html#a196d4ca3458eabee5fd9d56b3cf9b5f2">PrintImage::originalImageSize</a></div><div class="ttdeci">CGSize originalImageSize</div><div class="ttdoc">Оригинальные размеры картинки, т.к в previewImage маленькая картинка может содержаться ...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00029">PrintImage.h:29</a></div></div>
+<div class="ttc" id="interface_print_image_html_af5e7961a35837044fbab4d0b8daf76d7"><div class="ttname"><a href="interface_print_image.html#af5e7961a35837044fbab4d0b8daf76d7">PrintImage::isMergedImage</a></div><div class="ttdeci">BOOL isMergedImage</div><div class="ttdoc">Является ли данная картинка скленной, применяется при кружках, футболках, чехлах и др ...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00040">PrintImage.h:40</a></div></div>
+<div class="ttc" id="interface_print_image_html"><div class="ttname"><a href="interface_print_image.html">PrintImage</a></div><div class="ttdoc">Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00028">PrintImage.h:28</a></div></div>
+<div class="ttc" id="interface_print_image_html_a216e902f4191955c5b2607e17014f8b3"><div class="ttname"><a href="interface_print_image.html#a216e902f4191955c5b2607e17014f8b3">PrintImage::uploadURL</a></div><div class="ttdeci">NSURL * uploadURL</div><div class="ttdoc">Адрес картинки на сервере PhotoHouse после отправки пользователем данной картинки ...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00036">PrintImage.h:36</a></div></div>
+<div class="ttc" id="interface_print_image_html_ad7d136372d4e00e7768a70838cf5c8b2"><div class="ttname"><a href="interface_print_image.html#ad7d136372d4e00e7768a70838cf5c8b2">-[PrintImage cropImageForDesingAlbum]</a></div><div class="ttdeci">void cropImageForDesingAlbum()</div><div class="ttdoc">Обрезаем для дизайнерсокго альбома </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8m_source.html#l00231">PrintImage.m:231</a></div></div>
+<div class="ttc" id="interface_print_image_html_af0b819e675acfd32e7420882a0c5b76e"><div class="ttname"><a href="interface_print_image.html#af0b819e675acfd32e7420882a0c5b76e">PrintImage::urlLibrary</a></div><div class="ttdeci">NSString * urlLibrary</div><div class="ttdoc">Адрес картинки в библиотеке, по этому параметру идет поиск </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00034">PrintImage.h:34</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

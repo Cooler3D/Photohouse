@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>PhotoHouse: Исходный файл PhotoHouse/Model/SaveImageManager/SaveFinalOperation.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PhotoHouse
+   &#160;<span id="projectnumber">1.7 (17)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7795acbb99ddf39f185c94575b2288fc.html">PhotoHouse</a></li><li class="navelem"><a class="el" href="dir_272b79b4cfc705096eed6e643141e8cb.html">Model</a></li><li class="navelem"><a class="el" href="dir_0e69057941d4f6284f51ea13c4ff4c67.html">SaveImageManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SaveFinalOperation.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  SaveFinalOperation.m</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  PhotoHouse</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Дмитрий Мартынов on 4/3/15.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2015 Дмитрий Мартынов. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &quot;SaveFinalOperation.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#import &quot;PrintData.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#import &quot;PrintImage.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &quot;CoreDataShopCart.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="category_save_final_operation_07_08.html">   17</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_save_final_operation.html">SaveFinalOperation</a> ()</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">@property</span> (strong, nonatomic) <a class="code" href="interface_print_data.html">PrintData</a> *printData;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">@implementation </span><a class="code" href="interface_save_final_operation.html">SaveFinalOperation</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="interface_save_final_operation.html#a040a849b2447ed0180c8b4d85694b243">   23</a></span>&#160;-(id)initSaveWithPrintData:(<a class="code" href="interface_print_data.html">PrintData</a> *)printData andCurrentPrintImage:(<a class="code" href="interface_print_image.html">PrintImage</a> *)printImage andDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_save_final_operation_delegate-p.html">SaveFinalOperationDelegate</a>&gt;)delegate</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        _printData = printData;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        _printImage = printImage;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        _delegate = delegate;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;-(void)main</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    @autoreleasepool {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> *coreShop = [[<a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> alloc] init];</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        [coreShop <a class="code" href="interface_core_data_shop_cart.html#a9fd0b214490404382809db5fd415757d">savePrepareFinalPrintData</a>:_printData <a class="code" href="interface_core_data_shop_cart.html#a9fd0b214490404382809db5fd415757d">andPrintImage</a>:_printImage];</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        dispatch_async(dispatch_get_main_queue(), ^{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            NSLog(<span class="stringliteral">@&quot;finish %@&quot;</span>, <span class="keyword">self</span>.printImage.<a class="code" href="interface_print_image.html#af0b819e675acfd32e7420882a0c5b76e">urlLibrary</a>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            [<span class="keyword">self</span>.delegate saveFinalOperation:self didSavedImage:_printImage];</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        });</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_print_data_html"><div class="ttname"><a href="interface_print_data.html">PrintData</a></div><div class="ttdoc">Покупка пользователя. Представляет собой сфорированную покупку для отправки на сервер PhotoHouse Вы м...</div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8h_source.html#l00034">PrintData.h:34</a></div></div>
+<div class="ttc" id="interface_save_final_operation_html"><div class="ttname"><a href="interface_save_final_operation.html">SaveFinalOperation</a></div><div class="ttdoc">Очередь для сохранения финальных картинок в CoreDataShopCart. Вызывается из менеджера SaveImageManage...</div><div class="ttdef"><b>Definition:</b> <a href="_save_final_operation_8h_source.html#l00024">SaveFinalOperation.h:24</a></div></div>
+<div class="ttc" id="interface_core_data_shop_cart_html_a9fd0b214490404382809db5fd415757d"><div class="ttname"><a href="interface_core_data_shop_cart.html#a9fd0b214490404382809db5fd415757d">-[CoreDataShopCart savePrepareFinalPrintData:andPrintImage:]</a></div><div class="ttdeci">void savePrepareFinalPrintData:andPrintImage:(PrintData *printData,[andPrintImage] PrintImage *printImage)</div><div class="ttdoc">Финальное сохранение, только для PrintData.image.count > 1. </div><div class="ttdef"><b>Definition:</b> <a href="_core_data_shop_cart_8m_source.html#l00251">CoreDataShopCart.m:251</a></div></div>
+<div class="ttc" id="protocol_save_final_operation_delegate-p_html"><div class="ttname"><a href="protocol_save_final_operation_delegate-p.html">SaveFinalOperationDelegate-p</a></div><div class="ttdef"><b>Definition:</b> <a href="_save_final_operation_8h_source.html#l00040">SaveFinalOperation.h:40</a></div></div>
+<div class="ttc" id="interface_print_image_html"><div class="ttname"><a href="interface_print_image.html">PrintImage</a></div><div class="ttdoc">Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00028">PrintImage.h:28</a></div></div>
+<div class="ttc" id="interface_core_data_shop_cart_html"><div class="ttname"><a href="interface_core_data_shop_cart.html">CoreDataShopCart</a></div><div class="ttdef"><b>Definition:</b> <a href="_core_data_shop_cart_8h_source.html#l00014">CoreDataShopCart.h:14</a></div></div>
+<div class="ttc" id="interface_print_image_html_af0b819e675acfd32e7420882a0c5b76e"><div class="ttname"><a href="interface_print_image.html#af0b819e675acfd32e7420882a0c5b76e">PrintImage::urlLibrary</a></div><div class="ttdeci">NSString * urlLibrary</div><div class="ttdoc">Адрес картинки в библиотеке, по этому параметру идет поиск </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00034">PrintImage.h:34</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

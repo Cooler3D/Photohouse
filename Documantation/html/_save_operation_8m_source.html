@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>PhotoHouse: Исходный файл PhotoHouse/Model/SaveImageManager/SaveOperation.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PhotoHouse
+   &#160;<span id="projectnumber">1.7 (17)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7795acbb99ddf39f185c94575b2288fc.html">PhotoHouse</a></li><li class="navelem"><a class="el" href="dir_272b79b4cfc705096eed6e643141e8cb.html">Model</a></li><li class="navelem"><a class="el" href="dir_0e69057941d4f6284f51ea13c4ff4c67.html">SaveImageManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SaveOperation.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  SaveOperation.m</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  PhotoHouse</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Дмитрий Мартынов on 3/10/15.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2015 Дмитрий Мартынов. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &quot;SaveOperation.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#import &quot;PrintData.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#import &quot;PrintImage.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#import &quot;CoreDataShopCart.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &quot;CoreDataSocialImages.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="category_save_operation_07_08.html">   18</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_save_operation.html">SaveOperation</a> ()</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">@property</span> (strong, nonatomic) <a class="code" href="interface_print_data.html">PrintData</a> *printData;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">@implementation </span><a class="code" href="interface_save_operation.html">SaveOperation</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="interface_save_operation.html#ac8041d3067bb97411d21143d3adf058c">   23</a></span>&#160;- (id) initSaveWithPrintData:(<a class="code" href="interface_print_data.html">PrintData</a> *)printData andCurrentPrintImage:(<a class="code" href="interface_print_image.html">PrintImage</a> *)printImage andDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_save_operation_delegate-p.html">SaveOperationDelegate</a>&gt;)delegate</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        _printData = printData;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        _printImage = <a class="code" href="interface_save_operation.html#a86fdf50eb88d7cbe4b1cc5507b93498c">printImage</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        _delegate = <a class="code" href="interface_save_operation.html#a06e858b966f4425529f0f47cfa7ae86a">delegate</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;-(void)main</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    NSLog(<span class="stringliteral">@&quot;SaveOperation.main&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">//@autoreleasepool {</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">//NSLog(@&quot;main: %@&quot;, self.printImage.urlLibrary);</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//    __weak SaveOperation *weakSelf = self;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//        NSLog(@&quot;TimeOut Dispatch: Finished: %hhd; \nCanceled: %hhd&quot;, weakSelf.isFinished, weakSelf.isCancelled);</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//        </span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//    });</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> *coreShop = [[<a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> alloc] init];</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="interface_core_data_social_images.html">CoreDataSocialImages</a> *coreSocial = [[<a class="code" href="interface_core_data_social_images.html">CoreDataSocialImages</a> alloc] init];</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    NSLog(<span class="stringliteral">@&quot;SaveOperation.readSocial&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        NSData *socialImage = [coreSocial <a class="code" href="interface_core_data_social_images.html#a1bb688ecdc9ef067651c8a5bf97e3084">getImageDataWithURL</a>:_printImage.urlLibrary];</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    NSLog(<span class="stringliteral">@&quot;SaveOperation.write.coredata&quot;</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="interface_print_image.html">PrintImage</a> *result = [coreShop <a class="code" href="interface_core_data_shop_cart.html#a90b18ce4d29696bfe97cd4c1872fe94d">saveOriginalImagePrintDataUnique</a>:_printData.unique_print <a class="code" href="interface_core_data_shop_cart.html#a90b18ce4d29696bfe97cd4c1872fe94d">andPrintImage</a>:_printImage <a class="code" href="interface_core_data_shop_cart.html#a90b18ce4d29696bfe97cd4c1872fe94d">andSocialImageData</a>:socialImage];</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>.isCancelled || !result) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        [_printData replacePreviewPrintImage:result];</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>.isCancelled) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        NSLog(<span class="stringliteral">@&quot;SaveOperation.dispatch&quot;</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        dispatch_async(dispatch_get_main_queue(), ^{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            NSLog(<span class="stringliteral">@&quot;finish %@&quot;</span>, <span class="keyword">self</span>.printImage.<a class="code" href="interface_print_image.html#af0b819e675acfd32e7420882a0c5b76e">urlLibrary</a>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            [<span class="keyword">self</span>.delegate saveOperation:self didSavedImage:result];</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        });</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">//}</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">//-(void)cancel</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">//{</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">//    NSLog(@&quot;Cancel Operation&quot;);</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">//}</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_save_operation_html_a86fdf50eb88d7cbe4b1cc5507b93498c"><div class="ttname"><a href="interface_save_operation.html#a86fdf50eb88d7cbe4b1cc5507b93498c">SaveOperation::printImage</a></div><div class="ttdeci">PrintImage * printImage</div><div class="ttdoc">Картинка </div><div class="ttdef"><b>Definition:</b> <a href="_save_operation_8h_source.html#l00023">SaveOperation.h:23</a></div></div>
+<div class="ttc" id="interface_core_data_shop_cart_html_a90b18ce4d29696bfe97cd4c1872fe94d"><div class="ttname"><a href="interface_core_data_shop_cart.html#a90b18ce4d29696bfe97cd4c1872fe94d">-[CoreDataShopCart saveOriginalImagePrintDataUnique:andPrintImage:andSocialImageData:]</a></div><div class="ttdeci">PrintImage * saveOriginalImagePrintDataUnique:andPrintImage:andSocialImageData:(NSUInteger print_unique,[andPrintImage] PrintImage *printImage,[andSocialImageData] NSData *imageData)</div><div class="ttdoc">Сохранение большой(оригинальной) картинки </div><div class="ttdef"><b>Definition:</b> <a href="_core_data_shop_cart_8m_source.html#l00278">CoreDataShopCart.m:278</a></div></div>
+<div class="ttc" id="interface_print_data_html"><div class="ttname"><a href="interface_print_data.html">PrintData</a></div><div class="ttdoc">Покупка пользователя. Представляет собой сфорированную покупку для отправки на сервер PhotoHouse Вы м...</div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8h_source.html#l00034">PrintData.h:34</a></div></div>
+<div class="ttc" id="interface_save_operation_html"><div class="ttname"><a href="interface_save_operation.html">SaveOperation</a></div><div class="ttdoc">Очередь для сохранения большой картинки в CoreDataShopCart. Вызывается из менеджера SaveImageManager...</div><div class="ttdef"><b>Definition:</b> <a href="_save_operation_8h_source.html#l00022">SaveOperation.h:22</a></div></div>
+<div class="ttc" id="protocol_save_operation_delegate-p_html"><div class="ttname"><a href="protocol_save_operation_delegate-p.html">SaveOperationDelegate-p</a></div><div class="ttdef"><b>Definition:</b> <a href="_save_operation_8h_source.html#l00039">SaveOperation.h:39</a></div></div>
+<div class="ttc" id="interface_core_data_social_images_html_a1bb688ecdc9ef067651c8a5bf97e3084"><div class="ttname"><a href="interface_core_data_social_images.html#a1bb688ecdc9ef067651c8a5bf97e3084">-[CoreDataSocialImages getImageDataWithURL:]</a></div><div class="ttdeci">NSData * getImageDataWithURL:(NSString *url)</div><div class="ttdoc">Возвращаем данные по адресу </div><div class="ttdef"><b>Definition:</b> <a href="_core_data_social_images_8m_source.html#l00095">CoreDataSocialImages.m:95</a></div></div>
+<div class="ttc" id="interface_core_data_social_images_html"><div class="ttname"><a href="interface_core_data_social_images.html">CoreDataSocialImages</a></div><div class="ttdef"><b>Definition:</b> <a href="_core_data_social_images_8h_source.html#l00015">CoreDataSocialImages.h:15</a></div></div>
+<div class="ttc" id="interface_print_image_html"><div class="ttname"><a href="interface_print_image.html">PrintImage</a></div><div class="ttdoc">Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00028">PrintImage.h:28</a></div></div>
+<div class="ttc" id="interface_save_operation_html_a06e858b966f4425529f0f47cfa7ae86a"><div class="ttname"><a href="interface_save_operation.html#a06e858b966f4425529f0f47cfa7ae86a">SaveOperation::delegate</a></div><div class="ttdeci">id&lt; SaveOperationDelegate &gt; delegate</div><div class="ttdoc">Делегат </div><div class="ttdef"><b>Definition:</b> <a href="_save_operation_8h_source.html#l00024">SaveOperation.h:24</a></div></div>
+<div class="ttc" id="interface_core_data_shop_cart_html"><div class="ttname"><a href="interface_core_data_shop_cart.html">CoreDataShopCart</a></div><div class="ttdef"><b>Definition:</b> <a href="_core_data_shop_cart_8h_source.html#l00014">CoreDataShopCart.h:14</a></div></div>
+<div class="ttc" id="interface_print_image_html_af0b819e675acfd32e7420882a0c5b76e"><div class="ttname"><a href="interface_print_image.html#af0b819e675acfd32e7420882a0c5b76e">PrintImage::urlLibrary</a></div><div class="ttdeci">NSString * urlLibrary</div><div class="ttdoc">Адрес картинки в библиотеке, по этому параметру идет поиск </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00034">PrintImage.h:34</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>
