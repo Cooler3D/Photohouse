@@ -97,14 +97,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#import &quot;SaveOperationProtocol.h&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_print_data.html">PrintData</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_print_image.html">PrintImage</a>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_save_final_operation_delegate-p.html">SaveFinalOperationDelegate</a>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="interface_save_final_operation.html">   24</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_save_final_operation.html">SaveFinalOperation</a> : NSOperation</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="interface_save_final_operation.html">   24</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_save_final_operation.html">SaveFinalOperation</a> : NSObject &lt;<a class="code" href="protocol_save_operation_protocol-p.html">SaveOperationProtocol</a>&gt;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">@property</span> (strong, nonatomic) <a class="code" href="interface_print_image.html">PrintImage</a> *printImage;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">@property</span> (strong, nonatomic) id&lt;SaveFinalOperationDelegate&gt; delegate;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
@@ -122,11 +122,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="ttc" id="interface_print_data_html"><div class="ttname"><a href="interface_print_data.html">PrintData</a></div><div class="ttdoc">Покупка пользователя. Представляет собой сфорированную покупку для отправки на сервер PhotoHouse Вы м...</div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8h_source.html#l00034">PrintData.h:34</a></div></div>
 <div class="ttc" id="interface_save_final_operation_html"><div class="ttname"><a href="interface_save_final_operation.html">SaveFinalOperation</a></div><div class="ttdoc">Очередь для сохранения финальных картинок в CoreDataShopCart. Вызывается из менеджера SaveImageManage...</div><div class="ttdef"><b>Definition:</b> <a href="_save_final_operation_8h_source.html#l00024">SaveFinalOperation.h:24</a></div></div>
 <div class="ttc" id="protocol_save_final_operation_delegate-p_html"><div class="ttname"><a href="protocol_save_final_operation_delegate-p.html">SaveFinalOperationDelegate-p</a></div><div class="ttdef"><b>Definition:</b> <a href="_save_final_operation_8h_source.html#l00040">SaveFinalOperation.h:40</a></div></div>
-<div class="ttc" id="interface_print_image_html"><div class="ttname"><a href="interface_print_image.html">PrintImage</a></div><div class="ttdoc">Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00028">PrintImage.h:28</a></div></div>
+<div class="ttc" id="protocol_save_operation_protocol-p_html"><div class="ttname"><a href="protocol_save_operation_protocol-p.html">SaveOperationProtocol-p</a></div><div class="ttdef"><b>Definition:</b> <a href="_save_operation_protocol_8h_source.html#l00011">SaveOperationProtocol.h:11</a></div></div>
+<div class="ttc" id="interface_print_image_html"><div class="ttname"><a href="interface_print_image.html">PrintImage</a></div><div class="ttdoc">Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00027">PrintImage.h:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+Документация по PhotoHouse. Последние изменения: Чт 4 Фев 2016 00:57:57. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

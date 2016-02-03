@@ -1,0 +1,56 @@
+{
+  "code": 0,
+  "code_desc": null,
+  "time": 1436295573,
+  "result": {
+    "banners": [
+      {
+        "image_url": "public/img/banners/ios_10items3.jpg",
+        "action_url": "internal://13"
+      },
+      {
+        "image_url": "public/img/banners/ios_hd.jpg",
+        "action_url": "internal://13"
+      },
+      {
+        "image_url": "public/img/banners/ios_main_logo_external.png",
+        "action_url": "internal://13"
+      },
+      {
+        "image_url": "public/img/banners/ios_main_logo.png",
+        "action_url": "internal://13"
+      },
+      {
+        "image_url": "public/img/banners/ios_main_logo_internal.png",
+        "action_url": "internal://13"
+      },
+      {
+        "image_url": "public/img/banners/ios_photobook1.jpg",
+        "action_url": "internal://13"
+      },
+      {
+        "image_url": "public/img/banners/ios_photobook2.jpg",
+        "action_url": "internal://13"
+      },
+      {
+        "image_url": "public/img/banners/ios_photobooks7.jpg",
+        "action_url": "internal://13"
+      },
+      {
+        "image_url": "public/img/banners/ios_sale15_5.jpg",
+        "action_url": "internal://13"
+      },
+      {
+        "image_url": "public/img/banners/ios_uniquedesignphotobook4.jpg",
+        "action_url": "internal://13"
+      },
+      {
+        "image_url": "public/img/banners/ios_uniquedesignphotobook6.jpg",
+        "action_url": "internal://13"
+      }
+    ],
+    "interval": 5,
+    "act": "get_banners",
+    "api": "1.1"
+  }
+}

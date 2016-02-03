@@ -101,20 +101,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <tr class="memitem:ae54318cbe18178bc3ebd9d4aa024c7f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae54318cbe18178bc3ebd9d4aa024c7f6"></a>
 NSInteger&#160;</td><td class="memItemRight" valign="bottom"><b>count</b></td></tr>
 <tr class="separator:ae54318cbe18178bc3ebd9d4aa024c7f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef763e455c1f2ddad83138b2e7f01757"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef763e455c1f2ddad83138b2e7f01757"></a>
-NSOperationQueue *&#160;</td><td class="memItemRight" valign="bottom"><b>operationQueue</b></td></tr>
-<tr class="separator:aef763e455c1f2ddad83138b2e7f01757"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fc6a54b67150cc7578ccdd53fb7c30d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fc6a54b67150cc7578ccdd53fb7c30d"></a>
-NSArray *&#160;</td><td class="memItemRight" valign="bottom"><b>printImages</b></td></tr>
-<tr class="separator:a2fc6a54b67150cc7578ccdd53fb7c30d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e89807178ba77063451f1f625a3b68"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26e89807178ba77063451f1f625a3b68"></a>
+NSMutableArray *&#160;</td><td class="memItemRight" valign="bottom"><b>printImages</b></td></tr>
+<tr class="separator:a26e89807178ba77063451f1f625a3b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82768d0d2da164ba22033f70c6988b3a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82768d0d2da164ba22033f70c6988b3a"></a>
 SaveType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="category_save_image_manager_07_08.html#a82768d0d2da164ba22033f70c6988b3a">saveType</a></td></tr>
 <tr class="memdesc:a82768d0d2da164ba22033f70c6988b3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тип сохранения <br /></td></tr>
 <tr class="separator:a82768d0d2da164ba22033f70c6988b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8754d96180b771435a5f35c9789a7b52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8754d96180b771435a5f35c9789a7b52"></a>
-NSTimer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="category_save_image_manager_07_08.html#a8754d96180b771435a5f35c9789a7b52">saveTimer</a></td></tr>
-<tr class="memdesc:a8754d96180b771435a5f35c9789a7b52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тамер для ожидания сохранения <br /></td></tr>
-<tr class="separator:a8754d96180b771435a5f35c9789a7b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea87ec903ef4a4799a73e645c23dd1bd"><td class="memItemLeft" align="right" valign="top">NSMutableArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="category_save_image_manager_07_08.html#aea87ec903ef4a4799a73e645c23dd1bd">queueOperations</a></td></tr>
+<tr class="memdesc:aea87ec903ef4a4799a73e645c23dd1bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тамер для ожидания сохранения  <a href="#aea87ec903ef4a4799a73e645c23dd1bd">Подробнее...</a><br /></td></tr>
+<tr class="separator:aea87ec903ef4a4799a73e645c23dd1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9744d4f5d89abf760eddaee5d056c49f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9744d4f5d89abf760eddaee5d056c49f"></a>
 NSMutableArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="category_save_image_manager_07_08.html#a9744d4f5d89abf760eddaee5d056c49f">unfinishedSaveOperations</a></td></tr>
 <tr class="memdesc:a9744d4f5d89abf760eddaee5d056c49f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Массив незаконченных операций(SaveOperation) <br /></td></tr>
@@ -134,13 +130,39 @@ NSMutableArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock">
 <p>См. определение в файле <a class="el" href="_save_image_manager_8m_source.html">SaveImageManager.m</a> строка <a class="el" href="_save_image_manager_8m_source.html#l00031">31</a></p>
-</div><hr/>Объявления и описания членов категории находятся в файле:<ul>
+</div><h2 class="groupheader">Полный список свойств</h2>
+<a class="anchor" id="aea87ec903ef4a4799a73e645c23dd1bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSMutableArray*) queueOperations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Тамер для ожидания сохранения </p>
+<p>Массив операций </p>
+
+<p>См. определение в файле <a class="el" href="_save_image_manager_8m_source.html">SaveImageManager.m</a> строка <a class="el" href="_save_image_manager_8m_source.html#l00044">44</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов категории находятся в файле:<ul>
 <li>PhotoHouse/Model/SaveImageManager/<a class="el" href="_save_image_manager_8m_source.html">SaveImageManager.m</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:33. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+Документация по PhotoHouse. Последние изменения: Чт 4 Фев 2016 00:57:59. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

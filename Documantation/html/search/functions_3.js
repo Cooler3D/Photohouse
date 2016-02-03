@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['executecommnadwithjson_3aandcompleteblock_3aprogressuploadblock_3aerrorblock_3a',['executeCommnadWithJson:andCompleteBlock:progressUploadBlock:errorBlock:',['../interface_p_h_request_command.html#a6422e30b0176fba1351aa0584c30a56c',1,'PHRequestCommand']]],
-  ['executeresultblock_3aerrorblock_3a',['executeResultBlock:errorBlock:',['../interface_p_h_request.html#abcf98956cbdf64401776be4eb33f8008',1,'PHRequest']]],
-  ['executeresultblock_3aprogressuploadblock_3aerrorblock_3a',['executeResultBlock:progressUploadBlock:errorBlock:',['../interface_p_h_request.html#aad25cee6993041949e875f7fd27a8ba9',1,'PHRequest']]]
+  ['defaultdatawithbundlename_3a',['defaultDataWithBundleName:',['../interface_bundle_default.html#a5c41dae1e8d22deebcf44836e9762d07',1,'BundleDefault']]],
+  ['downloadimages',['downloadImages',['../interface_template.html#af9796d045865cf02f4447f3585b60819',1,'Template']]]
 ];

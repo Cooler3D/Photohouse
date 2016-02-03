@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['namecategory',['nameCategory',['../interface_print_data.html#a7499ed6f0999cc594a3142b86241edcf',1,'PrintData']]],
-  ['namepurchase',['namePurchase',['../interface_print_data.html#a34f9842a77e003efdba2d1fe646739e9',1,'PrintData']]],
-  ['nametype',['nameType',['../interface_print_data.html#a51aa2101e6f3843a3e9893a4b5ad7de4',1,'PrintData']]]
+  ['make',['make',['../interface_ellipse_model.html#aa5303311bd489c579414ed67ac32485f',1,'EllipseModel']]],
+  ['makeorderfirstname_3aandlastname_3aandphone_3aandaddress_3awithcomment_3aandphotorecordsarray_3aanddeliveryprintdta_3aanddelegate_3a',['makeOrderFirstName:andLastName:andPhone:andAddress:withComment:andPhotoRecordsArray:andDeliveryPrintDta:andDelegate:',['../interface_p_house_api.html#a4610ccec2a0448f9b117c89b0580aff8',1,'PHouseApi']]],
+  ['mergedimages',['mergedImages',['../interface_print_data.html#ac51eba85214393d09328808da9d89cef',1,'PrintData']]]
 ];

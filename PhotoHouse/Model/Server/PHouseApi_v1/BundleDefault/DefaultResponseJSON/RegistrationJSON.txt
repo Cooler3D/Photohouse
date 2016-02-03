@@ -1,0 +1,17 @@
+{
+  "code": "0",
+  "code_desc": "",
+  "time": "1435327287",
+  "result": {
+    "registration": {
+      "id": 1,
+      "firstname": "Максим",
+      "lastname": "Котов",
+      "email": "mailaa@mail.ru",
+      "regdate": "2014-09-03",
+      "group": 1
+    },
+    "act": "get_templates",
+    "api": "1.1"
+  }
+}

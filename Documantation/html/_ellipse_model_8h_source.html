@@ -130,14 +130,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="protocol_ellipse_model_delegate-p.html">   54</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_ellipse_model_delegate-p.html">EllipseModelDelegate</a> &lt;NSObject&gt;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">@required</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;- (void) ellipseModel:(<a class="code" href="interface_ellipse_model.html">EllipseModel</a>*)model didCompleteRightImage:(UIImage*)rightImage andLeftImage:(UIImage *)leftImage;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;- (void) ellipseModel:(<a class="code" href="interface_ellipse_model.html">EllipseModel</a> *)model didUpdateProgress:(CGFloat)progress;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_ellipse_model_html"><div class="ttname"><a href="interface_ellipse_model.html">EllipseModel</a></div><div class="ttdoc">Класс для формирования изображения изогнутого для кружки </div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_model_8h_source.html#l00033">EllipseModel.h:33</a></div></div>
 <div class="ttc" id="interface_ellipse_model_html_aa5303311bd489c579414ed67ac32485f"><div class="ttname"><a href="interface_ellipse_model.html#aa5303311bd489c579414ed67ac32485f">-[EllipseModel make]</a></div><div class="ttdeci">void make()</div><div class="ttdoc">Создаем картинку для кружки </div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_model_8m_source.html#l00050">EllipseModel.m:50</a></div></div>
 <div class="ttc" id="protocol_ellipse_model_delegate-p_html"><div class="ttname"><a href="protocol_ellipse_model_delegate-p.html">EllipseModelDelegate-p</a></div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_model_8h_source.html#l00054">EllipseModel.h:54</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+Документация по PhotoHouse. Последние изменения: Чт 4 Фев 2016 00:57:57. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

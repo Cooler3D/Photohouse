@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['underlayer',['underLayer',['../interface_layer_page.html#aa6222e4b2836deb699a32d0b1cd54d80',1,'LayerPage']]],
-  ['unfinishedsaveoperations',['unfinishedSaveOperations',['../category_save_image_manager_07_08.html#a9744d4f5d89abf760eddaee5d056c49f',1,'SaveImageManager()']]],
-  ['unique_5fimageid',['unique_imageID',['../interface_print_image.html#adfaf2ba838472b37b8fd939bed56d7b8',1,'PrintImage']]],
-  ['uploadurl',['uploadURL',['../interface_print_image.html#a216e902f4191955c5b2607e17014f8b3',1,'PrintImage']]],
-  ['urllibrary',['urlLibrary',['../interface_print_image.html#af0b819e675acfd32e7420882a0c5b76e',1,'PrintImage']]],
-  ['user_5fid',['user_id',['../interface_instagram_access_token.html#a7eb50cb5cfcd7f3e736e8b7ad125eabc',1,'InstagramAccessToken::user_id()'],['../interface_person_order_info.html#a1a4b20bbf3fb191b934a7f62e0939e33',1,'PersonOrderInfo::user_id()']]],
-  ['username',['username',['../interface_instagram_access_token.html#ad644237a1a42046471d6012b0b9451d3',1,'InstagramAccessToken']]],
-  ['usertemplate',['userTemplate',['../interface_prop_type.html#ac111b52a6ec0627076ec55a7eb5056a2',1,'PropType']]],
-  ['uturns',['uturns',['../interface_prop_type.html#a48f11e488545149f5a51f8c041f3c3e6',1,'PropType']]]
+  ['template_5fpsd',['template_psd',['../interface_layout.html#ade6dc53d562ea21ca888da2a0a96eef0',1,'Layout']]],
+  ['templates',['templates',['../interface_prop_type.html#a9fed7512dadd3dc1de995a12109b85de',1,'PropType::templates()'],['../interface_response_album.html#a8f1600cb5309a423827a0416c49b186c',1,'ResponseAlbum::templates()'],['../interface_response_album_v2.html#ab16e5f1768adcb1f9810067f11c368f3',1,'ResponseAlbumV2::templates()']]],
+  ['total_5fcost',['total_cost',['../interface_person_order_info.html#a43572f1eeedeb8bc512962449045c9bf',1,'PersonOrderInfo']]],
+  ['types',['types',['../interface_store_item.html#ab182f56bebe8998ab6aa99d0942449c7',1,'StoreItem']]],
+  ['typestore',['typeStore',['../interface_store_item.html#a80d6e83eda273e2cd26817ab703d8d67',1,'StoreItem']]]
 ];

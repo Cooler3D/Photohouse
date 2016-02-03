@@ -195,9 +195,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <tr class="memitem:af20402f7107ee15871ccf2866eee105e"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#af20402f7107ee15871ccf2866eee105e">createAndAddMergedImageWithPrintImage:</a></td></tr>
 <tr class="memdesc:af20402f7107ee15871ccf2866eee105e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаем скленные картинки (UnitTestOnly)  <a href="#af20402f7107ee15871ccf2866eee105e">Подробнее...</a><br /></td></tr>
 <tr class="separator:af20402f7107ee15871ccf2866eee105e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0510bb83d6533f39afa5f18c6d81857"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#af0510bb83d6533f39afa5f18c6d81857">createMergedImageWithPreview:andCompleteBlock:</a></td></tr>
-<tr class="memdesc:af0510bb83d6533f39afa5f18c6d81857"><td class="mdescLeft">&#160;</td><td class="mdescRight">Склееваем пользовательскую картинку с объектом(Кружка,Футболка и тд)  <a href="#af0510bb83d6533f39afa5f18c6d81857">Подробнее...</a><br /></td></tr>
-<tr class="separator:af0510bb83d6533f39afa5f18c6d81857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f38b4a6438be3334a1fdaf25532705f"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#a2f38b4a6438be3334a1fdaf25532705f">createMergedImageWithPreview:andCompleteBlock:andProgressBlock:</a></td></tr>
+<tr class="memdesc:a2f38b4a6438be3334a1fdaf25532705f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Склееваем пользовательскую картинку с объектом(Кружка,Футболка и тд)  <a href="#a2f38b4a6438be3334a1fdaf25532705f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2f38b4a6438be3334a1fdaf25532705f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5252c686decac2f45b1b45e02f47287"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_print_data.html#ac5252c686decac2f45b1b45e02f47287">initWithHistoryOrderItemsDictionary:</a></td></tr>
 <tr class="memdesc:ac5252c686decac2f45b1b45e02f47287"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализация по истории заказов  <a href="#ac5252c686decac2f45b1b45e02f47287">Подробнее...</a><br /></td></tr>
 <tr class="separator:ac5252c686decac2f45b1b45e02f47287"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -327,7 +327,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 
 </div>
 </div>
-<a class="anchor" id="af0510bb83d6533f39afa5f18c6d81857"></a>
+<a class="anchor" id="a2f38b4a6438be3334a1fdaf25532705f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -341,7 +341,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
           <td class="paramkey">andCompleteBlock:</td>
           <td></td>
           <td class="paramtype">(void(^)(NSArray *<a class="el" href="interface_print_data.html#a39afdbcbee951fd00c0861ce54015449">images</a>))&#160;</td>
-          <td class="paramname"><em>completeBlock</em>&#160;</td>
+          <td class="paramname"><em>completeBlock</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andProgressBlock:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(CGFloat progress))&#160;</td>
+          <td class="paramname"><em>progressBlock</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -538,7 +544,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:33. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+Документация по PhotoHouse. Последние изменения: Чт 4 Фев 2016 00:57:58. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

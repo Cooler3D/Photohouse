@@ -1,0 +1,20 @@
+{
+  "code": "0",
+  "code_desc": "",
+  "time": "1435327287",
+  "result": {
+    "user": {
+      "id": "15",
+      "firstname": "Дмитрий",
+      "lastname": "Мартынов",
+      "email": "a@a.ru",
+      "regdate": "2014-09-29",
+      "group_id": "1",
+      "props": [],
+      "group_name": "пользователь",
+      "access": "3"
+    },
+    "act": "auth",
+    "api": "1.1"
+  }
+}

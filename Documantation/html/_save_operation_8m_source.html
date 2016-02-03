@@ -104,84 +104,141 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#import &quot;CoreDataShopCart.h&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &quot;CoreDataSocialImages.h&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="category_save_operation_07_08.html">   18</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_save_operation.html">SaveOperation</a> ()</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">@property</span> (strong, nonatomic) <a class="code" href="interface_print_data.html">PrintData</a> *printData;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#import &quot;MDPhotoLibrary.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#import &quot;UIImage+Crop.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#import &quot;UIImage+Additions.h&quot;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">@implementation </span><a class="code" href="interface_save_operation.html">SaveOperation</a></div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="interface_save_operation.html#ac8041d3067bb97411d21143d3adf058c">   23</a></span>&#160;- (id) initSaveWithPrintData:(<a class="code" href="interface_print_data.html">PrintData</a> *)printData andCurrentPrintImage:(<a class="code" href="interface_print_image.html">PrintImage</a> *)printImage andDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_save_operation_delegate-p.html">SaveOperationDelegate</a>&gt;)delegate</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>) {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        _printData = printData;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        _printImage = <a class="code" href="interface_save_operation.html#a86fdf50eb88d7cbe4b1cc5507b93498c">printImage</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        _delegate = <a class="code" href="interface_save_operation.html#a06e858b966f4425529f0f47cfa7ae86a">delegate</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;-(void)main</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    NSLog(<span class="stringliteral">@&quot;SaveOperation.main&quot;</span>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">//@autoreleasepool {</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">//NSLog(@&quot;main: %@&quot;, self.printImage.urlLibrary);</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//    __weak SaveOperation *weakSelf = self;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//        NSLog(@&quot;TimeOut Dispatch: Finished: %hhd; \nCanceled: %hhd&quot;, weakSelf.isFinished, weakSelf.isCancelled);</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//        </span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//    });</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> *coreShop = [[<a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> alloc] init];</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="interface_core_data_social_images.html">CoreDataSocialImages</a> *coreSocial = [[<a class="code" href="interface_core_data_social_images.html">CoreDataSocialImages</a> alloc] init];</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    NSLog(<span class="stringliteral">@&quot;SaveOperation.readSocial&quot;</span>);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        NSData *socialImage = [coreSocial <a class="code" href="interface_core_data_social_images.html#a1bb688ecdc9ef067651c8a5bf97e3084">getImageDataWithURL</a>:_printImage.urlLibrary];</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="category_save_operation_07_08.html">   23</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_save_operation.html">SaveOperation</a> ()</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">@property</span> (strong, nonatomic) <a class="code" href="interface_print_data.html">PrintData</a> *printData;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">@implementation </span><a class="code" href="interface_save_operation.html">SaveOperation</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="interface_save_operation.html#ac8041d3067bb97411d21143d3adf058c">   28</a></span>&#160;- (id) initSaveWithPrintData:(<a class="code" href="interface_print_data.html">PrintData</a> *)printData andCurrentPrintImage:(<a class="code" href="interface_print_image.html">PrintImage</a> *)printImage andDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_save_operation_delegate-p.html">SaveOperationDelegate</a>&gt;)delegate</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        _printData = printData;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        _printImage = <a class="code" href="interface_save_operation.html#a86fdf50eb88d7cbe4b1cc5507b93498c">printImage</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        _delegate = <a class="code" href="interface_save_operation.html#a06e858b966f4425529f0f47cfa7ae86a">delegate</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;-(void)startSave</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    __weak <a class="code" href="interface_save_operation.html">SaveOperation</a> *wSelf = <span class="keyword">self</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    NSLog(<span class="stringliteral">@&quot;SaveOperation.main&quot;</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//    @autoreleasepool {</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        NSLog(<span class="stringliteral">@&quot;main: %@&quot;</span>, <span class="keyword">self</span>.printImage.<a class="code" href="interface_print_image.html#af0b819e675acfd32e7420882a0c5b76e">urlLibrary</a>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">//    __weak SaveOperation *weakSelf = self;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">//        NSLog(@&quot;TimeOut Dispatch: Finished: %hhd; \nCanceled: %hhd&quot;, weakSelf.isFinished, weakSelf.isCancelled);</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">//        </span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">//    });</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    NSLog(<span class="stringliteral">@&quot;SaveOperation.write.coredata&quot;</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="interface_print_image.html">PrintImage</a> *result = [coreShop <a class="code" href="interface_core_data_shop_cart.html#a90b18ce4d29696bfe97cd4c1872fe94d">saveOriginalImagePrintDataUnique</a>:_printData.unique_print <a class="code" href="interface_core_data_shop_cart.html#a90b18ce4d29696bfe97cd4c1872fe94d">andPrintImage</a>:_printImage <a class="code" href="interface_core_data_shop_cart.html#a90b18ce4d29696bfe97cd4c1872fe94d">andSocialImageData</a>:socialImage];</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>.isCancelled || !result) {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        [_printData replacePreviewPrintImage:result];</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">//    CoreDataShopCart *coreShop = [[CoreDataShopCart alloc] init];</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">//    CoreDataSocialImages *coreSocial = [[CoreDataSocialImages alloc] init];</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//    NSLog(@&quot;SaveOperation.readSocial&quot;);</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//    NSData *socialImage = [coreSocial getImageDataWithURL:_printImage.urlLibrary];</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>.isCancelled) {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">//    if (self.isCancelled) {</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">//        return;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">//    }</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        NSLog(<span class="stringliteral">@&quot;SaveOperation.dispatch&quot;</span>);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        dispatch_async(dispatch_get_main_queue(), ^{</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            NSLog(<span class="stringliteral">@&quot;finish %@&quot;</span>, <span class="keyword">self</span>.printImage.<a class="code" href="interface_print_image.html#af0b819e675acfd32e7420882a0c5b76e">urlLibrary</a>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            [<span class="keyword">self</span>.delegate saveOperation:self didSavedImage:result];</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        });</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">//}</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">//-(void)cancel</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">//{</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">//    NSLog(@&quot;Cancel Operation&quot;);</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">//}</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    [<span class="keyword">self</span> setCompletionBlock:^{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        [wSelf waitUntilFinished];</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }];</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">//    }</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;-(void)waitUntilFinished {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    NSLog(<span class="stringliteral">@&quot;SaveOperation.dispatch&quot;</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    __weak <a class="code" href="interface_save_operation.html">SaveOperation</a> *wSelf = <span class="keyword">self</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    dispatch_async(dispatch_get_main_queue(), ^{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        NSLog(<span class="stringliteral">@&quot;finish %@&quot;</span>, wSelf.printImage.urlLibrary);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        [<span class="keyword">self</span>.delegate saveOperation:self didSavedImage:wSelf.printImage];</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    });</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">@end</span></div>
-<div class="ttc" id="interface_save_operation_html_a86fdf50eb88d7cbe4b1cc5507b93498c"><div class="ttname"><a href="interface_save_operation.html#a86fdf50eb88d7cbe4b1cc5507b93498c">SaveOperation::printImage</a></div><div class="ttdeci">PrintImage * printImage</div><div class="ttdoc">Картинка </div><div class="ttdef"><b>Definition:</b> <a href="_save_operation_8h_source.html#l00023">SaveOperation.h:23</a></div></div>
-<div class="ttc" id="interface_core_data_shop_cart_html_a90b18ce4d29696bfe97cd4c1872fe94d"><div class="ttname"><a href="interface_core_data_shop_cart.html#a90b18ce4d29696bfe97cd4c1872fe94d">-[CoreDataShopCart saveOriginalImagePrintDataUnique:andPrintImage:andSocialImageData:]</a></div><div class="ttdeci">PrintImage * saveOriginalImagePrintDataUnique:andPrintImage:andSocialImageData:(NSUInteger print_unique,[andPrintImage] PrintImage *printImage,[andSocialImageData] NSData *imageData)</div><div class="ttdoc">Сохранение большой(оригинальной) картинки </div><div class="ttdef"><b>Definition:</b> <a href="_core_data_shop_cart_8m_source.html#l00278">CoreDataShopCart.m:278</a></div></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;-(void)setCompletionBlock:(<span class="keywordtype">void</span> (^)(<span class="keywordtype">void</span>))completionBlock {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    void (^CompleteBlock)(void) = ^{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">if</span> (completionBlock) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            completionBlock();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    };</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">//    __weak SaveOperation *wSelf = self;</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"></span>    void (^MakePreviewImageBlock)(NSData *imageData, UIImageOrientation orientation) = ^(NSData *imageData, UIImageOrientation orientation) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        UIImage *imageOriginal = [UIImage imageWithData:imageData];</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        NSInteger <span class="keyword">const</span> maxBiggerSide = 640;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        UIImage *resizedImage = [[UIImage imageWithCGImage:imageOriginal.CGImage] resizeImageToBiggerSide:maxBiggerSide];</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        UIImage *normalImageOrientation = [UIImage imageWithCGImage:resizedImage.CGImage scale:resizedImage.scale orientation:orientation];</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        NSData *imagePreviewData = UIImageJPEGRepresentation(normalImageOrientation, 0.6f);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        [<span class="keyword">self</span>.printImage.editedImageSetting changeOrientation:orientation];</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        [<span class="keyword">self</span>.printImage.editedImageSetting changeOrientationDefault:orientation];</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> *coreShop = [[<a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> alloc] init];</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        [coreShop <a class="code" href="interface_core_data_shop_cart.html#a90b18ce4d29696bfe97cd4c1872fe94d">saveOriginalImagePrintDataUnique</a>:self.printData.unique_print <a class="code" href="interface_core_data_shop_cart.html#a90b18ce4d29696bfe97cd4c1872fe94d">andPrintImage</a>:self.printImage <a class="code" href="interface_core_data_shop_cart.html#a90b18ce4d29696bfe97cd4c1872fe94d">andSocialImageData</a>:imagePreviewData];</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        CompleteBlock();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    };</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">// Читаем данные из сохраненных картинок соц.сетей</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>.printImage.<a class="code" href="interface_print_image.html#a650612db61ba0f157d7a784238e6a956">imageLibrary</a> == ImageLibrarySocial) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        NSLog(<span class="stringliteral">@&quot;SaveOperation.readSocial&quot;</span>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="interface_core_data_social_images.html">CoreDataSocialImages</a> *coreSocial = [[<a class="code" href="interface_core_data_social_images.html">CoreDataSocialImages</a> alloc] init];</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        NSData *socialImage = [coreSocial <a class="code" href="interface_core_data_social_images.html#a1bb688ecdc9ef067651c8a5bf97e3084">getImageDataWithURL</a>:_printImage.urlLibrary];</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        MakePreviewImageBlock(socialImage, UIImageOrientationUp);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="interface_m_d_photo_library.html">MDPhotoLibrary</a> *lib = [[<a class="code" href="interface_m_d_photo_library.html">MDPhotoLibrary</a> alloc] init];</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="comment">//            UIImage *imageOriginal = [UIImage imageWithData:imageData];</span><span class="comment">//            NSInteger const maxBiggerSide = 640;</span><span class="comment">//            UIImage *resizedImage = [[UIImage imageWithCGImage:imageOriginal.CGImage] resizeImageToBiggerSide:maxBiggerSide];</span><span class="comment">//            NSData *imagePreviewData = UIImageJPEGRepresentation(resizedImage, 0.6f);</span>[lib <a class="code" href="interface_m_d_photo_library.html#a35641c57da895542d96a0157d65c15ad">getAssetWithURL</a>:self.printImage.urlLibrary <a class="code" href="interface_m_d_photo_library.html#a35641c57da895542d96a0157d65c15ad">withResultBlock</a>:^(NSData *imageData, UIImageOrientation orientation) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            MakePreviewImageBlock(imageData, orientation);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        } <a class="code" href="interface_m_d_photo_library.html#a35641c57da895542d96a0157d65c15ad">failBlock</a>:^(NSError *error) {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            CompleteBlock();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }];</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_save_operation_html_a86fdf50eb88d7cbe4b1cc5507b93498c"><div class="ttname"><a href="interface_save_operation.html#a86fdf50eb88d7cbe4b1cc5507b93498c">SaveOperation::printImage</a></div><div class="ttdeci">PrintImage * printImage</div><div class="ttdoc">Картинка </div><div class="ttdef"><b>Definition:</b> <a href="_save_operation_8h_source.html#l00024">SaveOperation.h:24</a></div></div>
+<div class="ttc" id="interface_m_d_photo_library_html_a35641c57da895542d96a0157d65c15ad"><div class="ttname"><a href="interface_m_d_photo_library.html#a35641c57da895542d96a0157d65c15ad">-[MDPhotoLibrary getAssetWithURL:withResultBlock:failBlock:]</a></div><div class="ttdeci">void getAssetWithURL:withResultBlock:failBlock:(NSString *url,[withResultBlock] void(^completeBlock)(NSData *imageData, UIImageOrientation orientation),[failBlock] void(^failBlock)(NSError *error))</div><div class="ttdoc">Получаем картику по адресу </div></div>
+<div class="ttc" id="interface_core_data_shop_cart_html_a90b18ce4d29696bfe97cd4c1872fe94d"><div class="ttname"><a href="interface_core_data_shop_cart.html#a90b18ce4d29696bfe97cd4c1872fe94d">-[CoreDataShopCart saveOriginalImagePrintDataUnique:andPrintImage:andSocialImageData:]</a></div><div class="ttdeci">PrintImage * saveOriginalImagePrintDataUnique:andPrintImage:andSocialImageData:(NSUInteger print_unique,[andPrintImage] PrintImage *printImage,[andSocialImageData] NSData *imageData)</div><div class="ttdoc">Сохранение большой(оригинальной) картинки </div><div class="ttdef"><b>Definition:</b> <a href="_core_data_shop_cart_8m_source.html#l00324">CoreDataShopCart.m:324</a></div></div>
 <div class="ttc" id="interface_print_data_html"><div class="ttname"><a href="interface_print_data.html">PrintData</a></div><div class="ttdoc">Покупка пользователя. Представляет собой сфорированную покупку для отправки на сервер PhotoHouse Вы м...</div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8h_source.html#l00034">PrintData.h:34</a></div></div>
-<div class="ttc" id="interface_save_operation_html"><div class="ttname"><a href="interface_save_operation.html">SaveOperation</a></div><div class="ttdoc">Очередь для сохранения большой картинки в CoreDataShopCart. Вызывается из менеджера SaveImageManager...</div><div class="ttdef"><b>Definition:</b> <a href="_save_operation_8h_source.html#l00022">SaveOperation.h:22</a></div></div>
-<div class="ttc" id="protocol_save_operation_delegate-p_html"><div class="ttname"><a href="protocol_save_operation_delegate-p.html">SaveOperationDelegate-p</a></div><div class="ttdef"><b>Definition:</b> <a href="_save_operation_8h_source.html#l00039">SaveOperation.h:39</a></div></div>
-<div class="ttc" id="interface_core_data_social_images_html_a1bb688ecdc9ef067651c8a5bf97e3084"><div class="ttname"><a href="interface_core_data_social_images.html#a1bb688ecdc9ef067651c8a5bf97e3084">-[CoreDataSocialImages getImageDataWithURL:]</a></div><div class="ttdeci">NSData * getImageDataWithURL:(NSString *url)</div><div class="ttdoc">Возвращаем данные по адресу </div><div class="ttdef"><b>Definition:</b> <a href="_core_data_social_images_8m_source.html#l00095">CoreDataSocialImages.m:95</a></div></div>
+<div class="ttc" id="interface_m_d_photo_library_html"><div class="ttname"><a href="interface_m_d_photo_library.html">MDPhotoLibrary</a></div><div class="ttdef"><b>Definition:</b> <a href="_m_d_photo_library_8h_source.html#l00023">MDPhotoLibrary.h:23</a></div></div>
+<div class="ttc" id="interface_save_operation_html"><div class="ttname"><a href="interface_save_operation.html">SaveOperation</a></div><div class="ttdoc">Очередь для сохранения большой картинки в CoreDataShopCart. Вызывается из менеджера SaveImageManager...</div><div class="ttdef"><b>Definition:</b> <a href="_save_operation_8h_source.html#l00023">SaveOperation.h:23</a></div></div>
+<div class="ttc" id="interface_print_image_html_a650612db61ba0f157d7a784238e6a956"><div class="ttname"><a href="interface_print_image.html#a650612db61ba0f157d7a784238e6a956">PrintImage::imageLibrary</a></div><div class="ttdeci">ImageLibrary imageLibrary</div><div class="ttdoc">Тип картинки, память телефона(PhotoLibrary) или соц.сети </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00040">PrintImage.h:40</a></div></div>
+<div class="ttc" id="protocol_save_operation_delegate-p_html"><div class="ttname"><a href="protocol_save_operation_delegate-p.html">SaveOperationDelegate-p</a></div><div class="ttdef"><b>Definition:</b> <a href="_save_operation_8h_source.html#l00040">SaveOperation.h:40</a></div></div>
+<div class="ttc" id="interface_core_data_social_images_html_a1bb688ecdc9ef067651c8a5bf97e3084"><div class="ttname"><a href="interface_core_data_social_images.html#a1bb688ecdc9ef067651c8a5bf97e3084">-[CoreDataSocialImages getImageDataWithURL:]</a></div><div class="ttdeci">NSData * getImageDataWithURL:(NSString *url)</div><div class="ttdoc">Возвращаем данные по адресу </div><div class="ttdef"><b>Definition:</b> <a href="_core_data_social_images_8m_source.html#l00070">CoreDataSocialImages.m:70</a></div></div>
 <div class="ttc" id="interface_core_data_social_images_html"><div class="ttname"><a href="interface_core_data_social_images.html">CoreDataSocialImages</a></div><div class="ttdef"><b>Definition:</b> <a href="_core_data_social_images_8h_source.html#l00015">CoreDataSocialImages.h:15</a></div></div>
-<div class="ttc" id="interface_print_image_html"><div class="ttname"><a href="interface_print_image.html">PrintImage</a></div><div class="ttdoc">Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00028">PrintImage.h:28</a></div></div>
-<div class="ttc" id="interface_save_operation_html_a06e858b966f4425529f0f47cfa7ae86a"><div class="ttname"><a href="interface_save_operation.html#a06e858b966f4425529f0f47cfa7ae86a">SaveOperation::delegate</a></div><div class="ttdeci">id&lt; SaveOperationDelegate &gt; delegate</div><div class="ttdoc">Делегат </div><div class="ttdef"><b>Definition:</b> <a href="_save_operation_8h_source.html#l00024">SaveOperation.h:24</a></div></div>
+<div class="ttc" id="interface_print_image_html"><div class="ttname"><a href="interface_print_image.html">PrintImage</a></div><div class="ttdoc">Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00027">PrintImage.h:27</a></div></div>
+<div class="ttc" id="interface_save_operation_html_a06e858b966f4425529f0f47cfa7ae86a"><div class="ttname"><a href="interface_save_operation.html#a06e858b966f4425529f0f47cfa7ae86a">SaveOperation::delegate</a></div><div class="ttdeci">id&lt; SaveOperationDelegate &gt; delegate</div><div class="ttdoc">Делегат </div><div class="ttdef"><b>Definition:</b> <a href="_save_operation_8h_source.html#l00025">SaveOperation.h:25</a></div></div>
 <div class="ttc" id="interface_core_data_shop_cart_html"><div class="ttname"><a href="interface_core_data_shop_cart.html">CoreDataShopCart</a></div><div class="ttdef"><b>Definition:</b> <a href="_core_data_shop_cart_8h_source.html#l00014">CoreDataShopCart.h:14</a></div></div>
-<div class="ttc" id="interface_print_image_html_af0b819e675acfd32e7420882a0c5b76e"><div class="ttname"><a href="interface_print_image.html#af0b819e675acfd32e7420882a0c5b76e">PrintImage::urlLibrary</a></div><div class="ttdeci">NSString * urlLibrary</div><div class="ttdoc">Адрес картинки в библиотеке, по этому параметру идет поиск </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00034">PrintImage.h:34</a></div></div>
+<div class="ttc" id="interface_print_image_html_af0b819e675acfd32e7420882a0c5b76e"><div class="ttname"><a href="interface_print_image.html#af0b819e675acfd32e7420882a0c5b76e">PrintImage::urlLibrary</a></div><div class="ttdeci">NSString * urlLibrary</div><div class="ttdoc">Адрес картинки в библиотеке, по этому параметру идет поиск </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00033">PrintImage.h:33</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+Документация по PhotoHouse. Последние изменения: Чт 4 Фев 2016 00:57:57. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

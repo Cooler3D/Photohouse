@@ -1,0 +1,210 @@
+/* Меню */
+"store" = "Магазин";
+"shopcart" = "Корзина";
+"historyorders" = "История заказов";
+"options" = "Настройки";
+"support" = "Поддержка";
+"about" = "О приложении";
+"profile" = "Профиль";
+
+/* Магазин */
+"pcs." = "шт.";
+
+
+/* Конфигуратор */
+/* Стили Альбомов */
+"birthday" = "День рождения";
+"jubilee" = "Юбилей";
+"wedding" = "Свадьба";
+"vacation" = "Отдых";
+"love" = "Любовная история";
+"family" = "Семья";
+"corporate" = "Корпоратив";
+"children" = "Дети";
+"other" = "Другое";
+"orange_minimalism" = "Оранжевый минимализм";
+"dark_chocolate" = "Темный шоколад";
+"green_minimalism" = "Зеленый минимализм";
+"red_square" = "Красный квадрат";
+"turquoise_minimalism" = "Бирюзовый минимализм";
+"red_gray" = "Красно-серый";
+"pink_checkered" = "Розовый клетчатый";
+"turquoise_lined" = "Бирюзовый линованный";
+"turquoise_travel" = "Бирюзовые путешествия";
+
+
+"from" = "от";
+"to" = "до";
+"photos" = "фотографии";
+"tutns" = "разворотов";
+
+
+"continue" = "Продолжить";
+"delete" = "Удалить";
+"warning" = "Внимание";
+"try_else" = "Еще раз";
+
+
+"style_configurator_description" = "Выбор общей стилистики фотокниги. Стилистика определяет цветовое оформление и набор доступных разворотов.";
+"choose_style" = "Выберите стиль";
+
+
+"you_have_not_saved_the" = "У вас есть не сохраненный";
+"If you change the style, your" = "При смене стиля, ваш";
+"If you want back to store, your" = "Если вы хотите вернуться в магазин, ваш";
+"will be lost" = "будет потерян";
+"Continue" = "Продолжить выбор";
+"do_you_wnat_continue_editing?" = "Вы хотите продолжить редактирование?";
+
+"album_comment" = "Комметрарии к альбому";
+
+"This_photo_is_fail" = "Данная фотография не может быть прочитана";
+"need_access_to_photolibrary" = "Вы запретили доступ к библиотеке телефона, разрешить можно в Настройках телефона";
+
+
+/* Конструктор */
+"of" = "из";
+"flip" = "Разворот";
+
+"Attention" = "Внимание";
+"Create else pages, is to few pages" = "Создайте больше страниц для альбома";
+
+"CoverMagazine" = "Обложка";
+
+
+"Loading" = "Загрузка";
+"Loaded" = "Загрузилось";
+"covers" = "обложек";
+
+"configurator_title" = "Настройка фотокниги";
+"configurator_style" = "Стиль альбома";
+"configurator_uturns" = "Количество разворотов";
+"configurator_size" = "Размер и пропорции";
+"configurator_cover" = "Покрытие обложки";
+"configurator_comment" = "Комментарии к альбому";
+
+"price" = "Цена";
+"RUB" = "РУБ";
+"next" = "Далее";
+
+"frosted" = "Матовая обложка";
+"gloss" = "Глянцевая обложка";
+
+"constructor" = "Конструктор";
+"design" = "Дизайнерский";
+
+"Cancel" = "Отмена";
+
+"if_you_come_back_your" = "Если вы хотите венуться, ваш(а)";
+"will_removed" = "будет удален";
+"do_you_want_come_back" = "Вы хотите вернуться назад?";
+"yes" = "Да";
+"no" = "Нет";
+"save_to_shop_cart" = "Сохранение в корзине";
+"please_wait_when_selected_images_will_be_saved" = "Пожалуйста подождите, когда выбранные вами фотографии буду подготовлены.";
+"synchonize_to_cart" = "Синхронизация";
+
+
+/* Выбор фото */
+"choose_photo_title" = "Выберите фото";
+"This is maximun photos" = "Это максимальное количесво фотографий для данной покупки";
+"Cancel" = "Отмена";
+"device_btn" = "Устройство";
+
+
+
+/* ShowCase Витрина */
+"You can add images, after all photos will be saved" = "Вы сможете добавить(заменить) изображения, после того, как все ранее выбранные фотографии будут сохранены";
+
+"add_to_cart" = "В корзину";
+"choose_photo" = "Выбрать фото";
+"processing" = "Обработка...";
+
+
+/* Корзина */
+"remove_all_message" = "Вы действительно хотите удалить все заказы из корзины?";
+"remove_all" = "Удалить все";
+"shop_cart_title" = "Корзина";
+"error" = "Ошибка";
+"internet_not_found" = "Соединение с интернет недоступно";
+"total_price" = "Итого:";
+"send_button" = "Оформить";
+"detail_shop" = "Картинки";
+
+
+
+/* Shipping Delivery */
+"delivery_title" = "Доставка";
+"input_firstname" = "Введите Имя";
+"input_lastname" = "Введите Фамилию";
+"input_adsress" = "Введите адрес";
+"input_phone" = "Введите тетефон: +X (XXX) XXX XX-XX";
+"input_address_is_too_short" = "Указанный адрес слишком короткий!";
+
+"the_select_type_of_payment:" = "Выбранный тип оплаты:";
+"select_the_type_of_payment" = "Выберите тип оплаты";
+"select_the_type_of_delivery_for" = "Выберите тип доставки для";
+
+"choose_delivery_city_btn" = "Выберите город для доставки";
+
+"upload_to_server" = "Загрузка картинок на сервер";
+"send_order" = "Отправка заказа";
+"cancel_upload" = "Отменить загрузку";
+"do_you_want_cancel_upload" = "Вы хотите отменить загрузку?";
+"your_order_was_delivered_information_about_your_order_sent_on_email" = "Ваш заказ доставлен. Информация о вашем заказе отправленна вам на почту.";
+
+
+/* Настройки */
+"options_title" = "Настройки";
+"cache_photo_title" = "Кэшировать фото";
+"cache_photo_description" = "Все фотографии из соц.сетей будут кэшироваться, для ускорения загрузки. Приложение ваши фотографии не сохраняет.";
+
+
+/* Поддержка */
+"support_title" = "Обратная связь";
+"complete" = "Выполнено";
+"your_message_is_did_delivered" = "Ваше сообщение было доставлено в PhotoHouse";
+"input_email" = "Введите e-mail";
+"sending_message" = "Отправка сообщения";
+"support_default_message" = "Введите ваше сообщение";
+
+
+/* About */
+"about_title" = "О программе";
+"about_text" = "Создавайте оригинальные подарки с PhotoHouse.\nНаложите любое изображение на понравившейся подарок и мы создадим его для вас, а наши курьеры доставят.\n\nВозможности:\nЗаказ печати фотографий, фото-книг и фото-подарков прямо с вашего телефона.\nФото-книги высочайшего качества, сохранят самые памятные моменты.\nОбработка и редактирование фотографий прямо из приложения.\n\nПреимущества:\nВысочайшее качество печатаемой продукции.\nВыбор фотографий как из памяти телефона, так и из социальных сетей.\nИндивидуальная обработка каждого заказа профессиональными дизайнерами.\n\nВы можете заказать печать на:\nФотографиях\nФотоальбомах\nФутболках\nА так же многом другом!";
+"version" = "Версия";
+
+
+/* Profile */
+"profile_title" = "Профиль";
+"profile_firstname:" = "Имя";
+"profile_lastname:" = "Фамилия";
+"profile_email:" = "E-mail";
+"profile_date_reg:" = "Дата регистрации";
+"profile_logount" = "Выход";
+"Incorrect pair email/password" = "Не правильно введен логин или пароль";
+"Email address already used" = "Данный E-mail уже используется, воспользуйтесь формой восстановления пароля";
+
+
+/* SignIn */
+"signin_title" = "Авторизация";
+"input_password" = "Пароль";
+"signin_btn" = "Авторизоваться";
+"signin_forgot_btn" = "Забыли пароль?";
+
+
+/* SignUp */
+"singup_title" = "Регистрация";
+"is_too_short" = "очень короткое";
+"firstname" = "Имя";
+"lastname" = "Фамилия";
+"email" = "Email";
+"password" = "Пароль";
+"passwords_is_not_equal" = "Пароли не совпадают";
+
+
+/* Forgot password */
+"forgot_password_title" = "Восстановление";
+"sending" = "Отправка";
+"message_is_did_sended_to" = "Сообщение было отправленно на почту";
+"email_is_too_short" = "Email очень короткий";

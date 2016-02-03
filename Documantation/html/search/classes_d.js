@@ -9,6 +9,7 @@ var searchData=
   ['saveoperation',['SaveOperation',['../interface_save_operation.html',1,'']]],
   ['saveoperation_28_29',['SaveOperation()',['../category_save_operation_07_08.html',1,'']]],
   ['saveoperationdelegate_2dp',['SaveOperationDelegate-p',['../protocol_save_operation_delegate-p.html',1,'']]],
+  ['saveoperationprotocol_2dp',['SaveOperationProtocol-p',['../protocol_save_operation_protocol-p.html',1,'']]],
   ['shopcartimageentity',['ShopCartImageEntity',['../interface_shop_cart_image_entity.html',1,'']]],
   ['shopcartprintentity',['ShopCartPrintEntity',['../interface_shop_cart_print_entity.html',1,'']]],
   ['shopcartprintentity_28coredatageneratedaccessors_29',['ShopCartPrintEntity(CoreDataGeneratedAccessors)',['../category_shop_cart_print_entity_07_core_data_generated_accessors_08.html',1,'']]],

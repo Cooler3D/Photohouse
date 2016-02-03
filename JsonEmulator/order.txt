@@ -1,0 +1,253 @@
+{
+  "order_info": {
+    "status": "1",
+    "user_id": "9",
+    "phone": "9843758943758943",
+    "full_name": "martynov dmitriy",
+    "address": "moscow, efremova",
+    "description": ""
+  },
+  "time": "1445118712",
+  "act": "order",
+  "items": [
+    {
+      "item_id": "13",
+      "layouts": [],
+      "item_num": "1",
+      "images": [
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "1280",
+            "x": "0",
+            "height": "853"
+          },
+          "image": "uploads/name_1445118786_07271bb97ef76273.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "1280",
+            "x": "0",
+            "height": "853"
+          },
+          "image": "uploads/name_1445118783_f38918f1a207033c.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "1280",
+            "x": "0",
+            "height": "853"
+          },
+          "image": "uploads/name_1445118784_66768886614e87cf.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "1280",
+            "x": "0",
+            "height": "853"
+          },
+          "image": "uploads/name_1445118785_cd3e86823ae687ad.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "1280",
+            "x": "0",
+            "height": "853"
+          },
+          "image": "uploads/name_1445118785_729fc77c9e07a8df.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "775",
+            "x": "0",
+            "height": "771"
+          },
+          "image": "uploads/name_1445118784_250d716da0ff6186.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "1280",
+            "x": "0",
+            "height": "853"
+          },
+          "image": "uploads/name_1445118785_ed1959df19314152.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "1280",
+            "x": "0",
+            "height": "853"
+          },
+          "image": "uploads/name_1445118784_2178e03573cf7c17.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "1280",
+            "x": "0",
+            "height": "853"
+          },
+          "image": "uploads/name_1445118786_bf601fd321fb1965.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "1280",
+            "x": "0",
+            "height": "853"
+          },
+          "image": "uploads/name_1445118786_c5f067015e0933c7.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "1280",
+            "x": "0",
+            "height": "853"
+          },
+          "image": "uploads/name_1445118783_4abfb20a427bf510.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "775",
+            "x": "0",
+            "height": "771"
+          },
+          "image": "uploads/name_1445118783_6ed2e0d2d90b89bd.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "1280",
+            "x": "0",
+            "height": "960"
+          },
+          "image": "uploads/name_1445118783_cdeb21b904596708.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "1280",
+            "x": "0",
+            "height": "853"
+          },
+          "image": "uploads/name_1445118783_5d70c5bad07b6810.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "1280",
+            "x": "0",
+            "height": "853"
+          },
+          "image": "uploads/name_1445118782_ac74db2e1d166db6.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "775",
+            "x": "0",
+            "height": "771"
+          },
+          "image": "uploads/name_1445118786_342737687ddc4068.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "1280",
+            "x": "0",
+            "height": "853"
+          },
+          "image": "uploads/name_1445118784_332d1236cfada821.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "1280",
+            "x": "0",
+            "height": "853"
+          },
+          "image": "uploads/name_1445118784_6127d3ee6db47d04.jpeg",
+          "index": "0"
+        },
+        {
+          "orientation": "0",
+          "crop": {
+            "y": "0",
+            "width": "1280",
+            "x": "0",
+            "height": "853"
+          },
+          "image": "uploads/name_1445118785_47dd5f068292d278.jpeg",
+          "index": "0"
+        }
+      ],
+      "image_proc": "1",
+      "props": {
+        "type": "design",
+        "uturn": "8",
+        "size": "20x15",
+        "cover": "gloss",
+        "style": "children"
+      },
+      "comment": "",
+      "price": "2890"
+    },
+    {
+      "item_id": "20",
+      "item_num": "1",
+      "images": "",
+      "image_proc": "1",
+      "props": {
+        "city": "Moscow",
+        "type": "office",
+        "code": "Moscow_Self"
+      },
+      "comment": "",
+      "price": "0"
+    }
+  ]
+}

@@ -149,10 +149,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        NSData *socailImageData = nil;<span class="comment">// = self.coreDataUse ? nil : [coreModel getImageDataWithURL:[self.photoRecord.URL absoluteString]];</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        NSData *imageData = socailImageData == nil ? [[NSData alloc] initWithContentsOfURL:self.photoRecord.URL] : socailImageData;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">self</span>.photoRecord.importFromLibrary == ImportLibraryPhone) {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            ALAsset *asset = <span class="keyword">self</span>.photoRecord.asset;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            [<span class="keyword">self</span>.photoRecord setImage:[UIImage imageWithCGImage:[asset thumbnail]]];</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">//        if (self.photoRecord.importFromLibrary == ImportLibraryPhone) {</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">//            ALAsset *asset = self.photoRecord.asset;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">//            [self.photoRecord setImage:[UIImage imageWithCGImage:[asset thumbnail]]];</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">//        }</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">self</span>.isCancelled) {</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            imageData = nil;</div>
@@ -199,7 +199,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+Документация по PhotoHouse. Последние изменения: Чт 4 Фев 2016 00:57:57. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

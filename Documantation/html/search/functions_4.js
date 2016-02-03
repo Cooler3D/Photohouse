@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['feedbacktype_3aandtitle_3aandmessage_3aandemail_3aanddelegate_3a',['feedbackType:andTitle:andMessage:andEmail:andDelegate:',['../interface_p_house_api.html#ac79ef60c8a12e6b306aea67ebd4edd0d',1,'PHouseApi']]],
-  ['finalcompleteprintdata_3a',['finalCompletePrintData:',['../interface_core_data_shop_cart.html#aca4cfb24781acaf49fadb86c8f70af72',1,'CoreDataShopCart']]]
+  ['executecommnadwithjson_3aandcompleteblock_3aprogressuploadblock_3aerrorblock_3a',['executeCommnadWithJson:andCompleteBlock:progressUploadBlock:errorBlock:',['../interface_p_h_request_command.html#a6422e30b0176fba1351aa0584c30a56c',1,'PHRequestCommand']]],
+  ['executeimage_3a',['executeImage:',['../interface_edit_image_setting.html#a18929adaef7331f342bcdb4c54067f0b',1,'EditImageSetting']]],
+  ['executeresultblock_3aerrorblock_3a',['executeResultBlock:errorBlock:',['../interface_p_h_request.html#abcf98956cbdf64401776be4eb33f8008',1,'PHRequest']]],
+  ['executeresultblock_3aprogressuploadblock_3aerrorblock_3a',['executeResultBlock:progressUploadBlock:errorBlock:',['../interface_p_h_request.html#aad25cee6993041949e875f7fd27a8ba9',1,'PHRequest']]]
 ];

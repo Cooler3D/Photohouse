@@ -1,24 +1,5 @@
 var searchData=
 [
-  ['saturationvalue',['saturationValue',['../interface_edit_image_setting.html#ac369d7817ccde0836a38261bc3bd2225',1,'EditImageSetting']]],
-  ['savetimer',['saveTimer',['../category_save_image_manager_07_08.html#a8754d96180b771435a5f35c9789a7b52',1,'SaveImageManager()']]],
-  ['savetype',['saveType',['../category_save_image_manager_07_08.html#a82768d0d2da164ba22033f70c6988b3a',1,'SaveImageManager()']]],
-  ['scalepngurl',['scalePngUrl',['../interface_place_holder.html#a3bf64d6969962eba6c49753df4575917',1,'PlaceHolder']]],
-  ['selectpropcolor',['selectPropColor',['../interface_prop_type.html#aa97992a62fbd650f81b36d337b65546a',1,'PropType']]],
-  ['selectpropcover',['selectPropCover',['../interface_prop_type.html#a9e084b22347988d03bd3ec9f1576e6eb',1,'PropType']]],
-  ['selectpropsize',['selectPropSize',['../interface_prop_type.html#a5542545e9255e3fad50b97758694cf55',1,'PropType']]],
-  ['selectpropstyle',['selectPropStyle',['../interface_prop_type.html#a172dae0869ec43a1256f3badd21b94a2',1,'PropType']]],
-  ['selectproputurn',['selectPropUturn',['../interface_prop_type.html#a47ba01774e1025f68027f7caf39089b6',1,'PropType']]],
-  ['selecttemplate',['selectTemplate',['../interface_prop_type.html#a87e574e9f16fde1a7a67576e479deaab',1,'PropType']]],
-  ['servercurrenttimecommand',['serverCurrentTimeCommand',['../interface_p_h_response.html#a6e57ba23189bea07a78c562708513fba',1,'PHResponse']]],
-  ['size',['size',['../interface_template.html#af751ae58210d7ef4f8c612b35dd8e351',1,'Template']]],
-  ['sizes',['sizes',['../interface_prop_type.html#a916b161137043a4e7c9f86a8ef58c190',1,'PropType']]],
-  ['status',['status',['../interface_person_order_info.html#a65b62042448abe7871fe49eddb11ba05',1,'PersonOrderInfo']]],
-  ['status_5fid',['status_id',['../interface_person_order_info.html#a67dcbee43e460fe6f6b940393bef955c',1,'PersonOrderInfo']]],
-  ['storeitem',['storeItem',['../interface_base_strategy.html#a09163857d91e08cbee193856df284625',1,'BaseStrategy']]],
-  ['storethumbalurl',['storeThumbalUrl',['../interface_json_template_layout.html#ac5c32506bfc745c0b41f45b0525ae76a',1,'JsonTemplateLayout']]],
-  ['studio_5fid',['studio_id',['../interface_person_order_info.html#a7b125c4d1b3f875dfa5facf80bd36081',1,'PersonOrderInfo']]],
-  ['stylename',['styleName',['../interface_album_template.html#aae4cf8488fcf4007b30fcaf981ce2f0a',1,'AlbumTemplate']]],
-  ['styles',['styles',['../interface_prop_type.html#a9e36d28687fca498ce20fa181fb29346',1,'PropType']]],
-  ['stylethumbalurl',['styleThumbalUrl',['../interface_json_template_layout.html#a198001ce43a5faf5b3df689378ae8fc9',1,'JsonTemplateLayout']]]
+  ['rect',['rect',['../interface_place_holder.html#a41fbb0c07702d36431633be1ab369e25',1,'PlaceHolder']]],
+  ['recttovisibleeditor',['rectToVisibleEditor',['../interface_edit_image_setting.html#a82be1f925ecd31590b3362250d1a025d',1,'EditImageSetting']]]
 ];

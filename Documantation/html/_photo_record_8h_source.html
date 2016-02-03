@@ -115,24 +115,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">@property</span> (nonatomic, assign, getter = isEdited) BOOL edited;       <span class="comment">// Редактировалось ли? YES or NO</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">@property</span> (nonatomic, assign, readonly) BOOL hasImage;              <span class="comment">// Return YES if image is downloaded.</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">@property</span> (nonatomic, getter = isFailed) BOOL failed;               <span class="comment">// Return Yes if image failed to be downloaded/uploaded</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) ALAsset *asset;                       <span class="comment">// Для загрузки фотографий с телефона</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="interface_photo_record.html#a58dd0a1f65a4e966f51553410cccc028">   31</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSDate *<a class="code" href="interface_photo_record.html#a58dd0a1f65a4e966f51553410cccc028">dateSave</a>;           </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="interface_photo_record.html#aa22c1ffdca2b3f9d4e468bc86210352f">   32</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign, readonly) CGSize <a class="code" href="interface_photo_record.html#aa22c1ffdca2b3f9d4e468bc86210352f">imageSize</a>;           </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">@property</span> (nonatomic, assign, readonly) ImportLibrary importFromLibrary;      <span class="comment">// Откуда импортировали Фотку (Телефон, Instagram, VK)</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) ALAsset *asset __attribute__((deprecated(<span class="stringliteral">&quot;Remove property&quot;</span>)));                       <span class="comment">// Для загрузки фотографий с телефона</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">@property</span> (nonatomic, assign, readonly) ImportLibrary importFromLibrary;      <span class="comment">// Откуда импортировали Фотку (Телефон, Instagram, VK)</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;- (id) initWithSocialURl:(NSString *)socialUrl andImaportLibrary:(ImportLibrary)importLibrary;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;- (id) initWithAsset:(ALAsset *)asset;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;- (id) initWithSocialURl:(NSString *)socialUrl withImage:(UIImage *)image andImportLibrary:(ImportLibrary)importLibrary;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//- (id) initWithSocialURl:(NSString *)socialUrl andImaportLibrary:(ImportLibrary)importLibrary __attribute__((deprecated(&quot;use &#39;initAssetThumbal:&#39;&quot;)));</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;- (id) initWithAsset:(ALAsset *)asset __attribute__((deprecated(&quot;use &#39;initAssetThumbal:&#39;&quot;)));</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;- (id)initAssetThumbal:(CGImageRef)preview andNameUrlLibary:(NSString *)urlLib andDate:(NSDate *)date andImageSize:(CGSize)imageSize;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_photo_record_html_a58dd0a1f65a4e966f51553410cccc028"><div class="ttname"><a href="interface_photo_record.html#a58dd0a1f65a4e966f51553410cccc028">PhotoRecord::dateSave</a></div><div class="ttdeci">NSDate * dateSave</div><div class="ttdoc">Дата создание картинки </div><div class="ttdef"><b>Definition:</b> <a href="_photo_record_8h_source.html#l00031">PhotoRecord.h:31</a></div></div>
 <div class="ttc" id="interface_photo_record_html"><div class="ttname"><a href="interface_photo_record.html">PhotoRecord</a></div><div class="ttdef"><b>Definition:</b> <a href="_photo_record_8h_source.html#l00023">PhotoRecord.h:23</a></div></div>
+<div class="ttc" id="interface_photo_record_html_aa22c1ffdca2b3f9d4e468bc86210352f"><div class="ttname"><a href="interface_photo_record.html#aa22c1ffdca2b3f9d4e468bc86210352f">PhotoRecord::imageSize</a></div><div class="ttdeci">CGSize imageSize</div><div class="ttdoc">Оригинальный размер картинки </div><div class="ttdef"><b>Definition:</b> <a href="_photo_record_8h_source.html#l00032">PhotoRecord.h:32</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+Документация по PhotoHouse. Последние изменения: Чт 4 Фев 2016 00:57:57. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -106,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">@property</span> (weak, nonatomic) id&lt;FilterImageManagerDelegate&gt; delegate;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;- (id) initWithPrintImage:(<a class="code" href="interface_print_image.html">PrintImage</a> *)printImage andDelegate:(id&lt;FilterImageManagerDelegate&gt;)delegate;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;- (id) initWithPrintDataUnique:(NSUInteger)unique andPrintImage:(<a class="code" href="interface_print_image.html">PrintImage</a> *)printImage andDelegate:(id&lt;FilterImageManagerDelegate&gt;)delegate;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
@@ -120,12 +120,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_filter_image_manager_html"><div class="ttname"><a href="interface_filter_image_manager.html">FilterImageManager</a></div><div class="ttdoc">Применения фильтров перед отправкой картинки ОРИГИНАЛЬНОЙ на сервер PhotHouse. </div><div class="ttdef"><b>Definition:</b> <a href="_filter_image_manager_8h_source.html#l00020">FilterImageManager.h:20</a></div></div>
 <div class="ttc" id="protocol_filter_image_manager_delegate-p_html"><div class="ttname"><a href="protocol_filter_image_manager_delegate-p.html">FilterImageManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> <a href="_filter_image_manager_8h_source.html#l00037">FilterImageManager.h:37</a></div></div>
-<div class="ttc" id="interface_print_image_html"><div class="ttname"><a href="interface_print_image.html">PrintImage</a></div><div class="ttdoc">Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00028">PrintImage.h:28</a></div></div>
-<div class="ttc" id="interface_filter_image_manager_html_ad5bc8e5e37a783902054fc18a4a76c4f"><div class="ttname"><a href="interface_filter_image_manager.html#ad5bc8e5e37a783902054fc18a4a76c4f">-[FilterImageManager apply]</a></div><div class="ttdeci">void apply()</div><div class="ttdoc">Применяем фильтр, на картинку printImage содержащую оригинальное изображения накладываются фильтра ес...</div><div class="ttdef"><b>Definition:</b> <a href="_filter_image_manager_8m_source.html#l00031">FilterImageManager.m:31</a></div></div>
+<div class="ttc" id="interface_print_image_html"><div class="ttname"><a href="interface_print_image.html">PrintImage</a></div><div class="ttdoc">Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00027">PrintImage.h:27</a></div></div>
+<div class="ttc" id="interface_filter_image_manager_html_ad5bc8e5e37a783902054fc18a4a76c4f"><div class="ttname"><a href="interface_filter_image_manager.html#ad5bc8e5e37a783902054fc18a4a76c4f">-[FilterImageManager apply]</a></div><div class="ttdeci">void apply()</div><div class="ttdoc">Применяем фильтр, на картинку printImage содержащую оригинальное изображения накладываются фильтра ес...</div><div class="ttdef"><b>Definition:</b> <a href="_filter_image_manager_8m_source.html#l00039">FilterImageManager.m:39</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+Документация по PhotoHouse. Последние изменения: Чт 4 Фев 2016 00:57:57. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

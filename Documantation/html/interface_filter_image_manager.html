@@ -101,12 +101,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Методы экземпляра</h2></td></tr>
-<tr class="memitem:aba01abaa2a969102eb683583dad60779"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_filter_image_manager.html#aba01abaa2a969102eb683583dad60779">initWithPrintImage:andDelegate:</a></td></tr>
-<tr class="memdesc:aba01abaa2a969102eb683583dad60779"><td class="mdescLeft">&#160;</td><td class="mdescRight">Иницализируем фильтр  <a href="#aba01abaa2a969102eb683583dad60779">Подробнее...</a><br /></td></tr>
-<tr class="separator:aba01abaa2a969102eb683583dad60779"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5bc8e5e37a783902054fc18a4a76c4f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5bc8e5e37a783902054fc18a4a76c4f"></a>
-(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_filter_image_manager.html#ad5bc8e5e37a783902054fc18a4a76c4f">apply</a></td></tr>
-<tr class="memdesc:ad5bc8e5e37a783902054fc18a4a76c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Применяем фильтр, на картинку printImage содержащую оригинальное изображения накладываются фильтра если они не default. <br /></td></tr>
+<tr class="memitem:ab938e66a578c9f106a1639465375e281"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_filter_image_manager.html#ab938e66a578c9f106a1639465375e281">initWithPrintDataUnique:andPrintImage:andDelegate:</a></td></tr>
+<tr class="memdesc:ab938e66a578c9f106a1639465375e281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Иницализируем фильтр  <a href="#ab938e66a578c9f106a1639465375e281">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab938e66a578c9f106a1639465375e281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5bc8e5e37a783902054fc18a4a76c4f"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_filter_image_manager.html#ad5bc8e5e37a783902054fc18a4a76c4f">apply</a></td></tr>
+<tr class="memdesc:ad5bc8e5e37a783902054fc18a4a76c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Применяем фильтр, на картинку printImage содержащую оригинальное изображения накладываются фильтра если они не default.  <a href="#ad5bc8e5e37a783902054fc18a4a76c4f">Подробнее...</a><br /></td></tr>
 <tr class="separator:ad5bc8e5e37a783902054fc18a4a76c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
@@ -121,12 +120,38 @@ id&lt; <a class="el" href="protocol_filter_image_manager_delegate-p.html">Filter
 
 <p>См. определение в файле <a class="el" href="_filter_image_manager_8h_source.html">FilterImageManager.h</a> строка <a class="el" href="_filter_image_manager_8h_source.html#l00020">20</a></p>
 </div><h2 class="groupheader">Документация метода</h2>
-<a class="anchor" id="aba01abaa2a969102eb683583dad60779"></a>
+<a class="anchor" id="ad5bc8e5e37a783902054fc18a4a76c4f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">- (id) initWithPrintImage: </td>
+          <td class="memname">- (void) apply </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Применяем фильтр, на картинку printImage содержащую оригинальное изображения накладываются фильтра если они не default. </p>
+<p>Блок применения фильтров </p>
+
+<p>См. определение в файле <a class="el" href="_filter_image_manager_8m_source.html">FilterImageManager.m</a> строка <a class="el" href="_filter_image_manager_8m_source.html#l00039">39</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ab938e66a578c9f106a1639465375e281"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initWithPrintDataUnique: </td>
+          <td></td>
+          <td class="paramtype">(NSUInteger)&#160;</td>
+          <td class="paramname"><em>unique</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andPrintImage:</td>
           <td></td>
           <td class="paramtype">(<a class="el" href="interface_print_image.html">PrintImage</a> *)&#160;</td>
           <td class="paramname"><em>printImage</em></td>
@@ -154,7 +179,7 @@ id&lt; <a class="el" href="protocol_filter_image_manager_delegate-p.html">Filter
   </dd>
 </dl>
 
-<p>См. определение в файле <a class="el" href="_filter_image_manager_8m_source.html">FilterImageManager.m</a> строка <a class="el" href="_filter_image_manager_8m_source.html#l00020">20</a></p>
+<p>См. определение в файле <a class="el" href="_filter_image_manager_8m_source.html">FilterImageManager.m</a> строка <a class="el" href="_filter_image_manager_8m_source.html#l00026">26</a></p>
 
 </div>
 </div>
@@ -165,7 +190,7 @@ id&lt; <a class="el" href="protocol_filter_image_manager_delegate-p.html">Filter
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:32. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+Документация по PhotoHouse. Последние изменения: Чт 4 Фев 2016 00:57:58. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

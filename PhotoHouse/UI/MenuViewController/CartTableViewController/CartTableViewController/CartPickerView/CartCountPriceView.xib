@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.89999999999999991" contentMode="scaleToFill" id="iN0-l3-epB" customClass="CartCountPickerView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="192"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" alpha="0.89999999999999991" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ms-nh-AXa">
+                    <rect key="frame" x="20" y="0.0" width="58" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="Отмена">
+                        <color key="titleColor" red="0.19215686274509802" green="0.63529411764705879" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="actionCancelButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="4eI-Hh-yHC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" alpha="0.89999999999999991" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ren-xD-roT">
+                    <rect key="frame" x="247" y="0.0" width="53" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="OK">
+                        <color key="titleColor" red="0.19215686274509802" green="0.63529411764705879" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="actionOkButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="KEm-em-eMS"/>
+                    </connections>
+                </button>
+                <pickerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A0o-Jx-Kf4">
+                    <rect key="frame" x="0.0" y="30" width="320" height="162"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="lbQ-b9-CSA"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="uFE-Se-fK9"/>
+                    </connections>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" red="0.0078431372549019607" green="0.043137254901960784" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelButton" destination="8Ms-nh-AXa" id="w1X-Sl-cje"/>
+                <outlet property="okButton" destination="ren-xD-roT" id="L1a-cg-p2a"/>
+                <outlet property="pickerView" destination="A0o-Jx-Kf4" id="3tu-eR-qCX"/>
+            </connections>
+        </view>
+    </objects>
+</document>

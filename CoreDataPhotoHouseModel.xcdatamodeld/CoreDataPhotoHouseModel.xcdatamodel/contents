@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="1" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F27" minimumToolsVersion="Xcode 4.3">
+    <entity name="AddressEntity" representedClassName="AddressEntity" parentEntity="PHObjectProfile" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="profile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProfileUserEntity" inverseName="address" inverseEntity="ProfileUserEntity" syncable="YES"/>
+    </entity>
+    <entity name="BannerEntity" representedClassName="BannerEntity" syncable="YES">
+        <attribute name="actionUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="interval" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="DeliveryCityEntity" representedClassName="DeliveryCityEntity" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uiname" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="deliveries" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="DeliveryTypeEntity" inverseName="city" inverseEntity="DeliveryTypeEntity" syncable="YES"/>
+    </entity>
+    <entity name="DeliveryMemberEntity" representedClassName="DeliveryMemberEntity" parentEntity="PHObjectProfile" syncable="YES">
+        <attribute name="codeDelivery" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uiCityName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uiPaymentName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="profile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProfileUserEntity" inverseName="deliveryMember" inverseEntity="ProfileUserEntity" syncable="YES"/>
+    </entity>
+    <entity name="DeliveryTypeEntity" representedClassName="DeliveryTypeEntity" syncable="YES">
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cost" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="descritions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DeliveryCityEntity" inverseName="deliveries" inverseEntity="DeliveryCityEntity" syncable="YES"/>
+        <relationship name="payments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PaymentEntity" inverseName="delivery" inverseEntity="PaymentEntity" syncable="YES"/>
+    </entity>
+    <entity name="LayerImageEntity" representedClassName="LayerImageEntity" parentEntity="PHObjectAlbum" syncable="YES">
+        <attribute name="crop" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="layertype" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="pixelLimit" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="pixelMin" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="rect" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="urlUpload" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="z" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="layout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LayoutEntity" inverseName="layer" inverseEntity="LayoutEntity" syncable="YES"/>
+    </entity>
+    <entity name="LayoutEntity" representedClassName="LayoutEntity" parentEntity="PHObjectAlbum" syncable="YES">
+        <attribute name="id_layout" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="layoutType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pageIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="template_psd" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="layer" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LayerImageEntity" inverseName="layout" inverseEntity="LayerImageEntity" syncable="YES"/>
+        <relationship name="templateAlbum" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TemplateEntity" inverseName="layouts" inverseEntity="TemplateEntity" syncable="YES"/>
+    </entity>
+    <entity name="PaymentEntity" representedClassName="PaymentEntity" syncable="YES">
+        <attribute name="action" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paymentType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uiname" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="delivery" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DeliveryTypeEntity" inverseName="payments" inverseEntity="DeliveryTypeEntity" syncable="YES"/>
+    </entity>
+    <entity name="PHObjectAlbum" representedClassName="PHObjectAlbum" syncable="YES"/>
+    <entity name="PHObjectProfile" representedClassName="PHObjectProfile" syncable="YES"/>
+    <entity name="PHObjectProps" representedClassName="PHObjectProps" syncable="YES"/>
+    <entity name="PHObjectShopCart" representedClassName="PHObjectShopCart" syncable="YES"/>
+    <entity name="PHObjectStyleEntity" representedClassName="PHObjectStyleEntity" syncable="YES"/>
+    <entity name="PhoneEntity" representedClassName="PhoneEntity" parentEntity="PHObjectProfile" syncable="YES">
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="profile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProfileUserEntity" inverseName="phone" inverseEntity="ProfileUserEntity" syncable="YES"/>
+    </entity>
+    <entity name="ProfileUserEntity" representedClassName="ProfileUserEntity" parentEntity="PHObjectProfile" syncable="YES">
+        <attribute name="access" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idUser" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="passwordMD5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="regDate" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="address" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="AddressEntity" inverseName="profile" inverseEntity="AddressEntity" syncable="YES"/>
+        <relationship name="deliveryMember" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DeliveryMemberEntity" inverseName="profile" inverseEntity="DeliveryMemberEntity" syncable="YES"/>
+        <relationship name="phone" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PhoneEntity" inverseName="profile" inverseEntity="PhoneEntity" syncable="YES"/>
+    </entity>
+    <entity name="PropColorEntity" representedClassName="PropColorEntity" parentEntity="PHObjectProps" syncable="YES">
+        <attribute name="colorName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="propType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PropTypeEntity" inverseName="colors" inverseEntity="PropTypeEntity" syncable="YES"/>
+    </entity>
+    <entity name="PropCoverEntity" representedClassName="PropCoverEntity" parentEntity="PHObjectProps" syncable="YES">
+        <attribute name="cover" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="propType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PropTypeEntity" inverseName="covers" inverseEntity="PropTypeEntity" syncable="YES"/>
+    </entity>
+    <entity name="PropLayerImageEntity" representedClassName="PropLayerImageEntity" parentEntity="PHObjectProps" syncable="YES">
+        <attribute name="crop" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="layerType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="pixelLimit" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="pixelMin" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="rect" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="z" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="layout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PropLayoutEntity" inverseName="layer" inverseEntity="PropLayoutEntity" syncable="YES"/>
+    </entity>
+    <entity name="PropLayoutEntity" representedClassName="PropLayoutEntity" parentEntity="PHObjectProps" syncable="YES">
+        <attribute name="id_layout" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="layoutType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noScaleCombined" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="template_psd" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="combinedLayer" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PropPlaceHolderEntity" inverseName="layout" inverseEntity="PropPlaceHolderEntity" syncable="YES"/>
+        <relationship name="layer" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PropLayerImageEntity" inverseName="layout" inverseEntity="PropLayerImageEntity" syncable="YES"/>
+        <relationship name="templateAlbum" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PropTemplateEntity" inverseName="layouts" inverseEntity="PropTemplateEntity" syncable="YES"/>
+    </entity>
+    <entity name="PropPlaceHolderEntity" representedClassName="PropPlaceHolderEntity" parentEntity="PHObjectProps" syncable="YES">
+        <attribute name="layerNum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pngPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="psdPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rect" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="layout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PropLayoutEntity" inverseName="combinedLayer" inverseEntity="PropLayoutEntity" syncable="YES"/>
+    </entity>
+    <entity name="PropSizeEntity" representedClassName="PropSizeEntity" parentEntity="PHObjectProps" syncable="YES">
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="propType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PropTypeEntity" inverseName="sizes" inverseEntity="PropTypeEntity" syncable="YES"/>
+    </entity>
+    <entity name="PropStyleEntity" representedClassName="PropStyleEntity" parentEntity="PHObjectProps" syncable="YES">
+        <attribute name="maxCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="minCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="styleImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="styleName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="propType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PropTypeEntity" inverseName="styles" inverseEntity="PropTypeEntity" syncable="YES"/>
+    </entity>
+    <entity name="PropTemplateEntity" representedClassName="PropTemplateEntity" parentEntity="PHObjectProps" syncable="YES">
+        <attribute name="font" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id_template" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="layouts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PropLayoutEntity" inverseName="templateAlbum" inverseEntity="PropLayoutEntity" syncable="YES"/>
+        <relationship name="propType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PropTypeEntity" inverseName="templates" inverseEntity="PropTypeEntity" syncable="YES"/>
+    </entity>
+    <entity name="PropTypeEntity" representedClassName="PropTypeEntity" parentEntity="PHObjectProps" syncable="YES">
+        <attribute name="item_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="propName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="colors" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PropColorEntity" inverseName="propType" inverseEntity="PropColorEntity" syncable="YES"/>
+        <relationship name="covers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PropCoverEntity" inverseName="propType" inverseEntity="PropCoverEntity" syncable="YES"/>
+        <relationship name="sizes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PropSizeEntity" inverseName="propType" inverseEntity="PropSizeEntity" syncable="YES"/>
+        <relationship name="store" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StoreEntity" inverseName="propTypes" inverseEntity="StoreEntity" syncable="YES"/>
+        <relationship name="styles" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PropStyleEntity" inverseName="propType" inverseEntity="PropStyleEntity" syncable="YES"/>
+        <relationship name="templates" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PropTemplateEntity" inverseName="propType" inverseEntity="PropTemplateEntity" syncable="YES"/>
+        <relationship name="uturns" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PropUturnEntity" inverseName="propType" inverseEntity="PropUturnEntity" syncable="YES"/>
+    </entity>
+    <entity name="PropUturnEntity" representedClassName="PropUturnEntity" parentEntity="PHObjectProps" syncable="YES">
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="uturn" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="propType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PropTypeEntity" inverseName="uturns" inverseEntity="PropTypeEntity" syncable="YES"/>
+    </entity>
+    <entity name="PurchaseTypeEntity" representedClassName="PurchaseTypeEntity" parentEntity="PHObjectStyleEntity" syncable="YES">
+        <attribute name="id_purchase" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="styles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StyleTypeEntity" inverseName="type" inverseEntity="StyleTypeEntity" syncable="YES"/>
+    </entity>
+    <entity name="RangeEntity" representedClassName="RangeEntity" syncable="YES">
+        <attribute name="maxRange" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="minRange" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="nameStyle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="purchaseID" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="RangeStyleEntity" representedClassName="RangeStyleEntity" parentEntity="PHObjectStyleEntity" syncable="YES">
+        <attribute name="maxCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="minCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="nameStyle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="styleStyles" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StyleTypeEntity" inverseName="styles" inverseEntity="StyleTypeEntity" syncable="YES"/>
+    </entity>
+    <entity name="ShopCartImageEntity" representedClassName="ShopCartImageEntity" parentEntity="PHObjectShopCart" syncable="YES">
+        <attribute name="imageLarge" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="imagePreview" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="importLibrary" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="isMerged" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="sizeLargeImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unique_image" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uploadURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="urlLibrary" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="imageSetting" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ShopCartSettingEntity" inverseName="image" inverseEntity="ShopCartSettingEntity" syncable="YES"/>
+        <relationship name="print" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShopCartPrintEntity" inverseName="images" inverseEntity="ShopCartPrintEntity" syncable="YES"/>
+    </entity>
+    <entity name="ShopCartPrintEntity" representedClassName="ShopCartPrintEntity" parentEntity="PHObjectShopCart" syncable="YES">
+        <attribute name="count" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="nameCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="namePurchase" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="processInsert" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="purchaseID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="typeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unique_print" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ShopCartImageEntity" inverseName="print" inverseEntity="ShopCartImageEntity" syncable="YES"/>
+        <relationship name="props" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ShopCartPropsEntity" inverseName="print" inverseEntity="ShopCartPropsEntity" syncable="YES"/>
+    </entity>
+    <entity name="ShopCartPropsEntity" representedClassName="ShopCartPropsEntity" parentEntity="PHObjectShopCart" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cover" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="style" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uturn" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="print" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShopCartPrintEntity" inverseName="props" inverseEntity="ShopCartPrintEntity" syncable="YES"/>
+        <relationship name="templateAlbum" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ShopTemplateEntity" inverseName="propType" inverseEntity="ShopTemplateEntity" syncable="YES"/>
+    </entity>
+    <entity name="ShopCartSettingEntity" representedClassName="ShopCartSettingEntity" parentEntity="PHObjectShopCart" syncable="YES">
+        <attribute name="brightness" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="constast" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="crop" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filterName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orientation" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="orientationDefault" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="saturation" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShopCartImageEntity" inverseName="imageSetting" inverseEntity="ShopCartImageEntity" syncable="YES"/>
+    </entity>
+    <entity name="ShopImageLayerEntity" representedClassName="ShopImageLayerEntity" parentEntity="PHObjectShopCart" syncable="YES">
+        <attribute name="crop" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="layerType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="orientation" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="orientationDefault" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="pixelLimit" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="pixelMin" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="rect" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="urlPage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="urlUpload" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="z" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="layout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShopLayoutEntity" inverseName="layers" inverseEntity="ShopLayoutEntity" syncable="YES"/>
+    </entity>
+    <entity name="ShopLayoutEntity" representedClassName="ShopLayoutEntity" parentEntity="PHObjectShopCart" syncable="YES">
+        <attribute name="id_layout" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="layoutType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noScaleCombined" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pageIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="template_psd" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="combinedLayer" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ShopPlaceHolderEntity" inverseName="layout" inverseEntity="ShopPlaceHolderEntity" syncable="YES"/>
+        <relationship name="layers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ShopImageLayerEntity" inverseName="layout" inverseEntity="ShopImageLayerEntity" syncable="YES"/>
+        <relationship name="templateAlbum" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShopTemplateEntity" inverseName="layouts" inverseEntity="ShopTemplateEntity" syncable="YES"/>
+    </entity>
+    <entity name="ShopPlaceHolderEntity" representedClassName="ShopPlaceHolderEntity" parentEntity="PHObjectShopCart" syncable="YES">
+        <attribute name="layerNum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pngPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="psdPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rect" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="layout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShopLayoutEntity" inverseName="combinedLayer" inverseEntity="ShopLayoutEntity" syncable="YES"/>
+    </entity>
+    <entity name="ShopTemplateEntity" representedClassName="ShopTemplateEntity" parentEntity="PHObjectShopCart" syncable="YES">
+        <attribute name="font" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id_template" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name_template" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="size_template" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="layouts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ShopLayoutEntity" inverseName="templateAlbum" inverseEntity="ShopLayoutEntity" syncable="YES"/>
+        <relationship name="propType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShopCartPropsEntity" inverseName="templateAlbum" inverseEntity="ShopCartPropsEntity" syncable="YES"/>
+    </entity>
+    <entity name="SocialImageEntity" representedClassName="SocialImageEntity" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="library" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="StoreEntity" representedClassName="StoreEntity" parentEntity="PHObjectProps" syncable="YES">
+        <attribute name="availability" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="category_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="category_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id_puchase" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="propTypes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PropTypeEntity" inverseName="store" inverseEntity="PropTypeEntity" syncable="YES"/>
+    </entity>
+    <entity name="StyleTypeEntity" representedClassName="StyleTypeEntity" parentEntity="PHObjectStyleEntity" syncable="YES">
+        <attribute name="nameStyleProp" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="styles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RangeStyleEntity" inverseName="styleStyles" inverseEntity="RangeStyleEntity" syncable="YES"/>
+        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PurchaseTypeEntity" inverseName="styles" inverseEntity="PurchaseTypeEntity" syncable="YES"/>
+    </entity>
+    <entity name="TemplateEntity" representedClassName="TemplateEntity" parentEntity="PHObjectAlbum" syncable="YES">
+        <attribute name="font" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id_template" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="processInsert" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userTemplate" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <relationship name="layouts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LayoutEntity" inverseName="templateAlbum" inverseEntity="LayoutEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AddressEntity" positionX="162" positionY="135" width="128" height="75"/>
+        <element name="BannerEntity" positionX="-423" positionY="174" width="128" height="105"/>
+        <element name="DeliveryCityEntity" positionX="-1017" positionY="180" width="128" height="90"/>
+        <element name="DeliveryMemberEntity" positionX="162" positionY="135" width="128" height="105"/>
+        <element name="DeliveryTypeEntity" positionX="-839" positionY="150" width="128" height="135"/>
+        <element name="LayerImageEntity" positionX="0" positionY="135" width="128" height="180"/>
+        <element name="LayoutEntity" positionX="0" positionY="135" width="128" height="135"/>
+        <element name="PaymentEntity" positionX="-641" positionY="165" width="128" height="118"/>
+        <element name="PHObjectAlbum" positionX="162" positionY="135" width="128" height="43"/>
+        <element name="PHObjectProfile" positionX="162" positionY="135" width="128" height="43"/>
+        <element name="PHObjectProps" positionX="-297" positionY="335" width="128" height="43"/>
+        <element name="PHObjectShopCart" positionX="-387" positionY="-540" width="128" height="43"/>
+        <element name="PHObjectStyleEntity" positionX="162" positionY="135" width="128" height="43"/>
+        <element name="PhoneEntity" positionX="162" positionY="135" width="128" height="75"/>
+        <element name="ProfileUserEntity" positionX="162" positionY="135" width="128" height="225"/>
+        <element name="PropColorEntity" positionX="-227" positionY="468" width="128" height="90"/>
+        <element name="PropCoverEntity" positionX="-54" positionY="468" width="128" height="90"/>
+        <element name="PropLayerImageEntity" positionX="990" positionY="441" width="128" height="180"/>
+        <element name="PropLayoutEntity" positionX="610" positionY="450" width="128" height="148"/>
+        <element name="PropPlaceHolderEntity" positionX="810" positionY="476" width="128" height="118"/>
+        <element name="PropSizeEntity" positionX="99" positionY="477" width="128" height="90"/>
+        <element name="PropStyleEntity" positionX="261" positionY="483" width="128" height="120"/>
+        <element name="PropTemplateEntity" positionX="432" positionY="486" width="128" height="135"/>
+        <element name="PropTypeEntity" positionX="-396" positionY="444" width="128" height="195"/>
+        <element name="PropUturnEntity" positionX="1168" positionY="549" width="128" height="90"/>
+        <element name="PurchaseTypeEntity" positionX="162" positionY="135" width="128" height="75"/>
+        <element name="RangeEntity" positionX="162" positionY="135" width="128" height="120"/>
+        <element name="RangeStyleEntity" positionX="162" positionY="135" width="128" height="105"/>
+        <element name="ShopCartImageEntity" positionX="-486" positionY="-306" width="128" height="210"/>
+        <element name="ShopCartPrintEntity" positionX="-693" positionY="-252" width="128" height="180"/>
+        <element name="ShopCartPropsEntity" positionX="-126" positionY="-243" width="128" height="180"/>
+        <element name="ShopCartSettingEntity" positionX="-306" positionY="-276" width="128" height="163"/>
+        <element name="ShopImageLayerEntity" positionX="565" positionY="-261" width="128" height="223"/>
+        <element name="ShopLayoutEntity" positionX="261" positionY="-216" width="128" height="163"/>
+        <element name="ShopPlaceHolderEntity" positionX="421" positionY="-198" width="128" height="118"/>
+        <element name="ShopTemplateEntity" positionX="63" positionY="-198" width="128" height="135"/>
+        <element name="SocialImageEntity" positionX="162" positionY="135" width="128" height="90"/>
+        <element name="StoreEntity" positionX="-567" positionY="459" width="128" height="150"/>
+        <element name="StyleTypeEntity" positionX="162" positionY="135" width="128" height="90"/>
+        <element name="TemplateEntity" positionX="-189" positionY="144" width="128" height="150"/>
+    </elements>
+</model>

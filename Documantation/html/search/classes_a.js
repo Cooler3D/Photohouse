@@ -1,6 +1,8 @@
 var searchData=
 [
   ['magnitstrategy',['MagnitStrategy',['../interface_magnit_strategy.html',1,'']]],
+  ['mdphotolibrary',['MDPhotoLibrary',['../interface_m_d_photo_library.html',1,'']]],
+  ['mdphotolibrary_28_29',['MDPhotoLibrary()',['../category_m_d_photo_library_07_08.html',1,'']]],
   ['mergeoperation',['MergeOperation',['../interface_merge_operation.html',1,'']]],
   ['mergeoperationdelegate_2dp',['MergeOperationDelegate-p',['../protocol_merge_operation_delegate-p.html',1,'']]],
   ['mousemagstrategy',['MouseMagStrategy',['../interface_mouse_mag_strategy.html',1,'']]],

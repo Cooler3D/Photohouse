@@ -112,271 +112,464 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;} ImageType;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="category_print_image_07_08.html">   26</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_print_image.html">PrintImage</a> ()</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">@property</span> (assign, nonatomic) ImageType imageType;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">@implementation </span><a class="code" href="interface_print_image.html">PrintImage</a></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">@synthesize</span> <a class="code" href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">editedImageSetting</a> = _editedImageSetting;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">@synthesize</span> <a class="code" href="interface_print_image.html#a6d7171db6a426214e05f85f3455095fa">previewImage</a> = _previewImage;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">@synthesize</span> <a class="code" href="interface_print_image.html#af3ef09ed2183bea4054634bd8fb28efc">assetImage</a> = _assetImage;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">@synthesize</span> <a class="code" href="interface_print_image.html#aff9b7189611e69f9676a428c59632b4b">imageLargeData</a> = _imageLargeData;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="interface_print_image.html#aafeb6bab5eb462815563660baa45cc92">   39</a></span>&#160;- (id) initLargeImageData:(NSData *)imageData andPreviewImage:(UIImage *)previewImage withName:(NSString *)imageUrlName andEditSetting:(<a class="code" href="interface_edit_image_setting.html">EditImageSetting</a> *)editSetting</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>) {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        _imageLargeData     = imageData;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        _previewImage       = [editSetting <a class="code" href="interface_edit_image_setting.html#a177e904354641a567842e269d5a163fa">isDidEditing</a>] ? <a class="code" href="interface_print_image.html#a6d7171db6a426214e05f85f3455095fa">previewImage</a> : [UIImage imageWithData:imageData];</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        _urlLibrary         = imageUrlName;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        _isMergedImage      = NO;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        _originalImageSize  = imageData == nil ? _previewImage.size : [[UIImage imageWithData:imageData] size];</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        _editedImageSetting = editSetting;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="interface_print_image.html#acbfec3264ca748a79d1728691981b874">   53</a></span>&#160;-(id)initWithPreviewImage:(UIImage *)image withName:(NSString *)imageUrlName andEditSetting:(<a class="code" href="interface_edit_image_setting.html">EditImageSetting</a> *)editSetting originalSize:(CGSize)originalSize</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        _previewImage   = image;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        _photoPrintImage = [_previewImage copy];</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        _urlLibrary     = imageUrlName;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        _isMergedImage  = NO;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        _originalImageSize = CGSizeEqualToSize(originalSize, CGSizeZero) ? image.size : originalSize;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        _iconPreviewImage = [image aspectFill:CGSizeMake(50, 50)];</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        _editedImageSetting = editSetting ? editSetting : [[<a class="code" href="interface_edit_image_setting.html">EditImageSetting</a> alloc] initSettingWithImage:image];</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        _imageLibrary = ImageLibrarySocial;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="interface_print_image.html#a908412a970dd1e43a7ef959efef02aae">   70</a></span>&#160;- (id) initMergeImage:(UIImage *)image withName:(NSString *)imageUrlName</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        _previewImage   = image;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        _urlLibrary     = imageUrlName;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        _isMergedImage  = YES;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        _originalImageSize = image.size;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        _editedImageSetting = [[<a class="code" href="interface_edit_image_setting.html">EditImageSetting</a> alloc] initSettingWithImage:image];</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="interface_print_image.html#a1cb6cdb8707e117da109fb50abd42327">   84</a></span>&#160;-(id)initWithALAsset:(ALAsset *)asset withName:(NSString *)imageUrlName</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>) {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        ALAssetRepresentation *representation = asset.defaultRepresentation;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        NSDictionary *metadata = representation.metadata;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        NSInteger imageWidth = [[metadata objectForKey:@&quot;PixelWidth&quot;] integerValue];</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        NSInteger imageHeight = [[metadata objectForKey:@&quot;PixelHeight&quot;] integerValue];</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        _originalImageSize = CGSizeMake(imageWidth, imageHeight);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        _isMergedImage      = NO;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        _urlLibrary         = [representation.url absoluteString];</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        _assetImage         = asset;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        _imageLibrary       = ImageLibraryPhone;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="interface_print_image.html#aac18bd36446b87898ff2f43d6991afce">  105</a></span>&#160;- (id) initWithHistoryOrderDictionary:(NSDictionary *)imageDictionary</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>) {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        [<span class="keyword">self</span> parseImageDictionary:imageDictionary];</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        _isMergedImage = YES;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">static</span> NSInteger <span class="keyword">const</span> SIDE = 640;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="category_print_image_07_08.html">   29</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_print_image.html">PrintImage</a> ()</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">@property</span> (assign, nonatomic) ImageType imageType;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="category_print_image_07_08.html#a16755692ca1bbab8d98fea6711fa1e9e">   31</a></span>&#160;<span class="keyword">@property</span> (assign, nonatomic, readonly) BOOL hasChangeOrientation;  </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">@implementation </span><a class="code" href="interface_print_image.html">PrintImage</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">@synthesize</span> <a class="code" href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">editedImageSetting</a> = _editedImageSetting;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">@synthesize</span> <a class="code" href="interface_print_image.html#a6d7171db6a426214e05f85f3455095fa">previewImage</a> = _previewImage;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">@synthesize</span> assetImage = _assetImage;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">@synthesize</span> <a class="code" href="interface_print_image.html#aff9b7189611e69f9676a428c59632b4b">imageLargeData</a> = _imageLargeData;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">@synthesize</span> <a class="code" href="interface_print_image.html#a650612db61ba0f157d7a784238e6a956">imageLibrary</a> = _imageLibrary;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">@synthesize</span> <a class="code" href="interface_print_image.html#a97e6cb0902255c50878cca5e9e42e227">iconPreviewImage</a> = _iconPreviewImage;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;- (id) initLargeImageData:(NSData *)imageData andPreviewImage:(UIImage *)previewImage withName:(NSString *)imageUrlName andEditSetting:(<a class="code" href="interface_edit_image_setting.html">EditImageSetting</a> *)editSetting</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        _imageLargeData     = imageData;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        _previewImage       = [editSetting <a class="code" href="interface_edit_image_setting.html#a177e904354641a567842e269d5a163fa">isDidEditing</a>] ? <a class="code" href="interface_print_image.html#a6d7171db6a426214e05f85f3455095fa">previewImage</a> : [UIImage imageWithData:imageData];</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        _urlLibrary         = imageUrlName;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        _isMergedImage      = NO;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        _originalImageSize  = imageData == nil ? _previewImage.size : [[UIImage imageWithData:imageData] size];</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        _editedImageSetting = editSetting;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="interface_print_image.html#abc199486b0be51d30019ac2f6793bc9c">   60</a></span>&#160;-(id)initWithPreviewImage:(UIImage *)image withName:(NSString *)imageUrlName andEditSetting:(<a class="code" href="interface_edit_image_setting.html">EditImageSetting</a> *)editSetting originalSize:(CGSize)originalSize andUploadUrl:(NSString *)uploadUrl</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        _previewImage = (image.size.width &gt;= SIDE || image.size.height &gt;= SIDE) ? image : nil;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        _photoPrintImage = [_previewImage copy];</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        _urlLibrary     = imageUrlName;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        _isMergedImage  = NO;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        _originalImageSize = CGSizeEqualToSize(originalSize, CGSizeZero) ? image.size : originalSize;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        _iconPreviewImage = [image aspectFill:CGSizeMake(50, 50)];</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        _editedImageSetting = editSetting ? editSetting : [[<a class="code" href="interface_edit_image_setting.html">EditImageSetting</a> alloc] initSettingWithImage:image];</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        _imageLibrary = ImageLibrarySocial;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        _uploadURL = [NSURL URLWithString:uploadUrl];</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="interface_print_image.html#a9e71d8031d38d94833bc805783cc9783">   78</a></span>&#160;- (id) initMergeImage:(UIImage *)image withName:(NSString *)imageUrlName andUploadUrl:(NSString *)uploadUrl</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        _previewImage   = image;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        _urlLibrary     = imageUrlName;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        _isMergedImage  = YES;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        _originalImageSize = image.size;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        _editedImageSetting = [[<a class="code" href="interface_edit_image_setting.html">EditImageSetting</a> alloc] initSettingWithImage:image];</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        _uploadURL = [NSURL URLWithString:uploadUrl];</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;-(id)initWithALAsset:(ALAsset *)asset withName:(NSString *)imageUrlName</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;{</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        ALAssetRepresentation *representation = asset.defaultRepresentation;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        NSDictionary *metadata = representation.metadata;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        NSInteger imageWidth = [[metadata objectForKey:@&quot;PixelWidth&quot;] integerValue];</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        NSInteger imageHeight = [[metadata objectForKey:@&quot;PixelHeight&quot;] integerValue];</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        _originalImageSize = CGSizeMake(imageWidth, imageHeight);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        _isMergedImage      = NO;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        _urlLibrary         = [representation.url absoluteString];</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        _assetImage         = asset;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        _imageLibrary       = ImageLibraryPhone;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        NSLog(<span class="stringliteral">@&quot;ALAsset.orientation: %i&quot;</span>, (<span class="keywordtype">int</span>)representation.orientation);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">// Парсим историю</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;- (void) parseImageDictionary:(NSDictionary *)imageDictionary</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    NSString *path = [imageDictionary objectForKey:@&quot;image&quot;];</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    _uploadURL = [NSURL URLWithString:path];</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="interface_print_image.html#aac18bd36446b87898ff2f43d6991afce">  116</a></span>&#160;- (id) initWithHistoryOrderDictionary:(NSDictionary *)imageDictionary</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;{</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        [<span class="keyword">self</span> parseImageDictionary:imageDictionary];</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        _isMergedImage = YES;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="interface_print_image.html#a0db80f0307a39d24a80eeb861c9c319c">  128</a></span>&#160;- (void) updatePreviewImage:(UIImage *)image</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    _previewImage = image;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">// Парсим историю</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;- (void) parseImageDictionary:(NSDictionary *)imageDictionary</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    NSString *path = [imageDictionary objectForKey:@&quot;image&quot;];</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    _uploadURL = [NSURL URLWithString:path];</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="interface_print_image.html#aeac6d4b1b77d35804f9b27e4d8af1a16">  135</a></span>&#160;- (void) <a class="code" href="interface_print_image.html#aeac6d4b1b77d35804f9b27e4d8af1a16">clearImageLargeData</a></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    _imageLargeData = nil;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="interface_print_image.html#ae3b21f3c1466514eebb71185827aef36">  143</a></span>&#160;- (void) addOriginalSocilaImage:(UIImage *)originalSocialImage orOriginalAsset:(ALAsset *)asset</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;{</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">if</span> (originalSocialImage == nil &amp;&amp; asset != nil)</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    {</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="comment">// Картинка из телефона</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        ALAssetRepresentation *representation = asset.defaultRepresentation;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        NSDictionary *metadata = representation.metadata;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        NSInteger imageWidth = [[metadata objectForKey:@&quot;PixelWidth&quot;] integerValue];</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        NSInteger imageHeight = [[metadata objectForKey:@&quot;PixelHeight&quot;] integerValue];</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        _originalImageSize = CGSizeMake(imageWidth, imageHeight);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        _previewImage = [UIImage imageWithALAssert:asset toLargerSide:640];</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(originalSocialImage != nil &amp;&amp; asset == nil)</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="comment">// Картинка из соц.сетей</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        _originalImageSize  = originalSocialImage.size;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        NSInteger maxBiggerSide = 640;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        _previewImage       = [originalSocialImage resizeImageToBiggerSide:maxBiggerSide];</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    _editedImageSetting = [[<a class="code" href="interface_edit_image_setting.html">EditImageSetting</a> alloc] initSettingWithImage:_previewImage];</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    _iconPreviewImage = [_previewImage aspectFill:CGSizeMake(50, 50)];</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    _photoPrintImage = [_previewImage copy];</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> *coreShop = [[<a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> alloc] init];</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    [coreShop <a class="code" href="interface_core_data_shop_cart.html#a5abfd8250eaef87aac983439e1c0c539">updateAfterEditorPrintData</a>:nil <a class="code" href="interface_core_data_shop_cart.html#a5abfd8250eaef87aac983439e1c0c539">andPrintImage</a>:self];</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="comment">//NSLog(@&quot;PreviewSize: %@&quot;, NSStringFromCGSize(_previewImage.size));</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">//NSLog(@&quot;IconSize: %@&quot;, NSStringFromCGSize(_iconPreviewImage.size));</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="interface_print_image.html#aa3f20866d6aa528e8cca3e3bd00ff963">  181</a></span>&#160;- (void) cropPhotPrintWithGrigImage:(UIImage *)gridImage</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;{</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    CGFloat aspect_ratio = gridImage.size.width / gridImage.size.height;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    CGRect rect = [_previewImage sizeImage:_previewImage withDelitelHeight:aspect_ratio];</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    CGFloat aspectScale = <span class="keyword">self</span>.originalImageSize.width / <span class="keyword">self</span>.previewImage.size.width;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    _previewImage = [[UIImage alloc] cropImageFrom:_previewImage WithRect:rect];</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="comment">// Финальное обрезание, для оригинальной картинки</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    CGRect finalCropRect = CGRectMake(CGRectGetMinX(rect) * aspectScale,</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                                      CGRectGetMinY(rect) * aspectScale,</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                                      CGRectGetWidth(rect) * aspectScale,</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                                      CGRectGetHeight(rect) * aspectScale);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    [_editedImageSetting changeCropRect:finalCropRect];</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="interface_print_image.html#a0db80f0307a39d24a80eeb861c9c319c">  139</a></span>&#160;- (void) updatePreviewImage:(UIImage *)image</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;{</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    _previewImage = image;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="interface_print_image.html#ad385c491ac8bb8ef3dc647a50e47b891">  145</a></span>&#160;- (void) updateOriginalSize:(CGSize)originalSize {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    _originalImageSize = originalSize;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="interface_print_image.html#a1c198e43d902695df988a81d68dc062e">  150</a></span>&#160;-(void)updateUrlLibrary:(NSString *)urlLibrary andImageLibrary:(ImageLibrary)imageLibrary withPrintDataUnique:(NSUInteger)unique {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    _imageLibrary = <a class="code" href="interface_print_image.html#a650612db61ba0f157d7a784238e6a956">imageLibrary</a>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    [<span class="keyword">self</span>.editedImageSetting changeSetupDefault];</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> *coreShop = [[<a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> alloc] init];</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    [coreShop <a class="code" href="interface_core_data_shop_cart.html#a40d8d0cfeefbdf7758c4132c73bc7c91">updateURLLibraryWithPrintDataUnique</a>:unique <a class="code" href="interface_core_data_shop_cart.html#a40d8d0cfeefbdf7758c4132c73bc7c91">andPrintImage</a>:self <a class="code" href="interface_core_data_shop_cart.html#a40d8d0cfeefbdf7758c4132c73bc7c91">andNewUrlLibraryKey</a>:urlLibrary];</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    _urlLibrary = <a class="code" href="interface_print_image.html#af0b819e675acfd32e7420882a0c5b76e">urlLibrary</a>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="interface_print_image.html#a2d2086c3325bc433386b8d5089819e93">  161</a></span>&#160;-(void)updateUploadUrl:(NSString *)uploadUrl withPrintDataUnique:(NSUInteger)unique {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    _uploadURL = [NSURL URLWithString:uploadUrl];</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> *coreShop = [[<a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> alloc] init];</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    [coreShop <a class="code" href="interface_core_data_shop_cart.html#a461e10fea55c563518582f5b91f1a28d">updateAfterUploadPrintDataUnique</a>:unique <a class="code" href="interface_core_data_shop_cart.html#a461e10fea55c563518582f5b91f1a28d">andPrintImage</a>:self];</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="interface_print_image.html#aeac6d4b1b77d35804f9b27e4d8af1a16">  169</a></span>&#160;- (void) <a class="code" href="interface_print_image.html#aeac6d4b1b77d35804f9b27e4d8af1a16">clearImageLargeData</a></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;{</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    _imageLargeData = nil;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="interface_print_image.html#a5e813ddeb0abf8dc8468d591cfedb6dd">  175</a></span>&#160;- (CGSize)calculateOriginalSizeWithOrientation:(UIImageOrientation)showedImageOrientation {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    UIImageOrientation printImageDefaultOrientation = <span class="keyword">self</span>.editedImageSetting.imageDefaultOrientation;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    CGSize size = CGSizeZero;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">if</span> ((printImageDefaultOrientation == UIImageOrientationDown || printImageDefaultOrientation == UIImageOrientationUp) &amp;&amp;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        (showedImageOrientation == UIImageOrientationLeft || showedImageOrientation == UIImageOrientationRight)) {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        size = CGSizeMake(<span class="keyword">self</span>.<a class="code" href="interface_print_image.html#a196d4ca3458eabee5fd9d56b3cf9b5f2">originalImageSize</a>.height, <span class="keyword">self</span>.originalImageSize.width);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((printImageDefaultOrientation == UIImageOrientationRight || printImageDefaultOrientation == UIImageOrientationLeft) &amp;&amp;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;               (showedImageOrientation == UIImageOrientationUp || showedImageOrientation == UIImageOrientationDown)) {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        size = CGSizeMake(<span class="keyword">self</span>.<a class="code" href="interface_print_image.html#a196d4ca3458eabee5fd9d56b3cf9b5f2">originalImageSize</a>.height, <span class="keyword">self</span>.originalImageSize.width);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        size = CGSizeMake(<span class="keyword">self</span>.<a class="code" href="interface_print_image.html#a196d4ca3458eabee5fd9d56b3cf9b5f2">originalImageSize</a>.width, <span class="keyword">self</span>.originalImageSize.height);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">return</span> size;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;}</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="interface_print_image.html#a78ed872890342891b18c7e8d177ff378">  199</a></span>&#160;- (void) cropImageWithCropSize:(CGSize)cropSize</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;{</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    CGFloat aspect_ratio = cropSize.width / cropSize.height;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    CGRect rect = [_previewImage sizeImage:_previewImage withDelitelHeight:aspect_ratio];</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    CGFloat aspectScale = <span class="keyword">self</span>.originalImageSize.width / <span class="keyword">self</span>.previewImage.size.width;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    _previewImage = [[UIImage alloc] cropImageFrom:_previewImage WithRect:rect];</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    </div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="comment">// Финальное обрезание, для оригинальной картинки</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    CGRect finalCropRect = CGRectMake(CGRectGetMinX(rect) * aspectScale,</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                                      CGRectGetMinY(rect) * aspectScale,</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                                      CGRectGetWidth(rect) * aspectScale,</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                                      CGRectGetHeight(rect) * aspectScale);</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    [_editedImageSetting changeCropRect:finalCropRect];</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;}</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="interface_print_image.html#a6c6c7c7d362decc0a4e8d1476522441f">  216</a></span>&#160;-(void)cropImageForObjects:(UIImage *)gridImage</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;{</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    CGFloat aspect_ratio = gridImage.size.width / gridImage.size.height;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    CGRect rect = [[UIImage alloc] insertSizeView:_originalImageSize withAspectRatio:aspect_ratio];</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    </div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment">//    CGFloat aspectScale = self.originalImageSize.width / self.previewImage.size.width;</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">//    </span></div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment">//    CGRect final = CGRectMake(CGRectGetMinX(rect) * aspectScale,</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment">//                              CGRectGetMinY(rect) * aspectScale,</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment">//                              CGRectGetWidth(rect) * aspectScale,</span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment">//                              CGRectGetHeight(rect) * aspectScale);</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    [_editedImageSetting changeCropRect:rect];</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;}</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
-<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="interface_print_image.html#ad7d136372d4e00e7768a70838cf5c8b2">  231</a></span>&#160;-(void)<a class="code" href="interface_print_image.html#ad7d136372d4e00e7768a70838cf5c8b2">cropImageForDesingAlbum</a></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;{</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    CGRect <span class="keyword">final</span> = CGRectMake(0.f, 0.f, <span class="keyword">self</span>.<a class="code" href="interface_print_image.html#a196d4ca3458eabee5fd9d56b3cf9b5f2">originalImageSize</a>.width, <span class="keyword">self</span>.originalImageSize.height);</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    [_editedImageSetting changeCropRect:final];</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="preprocessor">#pragma mark - Publuc Getter</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="interface_print_image.html#a605657d4a8a5c7eccccfbb532e854078">  239</a></span>&#160;-(BOOL)<a class="code" href="interface_print_image.html#a605657d4a8a5c7eccccfbb532e854078">isDidEdited</a> {</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordflow">return</span> !_editedImageSetting ? NO : _editedImageSetting.isDidEditing;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;}</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;- (<a class="code" href="interface_edit_image_setting.html">EditImageSetting</a> *)<a class="code" href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">editedImageSetting</a> {</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">if</span> (!_editedImageSetting) {</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        _editedImageSetting = [[<a class="code" href="interface_edit_image_setting.html">EditImageSetting</a> alloc] initFilterName:DEFAUL_FILTER</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                                                         andSaturation:DEFAULT_SATURATION</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                                                         andBrightness:DEFAULT_BRIGHTNESS</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                                                           andContrast:DEFAULT_CONSTRAST</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                                                           andCropRect:CGRectMake(0, 0, _originalImageSize.width, _originalImageSize.height)</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                                                      andRectToVisible:CGRectZero</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                                                andAutoResizingEnabled:YES</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                                                   andImageOrientation:0];</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">return</span> _editedImageSetting;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;}</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;-(NSData *)<a class="code" href="interface_print_image.html#aff9b7189611e69f9676a428c59632b4b">imageLargeData</a></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;{</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordflow">return</span> _imageLargeData == nil ? UIImagePNGRepresentation(_previewImage) : _imageLargeData;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;}</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="preprocessor">#pragma mark - Setter</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;-(void)setUploadURL:(NSURL *)uploadURL</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;{</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    _uploadURL = <a class="code" href="interface_print_image.html#a216e902f4191955c5b2607e17014f8b3">uploadURL</a>;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="keyword">@end</span></div>
-<div class="ttc" id="interface_edit_image_setting_html_a177e904354641a567842e269d5a163fa"><div class="ttname"><a href="interface_edit_image_setting.html#a177e904354641a567842e269d5a163fa">-[EditImageSetting isDidEditing]</a></div><div class="ttdeci">BOOL isDidEditing()</div><div class="ttdoc">Редактировалась ли картинка или нет </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8m_source.html#l00063">EditImageSetting.m:63</a></div></div>
-<div class="ttc" id="interface_core_data_shop_cart_html_a5abfd8250eaef87aac983439e1c0c539"><div class="ttname"><a href="interface_core_data_shop_cart.html#a5abfd8250eaef87aac983439e1c0c539">-[CoreDataShopCart updateAfterEditorPrintData:andPrintImage:]</a></div><div class="ttdeci">void updateAfterEditorPrintData:andPrintImage:(PrintData *printData,[andPrintImage] PrintImage *printImage)</div><div class="ttdoc">Обновляем данные после редактора </div><div class="ttdef"><b>Definition:</b> <a href="_core_data_shop_cart_8m_source.html#l00117">CoreDataShopCart.m:117</a></div></div>
-<div class="ttc" id="interface_print_image_html_a605657d4a8a5c7eccccfbb532e854078"><div class="ttname"><a href="interface_print_image.html#a605657d4a8a5c7eccccfbb532e854078">-[PrintImage isDidEdited]</a></div><div class="ttdeci">BOOL isDidEdited()</div><div class="ttdoc">Редактировали ли ? </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8m_source.html#l00239">PrintImage.m:239</a></div></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;- (void) addOriginalSocilaImage:(UIImage *)originalSocialImage orOriginalAsset:(ALAsset *)asset</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;{</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment">//    if (originalSocialImage == nil &amp;&amp; asset != nil)</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment">//    {</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment">//        // Картинка из телефона</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">//        ALAssetRepresentation *representation = asset.defaultRepresentation;</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">//        NSDictionary *metadata = representation.metadata;</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment">//        NSInteger imageWidth = [[metadata objectForKey:@&quot;PixelWidth&quot;] integerValue];</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment">//        NSInteger imageHeight = [[metadata objectForKey:@&quot;PixelHeight&quot;] integerValue];</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment">//        </span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment">//        </span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment">//        ALAssetOrientation orientation = representation.orientation;</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment">//        NSLog(@&quot;OriginalSocilaImage.Orientation: %i&quot;, (int)orientation);</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment">//        _originalImageSize = /*(orientation == ALAssetOrientationUp || orientation == ALAssetOrientationDown) ? */CGSizeMake(imageWidth, imageHeight)/* : CGSizeMake(imageHeight, imageWidth)*/;</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment">//        </span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment">//        UIImage *result = [UIImage imageWithALAssert:asset toLargerSide:ScaledSide];</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="comment">//        NSLog(@&quot;OriginalSocilaImage.Size: %@&quot;, NSStringFromCGSize(result.size));</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment">//        _previewImage = (orientation == ALAssetOrientationUp/* || orientation == ALAssetOrientationDown*/) ? result : [UIImage imageWithCGImage:result.CGImage scale:result.scale orientation:(UIImageOrientation)orientation];</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="comment">//        NSLog(@&quot;OriginalSocilaImage.Size: %@&quot;, NSStringFromCGSize(_previewImage.size));</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment">//        </span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">//        _editedImageSetting = [[EditImageSetting alloc] initSettingWithImage:_previewImage];</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment">//        [self.editedImageSetting changeOrientation:(UIImageOrientation)representation.orientation];</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment">//        [self.editedImageSetting changeOrientationDefault:(UIImageOrientation)representation.orientation];</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment">//    }</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment">//    else if(originalSocialImage != nil &amp;&amp; asset == nil)</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">//    {</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment">//        // Картинка из соц.сетей</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment">//        _originalImageSize  = originalSocialImage.size;</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment">//        </span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment">//        _previewImage       = [originalSocialImage resizeImageToBiggerSide:ScaledSide];</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment">//        _editedImageSetting = [[EditImageSetting alloc] initSettingWithImage:_previewImage];</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">//        [self.editedImageSetting changeOrientation:_previewImage.imageOrientation];</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment">//        [self.editedImageSetting changeOrientationDefault:_previewImage.imageOrientation];</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">//    }</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">//    else {</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment">//        return;</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment">//    }</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment">//    _editedImageSetting = [[EditImageSetting alloc] initSettingWithImage:_previewImage];</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    _previewImage = originalSocialImage;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    _iconPreviewImage = [_previewImage aspectFill:CGSizeMake(50, 50)];</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    _photoPrintImage = [_previewImage copy];</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> *coreShop = [[<a class="code" href="interface_core_data_shop_cart.html">CoreDataShopCart</a> alloc] init];</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    [coreShop <a class="code" href="interface_core_data_shop_cart.html#a5abfd8250eaef87aac983439e1c0c539">updateAfterEditorPrintData</a>:nil <a class="code" href="interface_core_data_shop_cart.html#a5abfd8250eaef87aac983439e1c0c539">andPrintImage</a>:self];</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    NSLog(<span class="stringliteral">@&quot;PreviewSize: %@&quot;</span>, NSStringFromCGSize(_previewImage.size));</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    NSLog(<span class="stringliteral">@&quot;IconSize: %@&quot;</span>, NSStringFromCGSize(_iconPreviewImage.size));</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="interface_print_image.html#aa3f20866d6aa528e8cca3e3bd00ff963">  252</a></span>&#160;- (void) cropPhotPrintWithGrigImage:(UIImage *)gridImage</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;{</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    CGFloat aspect_ratio = gridImage.size.width / gridImage.size.height;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    CGRect rect = [_previewImage sizeImage:_previewImage withDelitelHeight:aspect_ratio];</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    CGFloat aspectScale = <span class="keyword">self</span>.originalImageSize.width / <span class="keyword">self</span>.previewImage.size.width;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    _previewImage = [[UIImage alloc] cropImageFrom:_previewImage WithRect:rect];</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="comment">// Финальное обрезание, для оригинальной картинки</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    CGRect finalCropRect = CGRectMake(CGRectGetMinX(rect) * aspectScale,</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                                      CGRectGetMinY(rect) * aspectScale,</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                                      CGRectGetWidth(rect) * aspectScale,</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                                      CGRectGetHeight(rect) * aspectScale);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    [_editedImageSetting changeCropRect:finalCropRect];</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;}</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="interface_print_image.html#ae49c773004271f9700be0a670f3e6845">  270</a></span>&#160;- (UIImage *) cropImageWithCropSize:(CGSize)cropSize</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;{</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    CGFloat aspect_ratio = cropSize.width / cropSize.height;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    UIImage *<a class="code" href="interface_print_image.html#a6d7171db6a426214e05f85f3455095fa">previewImage</a> = [<span class="keyword">self</span>.editedImageSetting executeImage:_previewImage];</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    CGRect rect = [<a class="code" href="interface_print_image.html#a6d7171db6a426214e05f85f3455095fa">previewImage</a> sizeImage:_previewImage withDelitelHeight:aspect_ratio];</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    CGFloat aspectScale = <span class="keyword">self</span>.originalImageSize.width / <a class="code" href="interface_print_image.html#a6d7171db6a426214e05f85f3455095fa">previewImage</a>.size.width;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    UIImage *cropImage = [[UIImage alloc] cropImageFrom:previewImage WithRect:rect];</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">if</span> (![<span class="keyword">self</span>.<a class="code" href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">editedImageSetting</a> isDidEditing]) {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;       </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        CGSize imageOriginalSize = <span class="keyword">self</span>.originalImageSize;<span class="comment">//CGSizeMake(775, 771);</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        CGSize editedImageSize = <span class="keyword">self</span>.editedImageSetting.editedImageSize;<span class="comment">//CGSizeMake(800, 795.87);</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        CGRect cropEditor = <span class="keyword">self</span>.editedImageSetting.cropRect;<span class="comment">//CGRectMake(85, 133, 630, 528);</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        CGFloat scale = editedImageSize.width / imageOriginalSize.width;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        CGRect cropOriginal = CGRectMake([<span class="keyword">self</span>.<a class="code" href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">editedImageSetting</a> isDidEditing] ? CGRectGetMinX(cropEditor) / scale : CGRectGetMinX(rect) * aspectScale,</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                                         [<span class="keyword">self</span>.<a class="code" href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">editedImageSetting</a> isDidEditing] ? CGRectGetMinY(cropEditor) / scale : CGRectGetMinY(rect) * aspectScale,</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                                         [<span class="keyword">self</span>.<a class="code" href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">editedImageSetting</a> isDidEditing] ? CGRectGetWidth(cropEditor) / scale : CGRectGetWidth(rect) * aspectScale,</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                                         [<span class="keyword">self</span>.<a class="code" href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">editedImageSetting</a> isDidEditing] ? CGRectGetHeight(cropEditor) / scale : CGRectGetHeight(rect) * aspectScale);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        [_editedImageSetting changeCropRect:cropOriginal];</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        CGFloat zoom = <span class="keyword">self</span>.originalImageSize.width / _previewImage.size.width;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        CGRect crop = CGRectMake(CGRectGetMinX(<span class="keyword">self</span>.<a class="code" href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">editedImageSetting</a>.<a class="code" href="interface_edit_image_setting.html#a03932ed5fd2a9dd7a505ede3b5c0c7dc">cropRect</a>) / zoom,</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                                 CGRectGetMinY(<span class="keyword">self</span>.<a class="code" href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">editedImageSetting</a>.<a class="code" href="interface_edit_image_setting.html#a03932ed5fd2a9dd7a505ede3b5c0c7dc">cropRect</a>) / zoom,</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                                 CGRectGetWidth(<span class="keyword">self</span>.<a class="code" href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">editedImageSetting</a>.<a class="code" href="interface_edit_image_setting.html#a03932ed5fd2a9dd7a505ede3b5c0c7dc">cropRect</a>) / zoom,</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                                 CGRectGetHeight(<span class="keyword">self</span>.<a class="code" href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">editedImageSetting</a>.<a class="code" href="interface_edit_image_setting.html#a03932ed5fd2a9dd7a505ede3b5c0c7dc">cropRect</a>) / zoom);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        cropImage = [[UIImage alloc] cropImageFrom:previewImage WithRect:crop];</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordflow">return</span> cropImage;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;}</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
+<div class="line"><a name="l00315"></a><span class="lineno"><a class="line" href="interface_print_image.html#a08b01bb3b7ca47a41d3b7a0f0d8e774c">  315</a></span>&#160;- (void) cropImageWithCropSize:(CGSize)cropSize withCompleteBlock:(<span class="keywordtype">void</span>(^)(UIImage *image))completeBlock {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="comment">//CGSizeMake(775, 771);</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="comment">//CGSizeMake(800, 795.87);</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="comment">//CGRectMake(85, 133, 630, 528);</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="comment">//</span>[<span class="keyword">self</span>.editedImageSetting executeImage:_previewImage withCompleteBlock:^(UIImage *resultImage) {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        UIImage *previewImage = resultImage;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        CGFloat aspect_ratio = cropSize.width / cropSize.height;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        CGRect rect = [<a class="code" href="interface_print_image.html#a6d7171db6a426214e05f85f3455095fa">previewImage</a> sizeImage:_previewImage withDelitelHeight:aspect_ratio];</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        CGFloat aspectScale = self.originalImageSize.width / previewImage.size.width;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                UIImage *cropImage = [[UIImage alloc] cropImageFrom:previewImage WithRect:rect];</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        </div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        if (![<span class="keyword">self</span>.editedImageSetting isDidEditing]) {</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                        CGSize imageOriginalSize = self.originalImageSize;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                        CGSize editedImageSize = self.editedImageSetting.editedImageSize;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                        CGRect cropEditor = self.editedImageSetting.cropRect;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                        CGFloat scale = editedImageSize.width / imageOriginalSize.width;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            </div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            CGRect cropOriginal = CGRectMake([<span class="keyword">self</span>.editedImageSetting isDidEditing] ? CGRectGetMinX(cropEditor) / scale : CGRectGetMinX(rect) * aspectScale,</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                                             [<span class="keyword">self</span>.editedImageSetting isDidEditing] ? CGRectGetMinY(cropEditor) / scale : CGRectGetMinY(rect) * aspectScale,</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                                             [<span class="keyword">self</span>.editedImageSetting isDidEditing] ? CGRectGetWidth(cropEditor) / scale : CGRectGetWidth(rect) * aspectScale,</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                                             [<span class="keyword">self</span>.editedImageSetting isDidEditing] ? CGRectGetHeight(cropEditor) / scale : CGRectGetHeight(rect) * aspectScale);</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            [_editedImageSetting changeCropRect:cropOriginal];</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        } else {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            UIImage *result = self.hasChangeOrientation ? [UIImage imageWithCGImage:previewImage.CGImage scale:previewImage.scale orientation:self.editedImageSetting.imageOrientation] : previewImage;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            CGFloat zoom = self.originalImageSize.width / result.size.width;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            CGRect crop = CGRectMake(CGRectGetMinX(self.editedImageSetting.cropRect) / zoom,</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                                     CGRectGetMinY(self.editedImageSetting.cropRect) / zoom,</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                                     CGRectGetWidth(self.editedImageSetting.cropRect) / zoom,</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                                     CGRectGetHeight(self.editedImageSetting.cropRect) / zoom);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            cropImage = [[UIImage alloc] cropImageFrom:result WithRect:crop];</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        }</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    </div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        if (completeBlock) {</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            completeBlock(cropImage);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    }];</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;}</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;</div>
+<div class="line"><a name="l00369"></a><span class="lineno"><a class="line" href="interface_print_image.html#a6c6c7c7d362decc0a4e8d1476522441f">  369</a></span>&#160;-(void)cropImageForObjects:(UIImage *)gridImage</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;{</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    CGFloat aspect_ratio = gridImage.size.width / gridImage.size.height;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    CGRect rect = [[UIImage alloc] insertSizeView:_originalImageSize withAspectRatio:aspect_ratio];</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="comment">//    CGFloat aspectScale = self.originalImageSize.width / self.previewImage.size.width;</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="comment">//    </span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="comment">//    CGRect final = CGRectMake(CGRectGetMinX(rect) * aspectScale,</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="comment">//                              CGRectGetMinY(rect) * aspectScale,</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="comment">//                              CGRectGetWidth(rect) * aspectScale,</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="comment">//                              CGRectGetHeight(rect) * aspectScale);</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    [_editedImageSetting changeCropRect:rect];</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;}</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;</div>
+<div class="line"><a name="l00384"></a><span class="lineno"><a class="line" href="interface_print_image.html#ad7d136372d4e00e7768a70838cf5c8b2">  384</a></span>&#160;-(void)<a class="code" href="interface_print_image.html#ad7d136372d4e00e7768a70838cf5c8b2">cropImageForDesingAlbum</a></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;{</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    CGRect <span class="keyword">final</span> = CGRectMake(0.f, 0.f, <span class="keyword">self</span>.<a class="code" href="interface_print_image.html#a196d4ca3458eabee5fd9d56b3cf9b5f2">originalImageSize</a>.width, <span class="keyword">self</span>.originalImageSize.height);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    [_editedImageSetting changeCropRect:final];</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;}</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
+<div class="line"><a name="l00391"></a><span class="lineno"><a class="line" href="interface_print_image.html#a58a6ca685e18adb0fa6d48cee4ada780">  391</a></span>&#160;-(void)resizeImageToMaxSide:(NSInteger)side {</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    UIImage *originalImage = _imageLargeData ? [UIImage imageWithData:_imageLargeData] : _previewImage;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    NSLog(<span class="stringliteral">@&quot;Before.size: %@&quot;</span>, NSStringFromCGSize(originalImage.size));</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    UIImage *result = [originalImage resizeImageToBiggerSide:side];</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    NSLog(<span class="stringliteral">@&quot;After: %@&quot;</span>, NSStringFromCGSize(result.size));</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    _previewImage = result;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    _imageLargeData = UIImagePNGRepresentation(result);</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    </div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    CGSize originalSize = <span class="keyword">self</span>.originalImageSize;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    CGSize reSize = result.size;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    </div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    CGFloat zoom = originalSize.width / reSize.width;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    </div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    CGRect crop = <span class="keyword">self</span>.editedImageSetting.cropRect;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    [<span class="keyword">self</span>.editedImageSetting changeCropRect:CGRectMake(CGRectGetMinX(crop) / zoom,</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;                                                       CGRectGetMinY(crop) / zoom,</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                                                       CGRectGetWidth(crop) / zoom,</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                                                       CGRectGetHeight(crop) / zoom)];</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    _originalImageSize = reSize;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;}</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;<span class="preprocessor">#pragma mark - Publuc Getter</span></div>
+<div class="line"><a name="l00414"></a><span class="lineno"><a class="line" href="interface_print_image.html#a605657d4a8a5c7eccccfbb532e854078">  414</a></span>&#160;-(BOOL)<a class="code" href="interface_print_image.html#a605657d4a8a5c7eccccfbb532e854078">isDidEdited</a> {</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keywordflow">return</span> !_editedImageSetting ? NO : _editedImageSetting.isDidEditing;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;}</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;- (<a class="code" href="interface_edit_image_setting.html">EditImageSetting</a> *)<a class="code" href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">editedImageSetting</a> {</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <span class="keywordflow">if</span> (!_editedImageSetting) {</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        _editedImageSetting = [[<a class="code" href="interface_edit_image_setting.html">EditImageSetting</a> alloc] initFilterName:DEFAUL_FILTER</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                                                         andSaturation:DEFAULT_SATURATION</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                                                         andBrightness:DEFAULT_BRIGHTNESS</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                                                           andContrast:DEFAULT_CONSTRAST</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;                                                           andCropRect:CGRectMake(0, 0, _originalImageSize.width, _originalImageSize.height)</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;                                                      andRectToVisible:CGRectZero</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;                                                andAutoResizingEnabled:YES</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                                                   andImageOrientation:UIImageOrientationUp andImageDefautlOrientation:UIImageOrientationUp];</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    }</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keywordflow">return</span> _editedImageSetting;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;}</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;-(ImageLibrary)<a class="code" href="interface_print_image.html#a650612db61ba0f157d7a784238e6a956">imageLibrary</a> {</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    NSInteger loc = [<span class="keyword">self</span>.urlLibrary rangeOfString:@&quot;http&quot;].location;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="keywordflow">return</span> loc == NSNotFound ? ImageLibraryPhone : ImageLibrarySocial;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;}</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;-(BOOL)hasChangeOrientation {</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <a class="code" href="interface_edit_image_setting.html">EditImageSetting</a> *setting = <span class="keyword">self</span>.editedImageSetting;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <span class="keywordflow">return</span> setting.<a class="code" href="interface_edit_image_setting.html#aaa92ff6587ab156baf5b50c2b6e8de72">imageOrientation</a> == setting.<a class="code" href="interface_edit_image_setting.html#a3714535f84a10b351c0d38fbc0123b26">imageDefaultOrientation</a> ? NO : YES;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;}</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;-(NSData *)<a class="code" href="interface_print_image.html#aff9b7189611e69f9676a428c59632b4b">imageLargeData</a></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;{</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="comment">//    if (!_imageLargeData) {</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        <span class="comment">//if (!_editedImageSetting.isDidEditing &amp;&amp; _previewImage.imageOrientation == UIImageOrientationUp) {</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="comment">//            return UIImagePNGRepresentation(_previewImage);</span></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        <span class="comment">/*} else {</span></div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;<span class="comment">            UIImage *result = [UIImage imageWithCGImage:_previewImage.CGImage scale:_previewImage.scale orientation:_previewImage.imageOrientation];</span></div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="comment">            return UIImageJPEGRepresentation(result, 0.7f);</span></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="comment">        }*/</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;<span class="comment">//    }</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    </div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <span class="keywordflow">return</span> _imageLargeData == nil ? UIImageJPEGRepresentation(_previewImage, 0.6f) : _imageLargeData;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;}</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;-(UIImage *)<a class="code" href="interface_print_image.html#a97e6cb0902255c50878cca5e9e42e227">iconPreviewImage</a> {</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="keywordflow">if</span> ([<span class="keyword">self</span>.<a class="code" href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">editedImageSetting</a> isDidEditing]) {</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        UIImage *preview = <span class="comment">/*[self.editedImageSetting executeImage:*/</span><span class="keyword">self</span>.previewImage<span class="comment">/*]*/</span>;</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        UIImage *icon = [preview aspectFill:CGSizeMake(50, 50)];</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        UIImage *result = [UIImage imageWithCGImage:icon.CGImage scale:icon.scale orientation:icon.imageOrientation];</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    }</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    </div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="keywordflow">return</span> _iconPreviewImage;</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;}</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_edit_image_setting_html_aaa92ff6587ab156baf5b50c2b6e8de72"><div class="ttname"><a href="interface_edit_image_setting.html#aaa92ff6587ab156baf5b50c2b6e8de72">EditImageSetting::imageOrientation</a></div><div class="ttdeci">UIImageOrientation imageOrientation</div><div class="ttdoc">Ориентация картинки для редактора и отображения </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00038">EditImageSetting.h:38</a></div></div>
+<div class="ttc" id="interface_edit_image_setting_html_a177e904354641a567842e269d5a163fa"><div class="ttname"><a href="interface_edit_image_setting.html#a177e904354641a567842e269d5a163fa">-[EditImageSetting isDidEditing]</a></div><div class="ttdeci">BOOL isDidEditing()</div><div class="ttdoc">Редактировалась ли картинка или нет </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8m_source.html#l00076">EditImageSetting.m:76</a></div></div>
+<div class="ttc" id="interface_core_data_shop_cart_html_a5abfd8250eaef87aac983439e1c0c539"><div class="ttname"><a href="interface_core_data_shop_cart.html#a5abfd8250eaef87aac983439e1c0c539">-[CoreDataShopCart updateAfterEditorPrintData:andPrintImage:]</a></div><div class="ttdeci">void updateAfterEditorPrintData:andPrintImage:(PrintData *printData,[andPrintImage] PrintImage *printImage)</div><div class="ttdoc">Обновляем данные после редактора </div><div class="ttdef"><b>Definition:</b> <a href="_core_data_shop_cart_8m_source.html#l00119">CoreDataShopCart.m:119</a></div></div>
+<div class="ttc" id="interface_core_data_shop_cart_html_a461e10fea55c563518582f5b91f1a28d"><div class="ttname"><a href="interface_core_data_shop_cart.html#a461e10fea55c563518582f5b91f1a28d">-[CoreDataShopCart updateAfterUploadPrintDataUnique:andPrintImage:]</a></div><div class="ttdeci">void updateAfterUploadPrintDataUnique:andPrintImage:(NSInteger unique,[andPrintImage] PrintImage *printImage)</div><div class="ttdoc">После загрузки картинкок на сервер PhotoHouse. </div><div class="ttdef"><b>Definition:</b> <a href="_core_data_shop_cart_8m_source.html#l00161">CoreDataShopCart.m:161</a></div></div>
+<div class="ttc" id="interface_print_image_html_a605657d4a8a5c7eccccfbb532e854078"><div class="ttname"><a href="interface_print_image.html#a605657d4a8a5c7eccccfbb532e854078">-[PrintImage isDidEdited]</a></div><div class="ttdeci">BOOL isDidEdited()</div><div class="ttdoc">Оригинальная картинка -> Уменьшенная для обработки </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8m_source.html#l00414">PrintImage.m:414</a></div></div>
 <div class="ttc" id="interface_edit_image_setting_html"><div class="ttname"><a href="interface_edit_image_setting.html">EditImageSetting</a></div><div class="ttdoc">Объект настройки редактора фотографии. Содержит в себе настройки фильтра, поворота, яркости, контраста, освещенности. Данный объект не применяет фильтры, контрасты к картинке </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00025">EditImageSetting.h:25</a></div></div>
-<div class="ttc" id="interface_print_image_html_aeac6d4b1b77d35804f9b27e4d8af1a16"><div class="ttname"><a href="interface_print_image.html#aeac6d4b1b77d35804f9b27e4d8af1a16">-[PrintImage clearImageLargeData]</a></div><div class="ttdeci">void clearImageLargeData()</div><div class="ttdoc">Очищаем данные картинки </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8m_source.html#l00135">PrintImage.m:135</a></div></div>
-<div class="ttc" id="interface_print_image_html_af3ef09ed2183bea4054634bd8fb28efc"><div class="ttname"><a href="interface_print_image.html#af3ef09ed2183bea4054634bd8fb28efc">PrintImage::assetImage</a></div><div class="ttdeci">ALAsset * assetImage</div><div class="ttdoc">Картинка из библиотеки телефона </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00039">PrintImage.h:39</a></div></div>
-<div class="ttc" id="interface_print_image_html_aff9b7189611e69f9676a428c59632b4b"><div class="ttname"><a href="interface_print_image.html#aff9b7189611e69f9676a428c59632b4b">PrintImage::imageLargeData</a></div><div class="ttdeci">NSData * imageLargeData</div><div class="ttdoc">Данные картинки, можно отправлять </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00030">PrintImage.h:30</a></div></div>
-<div class="ttc" id="interface_print_image_html_a6d7171db6a426214e05f85f3455095fa"><div class="ttname"><a href="interface_print_image.html#a6d7171db6a426214e05f85f3455095fa">PrintImage::previewImage</a></div><div class="ttdeci">UIImage * previewImage</div><div class="ttdoc">Картинка 640 по большей стороне, с ней будем изменять </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00031">PrintImage.h:31</a></div></div>
-<div class="ttc" id="interface_print_image_html_a830c1a62ed682afe29fbdcaa9bab2983"><div class="ttname"><a href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">PrintImage::editedImageSetting</a></div><div class="ttdeci">EditImageSetting * editedImageSetting</div><div class="ttdoc">Настройки редактрованной фотографии </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00035">PrintImage.h:35</a></div></div>
-<div class="ttc" id="interface_print_image_html_a196d4ca3458eabee5fd9d56b3cf9b5f2"><div class="ttname"><a href="interface_print_image.html#a196d4ca3458eabee5fd9d56b3cf9b5f2">PrintImage::originalImageSize</a></div><div class="ttdeci">CGSize originalImageSize</div><div class="ttdoc">Оригинальные размеры картинки, т.к в previewImage маленькая картинка может содержаться ...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00029">PrintImage.h:29</a></div></div>
-<div class="ttc" id="interface_print_image_html"><div class="ttname"><a href="interface_print_image.html">PrintImage</a></div><div class="ttdoc">Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00028">PrintImage.h:28</a></div></div>
+<div class="ttc" id="interface_print_image_html_aeac6d4b1b77d35804f9b27e4d8af1a16"><div class="ttname"><a href="interface_print_image.html#aeac6d4b1b77d35804f9b27e4d8af1a16">-[PrintImage clearImageLargeData]</a></div><div class="ttdeci">void clearImageLargeData()</div><div class="ttdoc">Очищаем данные картинки </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8m_source.html#l00169">PrintImage.m:169</a></div></div>
+<div class="ttc" id="interface_core_data_shop_cart_html_a40d8d0cfeefbdf7758c4132c73bc7c91"><div class="ttname"><a href="interface_core_data_shop_cart.html#a40d8d0cfeefbdf7758c4132c73bc7c91">-[CoreDataShopCart updateURLLibraryWithPrintDataUnique:andPrintImage:andNewUrlLibraryKey:]</a></div><div class="ttdeci">void updateURLLibraryWithPrintDataUnique:andPrintImage:andNewUrlLibraryKey:(NSInteger unique,[andPrintImage] PrintImage *printImage,[andNewUrlLibraryKey] NSString *newUrlLibrary)</div><div class="ttdoc">Обновляем данные urlLibrary в PrintImage. </div><div class="ttdef"><b>Definition:</b> <a href="_core_data_shop_cart_8m_source.html#l00200">CoreDataShopCart.m:200</a></div></div>
+<div class="ttc" id="interface_edit_image_setting_html_a3714535f84a10b351c0d38fbc0123b26"><div class="ttname"><a href="interface_edit_image_setting.html#a3714535f84a10b351c0d38fbc0123b26">EditImageSetting::imageDefaultOrientation</a></div><div class="ttdeci">UIImageOrientation imageDefaultOrientation</div><div class="ttdoc">Ориентация картинки, которая была при сохранении, нужно для правильного вращения на сервере ...</div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00039">EditImageSetting.h:39</a></div></div>
+<div class="ttc" id="interface_print_image_html_aff9b7189611e69f9676a428c59632b4b"><div class="ttname"><a href="interface_print_image.html#aff9b7189611e69f9676a428c59632b4b">PrintImage::imageLargeData</a></div><div class="ttdeci">NSData * imageLargeData</div><div class="ttdoc">Данные картинки, можно отправлять </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00029">PrintImage.h:29</a></div></div>
+<div class="ttc" id="interface_print_image_html_a6d7171db6a426214e05f85f3455095fa"><div class="ttname"><a href="interface_print_image.html#a6d7171db6a426214e05f85f3455095fa">PrintImage::previewImage</a></div><div class="ttdeci">UIImage * previewImage</div><div class="ttdoc">Картинка 640 по большей стороне, с ней будем изменять </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00030">PrintImage.h:30</a></div></div>
+<div class="ttc" id="interface_print_image_html_a97e6cb0902255c50878cca5e9e42e227"><div class="ttname"><a href="interface_print_image.html#a97e6cb0902255c50878cca5e9e42e227">PrintImage::iconPreviewImage</a></div><div class="ttdeci">UIImage * iconPreviewImage</div><div class="ttdoc">Иконка для ToolBar. </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00032">PrintImage.h:32</a></div></div>
+<div class="ttc" id="interface_print_image_html_a650612db61ba0f157d7a784238e6a956"><div class="ttname"><a href="interface_print_image.html#a650612db61ba0f157d7a784238e6a956">PrintImage::imageLibrary</a></div><div class="ttdeci">ImageLibrary imageLibrary</div><div class="ttdoc">Тип картинки, память телефона(PhotoLibrary) или соц.сети </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00040">PrintImage.h:40</a></div></div>
+<div class="ttc" id="interface_print_image_html_a830c1a62ed682afe29fbdcaa9bab2983"><div class="ttname"><a href="interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983">PrintImage::editedImageSetting</a></div><div class="ttdeci">EditImageSetting * editedImageSetting</div><div class="ttdoc">Настройки редактрованной фотографии </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00034">PrintImage.h:34</a></div></div>
+<div class="ttc" id="interface_print_image_html_a196d4ca3458eabee5fd9d56b3cf9b5f2"><div class="ttname"><a href="interface_print_image.html#a196d4ca3458eabee5fd9d56b3cf9b5f2">PrintImage::originalImageSize</a></div><div class="ttdeci">CGSize originalImageSize</div><div class="ttdoc">Оригинальные размеры картинки, т.к в previewImage маленькая картинка может содержаться ...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00028">PrintImage.h:28</a></div></div>
+<div class="ttc" id="interface_print_image_html"><div class="ttname"><a href="interface_print_image.html">PrintImage</a></div><div class="ttdoc">Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00027">PrintImage.h:27</a></div></div>
+<div class="ttc" id="interface_edit_image_setting_html_a03932ed5fd2a9dd7a505ede3b5c0c7dc"><div class="ttname"><a href="interface_edit_image_setting.html#a03932ed5fd2a9dd7a505ede3b5c0c7dc">EditImageSetting::cropRect</a></div><div class="ttdeci">CGRect cropRect</div><div class="ttdoc">Rect по которому вырезаем оригинальную картинку для отправки на сервер </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00033">EditImageSetting.h:33</a></div></div>
 <div class="ttc" id="interface_core_data_shop_cart_html"><div class="ttname"><a href="interface_core_data_shop_cart.html">CoreDataShopCart</a></div><div class="ttdef"><b>Definition:</b> <a href="_core_data_shop_cart_8h_source.html#l00014">CoreDataShopCart.h:14</a></div></div>
-<div class="ttc" id="interface_print_image_html_a216e902f4191955c5b2607e17014f8b3"><div class="ttname"><a href="interface_print_image.html#a216e902f4191955c5b2607e17014f8b3">PrintImage::uploadURL</a></div><div class="ttdeci">NSURL * uploadURL</div><div class="ttdoc">Адрес картинки на сервере PhotoHouse после отправки пользователем данной картинки ...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00036">PrintImage.h:36</a></div></div>
-<div class="ttc" id="interface_print_image_html_ad7d136372d4e00e7768a70838cf5c8b2"><div class="ttname"><a href="interface_print_image.html#ad7d136372d4e00e7768a70838cf5c8b2">-[PrintImage cropImageForDesingAlbum]</a></div><div class="ttdeci">void cropImageForDesingAlbum()</div><div class="ttdoc">Обрезаем для дизайнерсокго альбома </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8m_source.html#l00231">PrintImage.m:231</a></div></div>
+<div class="ttc" id="interface_print_image_html_ad7d136372d4e00e7768a70838cf5c8b2"><div class="ttname"><a href="interface_print_image.html#ad7d136372d4e00e7768a70838cf5c8b2">-[PrintImage cropImageForDesingAlbum]</a></div><div class="ttdeci">void cropImageForDesingAlbum()</div><div class="ttdoc">Обрезаем для дизайнерсокго альбома </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8m_source.html#l00384">PrintImage.m:384</a></div></div>
+<div class="ttc" id="interface_print_image_html_af0b819e675acfd32e7420882a0c5b76e"><div class="ttname"><a href="interface_print_image.html#af0b819e675acfd32e7420882a0c5b76e">PrintImage::urlLibrary</a></div><div class="ttdeci">NSString * urlLibrary</div><div class="ttdoc">Адрес картинки в библиотеке, по этому параметру идет поиск </div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00033">PrintImage.h:33</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+Документация по PhotoHouse. Последние изменения: Чт 4 Фев 2016 00:57:57. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

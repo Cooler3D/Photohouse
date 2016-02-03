@@ -147,14 +147,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    [operation setDelegate:nil];</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    operation = nil;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    NSLog(<span class="stringliteral">@&quot;count: %i&quot;</span>, _count);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>.count == <span class="keyword">self</span>.images.count - 1) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        [<span class="keyword">self</span>.delegate mugManager:self didMergedImage:image];</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        [<span class="keyword">self</span> startFirstImage:image];</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    CGFloat progress = (float)_count / (<span class="keywordtype">float</span>)(<span class="keyword">self</span>.images.count-1);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    [<span class="keyword">self</span>.delegate mugManager:self didUpdateProgress:progress];</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">//    NSLog(@&quot;count: %i; all: %i&quot;, _count, (int)self.images.count-1);</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span>.count == <span class="keyword">self</span>.images.count - 1) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        [<span class="keyword">self</span>.delegate mugManager:self didMergedImage:image];</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        [<span class="keyword">self</span> startFirstImage:image];</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_mug_merge_manager_html"><div class="ttname"><a href="interface_mug_merge_manager.html">MugMergeManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_mug_merge_manager_8h_source.html#l00013">MugMergeManager.h:13</a></div></div>
 <div class="ttc" id="interface_merge_operation_html"><div class="ttname"><a href="interface_merge_operation.html">MergeOperation</a></div><div class="ttdef"><b>Definition:</b> <a href="_merge_operation_8h_source.html#l00013">MergeOperation.h:13</a></div></div>
 <div class="ttc" id="protocol_merge_operation_delegate-p_html"><div class="ttname"><a href="protocol_merge_operation_delegate-p.html">MergeOperationDelegate-p</a></div><div class="ttdef"><b>Definition:</b> <a href="_merge_operation_8h_source.html#l00027">MergeOperation.h:27</a></div></div>
@@ -163,7 +169,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+Документация по PhotoHouse. Последние изменения: Чт 4 Фев 2016 00:57:57. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

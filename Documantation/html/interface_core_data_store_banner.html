@@ -136,9 +136,12 @@ NSManagedObjectContext *&#160;</td><td class="memItemRight" valign="bottom"><b>m
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Возвращаем сохраненные баннеры <a class="el" href="_banner_8h_source.html">Banner.h</a> </p><dl class="params"><dt>Аргументы</dt><dd>
+<p>Возвращаем сохраненные баннеры <a class="el" href="_banner_8h_source.html">Banner.h</a> </p><div class="fragment"><div class="line">NSInteger interval = 0;</div>
+<div class="line"><a class="code" href="interface_core_data_store_banner.html">CoreDataStoreBanner</a> *coreBanner = [<a class="code" href="interface_core_data_store_banner.html">CoreDataStoreBanner</a> alloc] init];</div>
+<div class="line">[coreBanner getBannersSetInterval:&amp;interval];</div>
+</div><!-- fragment --> <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramname">interval</td><td>устанавливаем счетчик </td></tr>
+    <tr><td class="paramname">interval</td><td>передвем ссылку на Integer, куда в последствии запишется интервал </td></tr>
   </table>
   </dd>
 </dl>
@@ -212,7 +215,7 @@ NSManagedObjectContext *&#160;</td><td class="memItemRight" valign="bottom"><b>m
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:32. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+Документация по PhotoHouse. Последние изменения: Чт 4 Фев 2016 00:57:58. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

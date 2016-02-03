@@ -1,14 +1,16 @@
 var searchData=
 [
-  ['feedbacktype_3aandtitle_3aandmessage_3aandemail_3aanddelegate_3a',['feedbackType:andTitle:andMessage:andEmail:andDelegate:',['../interface_p_house_api.html#ac79ef60c8a12e6b306aea67ebd4edd0d',1,'PHouseApi']]],
-  ['fields',['Fields',['../interface_fields.html',1,'']]],
-  ['filterimagemanager',['FilterImageManager',['../interface_filter_image_manager.html',1,'']]],
-  ['filterimagemanager_28_29',['FilterImageManager()',['../category_filter_image_manager_07_08.html',1,'']]],
-  ['filterimagemanagerdelegate_2dp',['FilterImageManagerDelegate-p',['../protocol_filter_image_manager_delegate-p.html',1,'']]],
-  ['filtername',['filterName',['../interface_edit_image_setting.html#ad0a6698e20bb40881bb03051998403fd',1,'EditImageSetting']]],
-  ['finalcompleteprintdata_3a',['finalCompletePrintData:',['../interface_core_data_shop_cart.html#aca4cfb24781acaf49fadb86c8f70af72',1,'CoreDataShopCart']]],
-  ['fontname',['fontName',['../interface_template.html#a6865cd573c106165c738fe817cf9c076',1,'Template']]],
-  ['formasize',['formaSize',['../interface_album_template.html#a347e2ce2f8d5e50b548b4ec3d64d901c',1,'AlbumTemplate']]],
-  ['frontlayer',['frontLayer',['../interface_layout.html#aa071b348dd15b077769d4bae57f088e4',1,'Layout']]],
-  ['fullname',['fullname',['../interface_instagram_access_token.html#ac871652099aa16b66f0898a46c82f73c',1,'InstagramAccessToken::fullname()'],['../interface_person_order_info.html#a33d75e798bc3ffab13c310ce60cbc2ae',1,'PersonOrderInfo::fullName()']]]
+  ['editedimagesetting',['editedImageSetting',['../interface_print_image.html#a830c1a62ed682afe29fbdcaa9bab2983',1,'PrintImage']]],
+  ['editedimagesize',['editedImageSize',['../interface_edit_image_setting.html#a62277904f6993d6e0a7a3071dd0c0431',1,'EditImageSetting']]],
+  ['editimagesetting',['EditImageSetting',['../interface_edit_image_setting.html',1,'']]],
+  ['editimagesetting_28_29',['EditImageSetting()',['../category_edit_image_setting_07_08.html',1,'']]],
+  ['ellipsemodel',['EllipseModel',['../interface_ellipse_model.html',1,'']]],
+  ['ellipsemodel_28_29',['EllipseModel()',['../category_ellipse_model_07_08.html',1,'']]],
+  ['ellipsemodeldelegate_2dp',['EllipseModelDelegate-p',['../protocol_ellipse_model_delegate-p.html',1,'']]],
+  ['error',['error',['../interface_p_h_response.html#accd3c499087a6204c1cfac47f21d30ce',1,'PHResponse']]],
+  ['errornotautorized',['errorNotAutorized',['../category_m_d_photo_library_07_08.html#ab537f6e756e594a1a27f3621cde5fa01',1,'MDPhotoLibrary()']]],
+  ['executecommnadwithjson_3aandcompleteblock_3aprogressuploadblock_3aerrorblock_3a',['executeCommnadWithJson:andCompleteBlock:progressUploadBlock:errorBlock:',['../interface_p_h_request_command.html#a6422e30b0176fba1351aa0584c30a56c',1,'PHRequestCommand']]],
+  ['executeimage_3a',['executeImage:',['../interface_edit_image_setting.html#a18929adaef7331f342bcdb4c54067f0b',1,'EditImageSetting']]],
+  ['executeresultblock_3aerrorblock_3a',['executeResultBlock:errorBlock:',['../interface_p_h_request.html#abcf98956cbdf64401776be4eb33f8008',1,'PHRequest']]],
+  ['executeresultblock_3aprogressuploadblock_3aerrorblock_3a',['executeResultBlock:progressUploadBlock:errorBlock:',['../interface_p_h_request.html#aad25cee6993041949e875f7fd27a8ba9',1,'PHRequest']]]
 ];

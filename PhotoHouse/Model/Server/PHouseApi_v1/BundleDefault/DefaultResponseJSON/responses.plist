@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>update_time_test</key>
+	<string>UpdateTimeJSON</string>
+	<key>registration_test</key>
+	<string>RegistrationJSON</string>
+	<key>auth_test</key>
+	<string>AuthJSON</string>
+	<key>upload_image_test</key>
+	<string>ResponceUploadImage</string>
+	<key>banners</key>
+	<string>BannersJSON</string>
+	<key>albumconstructor_v2Test</key>
+	<string>AlbumConstExternalVer2JSON</string>
+	<key>albumconstuctor</key>
+	<string>AlbumConstInternalJSON</string>
+	<key>albumconstructorTests</key>
+	<string>AlbumConstExternalJSON</string>
+	<key>storeItems</key>
+	<string>StoreItemsJSON</string>
+	<key>price</key>
+	<string>PriceJSON</string>
+	<key>delivery</key>
+	<string>DeliveryJSON</string>
+	<key>rangeImages</key>
+	<string>RangeImagesJSON</string>
+</dict>
+</plist>

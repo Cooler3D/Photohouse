@@ -1,0 +1,13 @@
+{
+  "code": 0,
+  "code_desc": "",
+  "time": 1436193741.926,
+  "result": {
+    "get_items": 1436127948,
+    "get_album_templates": 1436127948,
+    "get_deliveries": 1436127948,
+    "get_banners": 1436127948,
+    "act": "get_updates_time",
+    "api": "1.1"
+  }
+}

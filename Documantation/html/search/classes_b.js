@@ -24,6 +24,8 @@ var searchData=
   ['phresponse',['PHResponse',['../interface_p_h_response.html',1,'']]],
   ['placeholder',['PlaceHolder',['../interface_place_holder.html',1,'']]],
   ['platestrategy',['PlateStrategy',['../interface_plate_strategy.html',1,'']]],
+  ['ppbasecontrast',['PPBaseContrast',['../interface_p_p_base_contrast.html',1,'']]],
+  ['ppbasefilter',['PPBaseFilter',['../interface_p_p_base_filter.html',1,'']]],
   ['printdata',['PrintData',['../interface_print_data.html',1,'']]],
   ['printdata_28_29',['PrintData()',['../category_print_data_07_08.html',1,'']]],
   ['printimage',['PrintImage',['../interface_print_image.html',1,'']]],

@@ -1,0 +1,461 @@
+{
+  "code": 0,
+  "code_desc": "",
+  "time": 1436349997.2606,
+  "result": {
+    "items": [
+      {
+        "id": "1",
+        "name": "Кружка",
+        "description": "",
+        "category_id": "3",
+        "type": "fixed",
+        "availability": "available",
+        "category_name": "Сувениры и подарки",
+        "types": [
+          {
+            "name": "glass",
+            "price": 490
+          },
+          {
+            "name": "chameleon",
+            "price": 590
+          },
+          {
+            "name": "latte",
+            "price": 440
+          },
+          {
+            "name": "heart",
+            "price": 390,
+            "colorized": {
+              "pink": 0,
+              "blue": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "name": "Футболка",
+        "description": "",
+        "category_id": "3",
+        "type": "fixed",
+        "availability": "available",
+        "category_name": "Сувениры и подарки",
+        "types": [
+          {
+            "name": "default",
+            "price": "790",
+            "size": {
+              "XXL": 0,
+              "XL": 0,
+              "L": 0,
+              "M": 0,
+              "S": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "name": "Коврик для мыши",
+        "description": "",
+        "category_id": "3",
+        "type": "fixed",
+        "availability": "available",
+        "category_name": "Сувениры и подарки",
+        "types": [
+          {
+            "name": "default",
+            "price": "390"
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "name": "Чехол для iPhone 5",
+        "description": "",
+        "category_id": "4",
+        "type": "fixed",
+        "availability": "available",
+        "category_name": "Чехлы и магниты",
+        "types": [
+          {
+            "name": "default",
+            "price": "690"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "name": "8x10",
+        "description": "",
+        "category_id": "2",
+        "type": "additional",
+        "availability": "available",
+        "category_name": "Фотопечать",
+        "types": [
+          {
+            "name": "default",
+            "price": "270",
+            "style": [
+              {
+                "name": "default",
+                "min": 25,
+                "max": 50
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "name": "10х15",
+        "description": "",
+        "category_id": "2",
+        "type": "additional",
+        "availability": "available",
+        "category_name": "Фотопечать",
+        "types": [
+          {
+            "name": "default",
+            "price": "280",
+            "style": [
+              {
+                "name": "default",
+                "min": 22,
+                "max": 40
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "name": "15х21",
+        "description": "",
+        "category_id": "2",
+        "type": "additional",
+        "availability": "available",
+        "category_name": "Фотопечать",
+        "types": [
+          {
+            "name": "default",
+            "price": "290",
+            "style": [
+              {
+                "name": "default",
+                "min": 16,
+                "max": 40
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "name": "20х30",
+        "description": "",
+        "category_id": "2",
+        "type": "additional",
+        "availability": "unavailable",
+        "category_name": "Фотопечать",
+        "types": [
+          {
+            "name": "default",
+            "price": "31",
+            "style": [
+              {
+                "name": "default",
+                "min": 12,
+                "max": 40
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "name": "Альбом",
+        "description": "",
+        "category_id": "1",
+        "type": "fixed",
+        "availability": "available",
+        "category_name": "Альбомы",
+        "types": [
+          {
+            "name": "design",
+            "price": 2890,
+            "size": {
+              "20x20": "200",
+              "20x15": "0"
+            },
+            "uturn": {
+              "8": "0",
+              "10": "100",
+              "12": "300"
+            },
+            "cover": {
+              "gloss": "0",
+              "frosted": "0"
+            },
+            "style": [
+              {
+                "name": "orange_minimalism",
+                "min": 31,
+                "max": 31
+              },
+              {
+                "name": "dark_chocolate",
+                "min": 32,
+                "max": 32
+              },
+              {
+                "name": "green_minimalism",
+                "min": 36,
+                "max": 36
+              },
+              {
+                "name": "red_square",
+                "min": 34,
+                "max": 34
+              },
+              {
+                "name": "turquoise_minimalism",
+                "min": 40,
+                "max": 40
+              },
+              {
+                "name": "red_gray",
+                "min": 33,
+                "max": 33
+              },
+              {
+                "name": "wedding",
+                "min": 25,
+                "max": 25
+              },
+              {
+                "name": "corporate",
+                "min": 28,
+                "max": 28
+              },
+              {
+                "name": "children",
+                "min": 19,
+                "max": 19
+              },
+              {
+                "name": "love",
+                "min": 31,
+                "max": 31
+              }
+            ]
+          },
+          {
+            "name": "constructor",
+            "price": 2390,
+            "size": {
+              "20x15": "0",
+              "20x20": "200"
+            },
+            "uturn": {
+              "8": "0",
+              "10": "100",
+              "12": "300"
+            },
+            "cover": {
+              "gloss": "0",
+              "frosted": "0"
+            },
+            "style": [
+              {
+                "name": "pink_checkered",
+                "min": 35,
+                "max": 84
+              },
+              {
+                "name": "turquoise_lined",
+                "min": 35,
+                "max": 84
+              },
+              {
+                "name": "turquoise_travel",
+                "min": 35,
+                "max": 84
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "name": "Магнит",
+        "description": "",
+        "category_id": "4",
+        "type": "fixed",
+        "availability": "available",
+        "category_name": "Чехлы и магниты",
+        "types": [
+          {
+            "name": "heart",
+            "price": 590,
+            "size": {
+              "10": "0"
+            },
+            "style": [
+              {
+                "name": "default",
+                "min": 1,
+                "max": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "name": "Брелок",
+        "description": "",
+        "category_id": "3",
+        "type": "fixed",
+        "availability": "available",
+        "category_name": "Сувениры и подарки",
+        "types": [
+          {
+            "name": "metal",
+            "price": 390
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "name": "Часы стеклянные",
+        "description": "",
+        "category_id": "3",
+        "type": "fixed",
+        "availability": "available",
+        "category_name": "Сувениры и подарки",
+        "types": [
+          {
+            "name": "default",
+            "price": "990"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "name": "Холст",
+        "description": "",
+        "category_id": "2",
+        "type": "fixed",
+        "availability": "unavailable",
+        "category_name": "Фотопечать",
+        "types": [
+          {
+            "name": "default",
+            "price": "1334"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "name": "Тарелка",
+        "description": "",
+        "category_id": "3",
+        "type": "fixed",
+        "availability": "available",
+        "category_name": "Сувениры и подарки",
+        "types": [
+          {
+            "name": "default",
+            "price": "440"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "name": "Фото",
+        "description": "",
+        "category_id": "2",
+        "type": "additional",
+        "availability": "unavailable",
+        "category_name": "Фотопечать",
+        "types": [
+          {
+            "name": "8x10",
+            "price": 8,
+            "style": [
+              {
+                "name": "8x10",
+                "min": 25,
+                "max": 50
+              }
+            ]
+          },
+          {
+            "name": "10х15",
+            "price": 11,
+            "style": [
+              {
+                "name": "10х15",
+                "min": 22,
+                "max": 40
+              }
+            ]
+          },
+          {
+            "name": "15х21",
+            "price": 21,
+            "style": [
+              {
+                "name": "15х21",
+                "min": 16,
+                "max": 40
+              }
+            ]
+          },
+          {
+            "name": "20х30",
+            "price": 31,
+            "style": [
+              {
+                "name": "20х30",
+                "min": 12,
+                "max": 40
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "name": "Доставка",
+        "description": "",
+        "category_id": "6",
+        "type": "fixed",
+        "availability": "available",
+        "category_name": "Услуги",
+        "types": []
+      },
+      {
+        "id": "21",
+        "name": "Чехол для iPhone 6",
+        "description": " ",
+        "category_id": "4",
+        "type": "fixed",
+        "availability": "available",
+        "category_name": "Чехлы и магниты",
+        "types": [
+          {
+            "name": "default",
+            "price": "740"
+          }
+        ]
+      }
+    ],
+    "act": "get_items",
+    "api": "1.1"
+  }
+}

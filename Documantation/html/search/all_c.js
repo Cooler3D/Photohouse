@@ -1,10 +1,17 @@
 var searchData=
 [
-  ['name',['name',['../interface_template.html#a55849af04650a667b29a2625f1901dea',1,'Template::name()'],['../interface_prop_type.html#a7ef9cc55fa05ce95606e8551d16f345f',1,'PropType::name()'],['../interface_item_info_order.html#a723608e83c7b02e83fc865da3665593b',1,'ItemInfoOrder::name()']]],
-  ['namecategory',['nameCategory',['../interface_print_data.html#a7499ed6f0999cc594a3142b86241edcf',1,'PrintData']]],
-  ['namekey',['nameKey',['../interface_layer_page.html#a2bd134e5b98b86fb6e5bd50e66f3b0b9',1,'LayerPage']]],
-  ['namepurchase',['namePurchase',['../interface_store_item.html#a61d7e37013bf805852ca54478a60e0de',1,'StoreItem::namePurchase()'],['../interface_base_strategy.html#a43491e9e7008f9780e6a2f96dbfa0db3',1,'BaseStrategy::namePurchase()'],['../interface_print_data.html#a34f9842a77e003efdba2d1fe646739e9',1,'PrintData::namePurchase()']]],
-  ['nametype',['nameType',['../interface_print_data.html#a51aa2101e6f3843a3e9893a4b5ad7de4',1,'PrintData']]],
-  ['normalqualityurl',['normalQualityURL',['../interface_v_kontake_image_data.html#ab511c0faad02675c6ca37ec77397b9e9',1,'VKontakeImageData']]],
-  ['noscalecombinedlayer',['noscaleCombinedLayer',['../interface_layout.html#a0049c70c07757c9698a3c9579748a05c',1,'Layout']]]
+  ['magnitstrategy',['MagnitStrategy',['../interface_magnit_strategy.html',1,'']]],
+  ['make',['make',['../interface_ellipse_model.html#aa5303311bd489c579414ed67ac32485f',1,'EllipseModel']]],
+  ['makeorderfirstname_3aandlastname_3aandphone_3aandaddress_3awithcomment_3aandphotorecordsarray_3aanddeliveryprintdta_3aanddelegate_3a',['makeOrderFirstName:andLastName:andPhone:andAddress:withComment:andPhotoRecordsArray:andDeliveryPrintDta:andDelegate:',['../interface_p_house_api.html#a4610ccec2a0448f9b117c89b0580aff8',1,'PHouseApi']]],
+  ['mdphotolibrary',['MDPhotoLibrary',['../interface_m_d_photo_library.html',1,'']]],
+  ['mdphotolibrary_28_29',['MDPhotoLibrary()',['../category_m_d_photo_library_07_08.html',1,'']]],
+  ['mergedimages',['mergedImages',['../interface_base_strategy.html#a9c283f4801faaa2f982c514871f8eed6',1,'BaseStrategy::mergedImages()'],['../interface_print_data.html#ac51eba85214393d09328808da9d89cef',1,'PrintData::mergedImages()']]],
+  ['mergeoperation',['MergeOperation',['../interface_merge_operation.html',1,'']]],
+  ['mergeoperationdelegate_2dp',['MergeOperationDelegate-p',['../protocol_merge_operation_delegate-p.html',1,'']]],
+  ['mousemagstrategy',['MouseMagStrategy',['../interface_mouse_mag_strategy.html',1,'']]],
+  ['mugmergemanager',['MugMergeManager',['../interface_mug_merge_manager.html',1,'']]],
+  ['mugmergemanager_28_29',['MugMergeManager()',['../category_mug_merge_manager_07_08.html',1,'']]],
+  ['mugmergemanagerdelegate_2dp',['MugMergeManagerDelegate-p',['../protocol_mug_merge_manager_delegate-p.html',1,'']]],
+  ['mugstrategy',['MugStrategy',['../interface_mug_strategy.html',1,'']]],
+  ['mugstrategy_28_29',['MugStrategy()',['../category_mug_strategy_07_08.html',1,'']]]
 ];

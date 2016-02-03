@@ -1,0 +1,96 @@
+{
+  "code": "0",
+  "code_desc": "",
+  "time": "1436036557",
+  "result": {
+    "deliveries": {
+      "cities": [
+        {
+          "name": "Moscow",
+          "uiname": "Москва",
+          "deliveries": [
+            {
+              "type": "courier",
+              "code": "Moscow_Courier",
+              "cost": "300",
+              "description": "Курьер до МКАД"
+            },
+            {
+              "type": "courier",
+              "code": "Moscow_Courier2",
+              "cost": "300",
+              "description": "Курьер после МКАД, 300р. + 20р. за км."
+            },
+            {
+              "type": "office",
+              "code": "Moscow_Self",
+              "cost": "0",
+              "description": "Самовывоз, Москва, ул. Ефремова 13-2"
+            }
+          ]
+        },
+        {
+          "name": "Post",
+          "uiname": "Почтой (из Москвы)",
+          "deliveries": [
+            {
+              "type": "post",
+              "code": "Russian_Post1",
+              "cost": "400",
+              "description": "до 600 км"
+            },
+            {
+              "type": "post",
+              "code": "Russian_Post2",
+              "cost": "450",
+              "description": "от 600 до 2000 км"
+            },
+            {
+              "type": "post",
+              "code": "Russian_Post3",
+              "cost": "500",
+              "description": "от 2000 до 5000 км"
+            },
+            {
+              "type": "post",
+              "code": "Russian_Post4",
+              "cost": "550",
+              "description": "от 5000 до 8000 км"
+            },
+            {
+              "type": "post",
+              "code": "Russian_Post5",
+              "cost": "600",
+              "description": "свыше 8000 км"
+            }
+          ]
+        }
+      ],
+      "payments": {
+        "default": [
+          {
+            "name": "post",
+            "uiname": "Оплата наличными при получении",
+            "action": "0"
+          }
+        ],
+        "courier": [
+          {
+            "name": "post",
+            "uiname": "Оплата наличными при получении",
+            "action": "0"
+          }
+        ],
+        "office": [
+          {
+            "name": "post",
+            "uiname": "Оплата наличными при получении",
+            "action": "0"
+          }
+        ]
+      }
+    },
+    "act": "get_deliveries",
+    "api": "1.1"
+  }
+}

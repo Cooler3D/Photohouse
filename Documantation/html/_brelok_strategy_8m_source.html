@@ -160,11 +160,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        merge = [[UIImage alloc] mergeImageView:imageView withLowerImageView:objectImageView andUpperImageView:shadowImageView];</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    });</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="interface_print_image.html">PrintImage</a> *merged = [[<a class="code" href="interface_print_image.html">PrintImage</a> alloc] initMergeImage:merge withName:@&quot;merge_tshirt&quot;];</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="interface_print_image.html">PrintImage</a> *merged = [[<a class="code" href="interface_print_image.html">PrintImage</a> alloc] initMergeImage:merge withName:@&quot;merge_tshirt&quot; andUploadUrl:nil];</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> [NSArray arrayWithObject:merged];</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;-(void)createMergedImageWithPreview:(UIImage *)previewImage andCompleteBlock:(<span class="keywordtype">void</span> (^)(NSArray *))completeBlock</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;-(void)createMergedImageWithPreview:(UIImage *)previewImage andCompleteBlock:(<span class="keywordtype">void</span> (^)(NSArray *))completeBlock andProgressBlock:(<span class="keywordtype">void</span>(^)(CGFloat progress))progressBlock</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">if</span> (completeBlock) {</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        completeBlock([<span class="keyword">self</span> createAndAddMergedImage:previewImage]);</div>
@@ -173,11 +173,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_brelok_strategy_html"><div class="ttname"><a href="interface_brelok_strategy.html">BrelokStrategy</a></div><div class="ttdef"><b>Definition:</b> <a href="_brelok_strategy_8h_source.html#l00011">BrelokStrategy.h:11</a></div></div>
 <div class="ttc" id="interface_base_strategy_html_ac54531498deacea67f82eb114ee7f74b"><div class="ttname"><a href="interface_base_strategy.html#ac54531498deacea67f82eb114ee7f74b">-[BaseStrategy showcaseImage]</a></div><div class="ttdeci">UIImage * showcaseImage()</div><div class="ttdoc">Витрина магазина иконка </div><div class="ttdef"><b>Definition:</b> <a href="_base_strategy_8m_source.html#l00080">BaseStrategy.m:80</a></div></div>
-<div class="ttc" id="interface_print_image_html"><div class="ttname"><a href="interface_print_image.html">PrintImage</a></div><div class="ttdoc">Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00028">PrintImage.h:28</a></div></div>
+<div class="ttc" id="interface_print_image_html"><div class="ttname"><a href="interface_print_image.html">PrintImage</a></div><div class="ttdoc">Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00027">PrintImage.h:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+Документация по PhotoHouse. Последние изменения: Чт 4 Фев 2016 00:57:57. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

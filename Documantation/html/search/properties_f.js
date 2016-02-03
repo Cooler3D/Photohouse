@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['rect',['rect',['../interface_place_holder.html#a41fbb0c07702d36431633be1ab369e25',1,'PlaceHolder']]],
-  ['recttovisibleeditor',['rectToVisibleEditor',['../interface_edit_image_setting.html#a82be1f925ecd31590b3362250d1a025d',1,'EditImageSetting']]]
+  ['queueoperations',['queueOperations',['../category_save_image_manager_07_08.html#aea87ec903ef4a4799a73e645c23dd1bd',1,'SaveImageManager()']]]
 ];

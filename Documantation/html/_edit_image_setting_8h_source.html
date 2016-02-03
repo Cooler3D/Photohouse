@@ -119,45 +119,67 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="interface_edit_image_setting.html#a6dd6db7791c3151ad5b65b6c8068a33f">   36</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign, readonly) BOOL <a class="code" href="interface_edit_image_setting.html#a6dd6db7791c3151ad5b65b6c8068a33f">isAutoResizing</a>;            </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="interface_edit_image_setting.html#aaa92ff6587ab156baf5b50c2b6e8de72">   38</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign, readonly) UIImageOrientation <a class="code" href="interface_edit_image_setting.html#aaa92ff6587ab156baf5b50c2b6e8de72">imageOrientation</a>;    </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="interface_edit_image_setting.html#a3714535f84a10b351c0d38fbc0123b26">   39</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign, readonly) UIImageOrientation <a class="code" href="interface_edit_image_setting.html#a3714535f84a10b351c0d38fbc0123b26">imageDefaultOrientation</a>; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="interface_edit_image_setting.html#a62277904f6993d6e0a7a3071dd0c0431">   41</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign, readonly) CGSize <a class="code" href="interface_edit_image_setting.html#a62277904f6993d6e0a7a3071dd0c0431">editedImageSize</a>;         </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;- (BOOL) <a class="code" href="interface_edit_image_setting.html#a177e904354641a567842e269d5a163fa">isDidEditing</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;- (void) changeFilter:(NSString *)filterName;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;- (void) changeSaturation:(CGFloat)satiration;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;- (void) changeBrightness:(CGFloat)brightness;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;- (void) changeContrast:(CGFloat)contrast;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;- (void) changeCropRect:(CGRect)cropRect;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;- (void) changeCropVisible:(CGRect)cropVisible;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;- (void) changeAutoResize:(BOOL)resize;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;- (void) changeOrientation:(UIImageOrientation)orintation;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;- (void) <a class="code" href="interface_edit_image_setting.html#a494c7fe77292c7f40b32c59e4a9cb2a7">changeSetupDefault</a>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;- (BOOL) <a class="code" href="interface_edit_image_setting.html#a177e904354641a567842e269d5a163fa">isDidEditing</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;- (void) changeFilter:(NSString *)filterName;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;- (void) changeSaturation:(CGFloat)satiration;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;- (void) changeBrightness:(CGFloat)brightness;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;- (void) changeContrast:(CGFloat)contrast;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;- (void) changeCropRect:(CGRect)cropRect;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;- (void) changeCropVisible:(CGRect)cropVisible;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;- (void) changeAutoResize:(BOOL)resize;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;- (void) changeOrientation:(UIImageOrientation)orintation;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;- (void) changeOrientationDefault:(UIImageOrientation)orintationDefault;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;- (void) <a class="code" href="interface_edit_image_setting.html#a494c7fe77292c7f40b32c59e4a9cb2a7">changeSetupDefault</a>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;- (id) initFilterName:(NSString*)filterName</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        andSaturation:(CGFloat)saturation</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        andBrightness:(CGFloat)brightness</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;          andContrast:(CGFloat)contrast</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;          andCropRect:(CGRect)cropRect</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;     andRectToVisible:(CGRect)rectToVisible</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;andAutoResizingEnabled:(BOOL)autoResizeEnabled</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  andImageOrientation:(UIImageOrientation) orientation;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;- (id) initSettingWithImage:(UIImage *)image;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">@end</span></div>
-<div class="ttc" id="interface_edit_image_setting_html_aaa92ff6587ab156baf5b50c2b6e8de72"><div class="ttname"><a href="interface_edit_image_setting.html#aaa92ff6587ab156baf5b50c2b6e8de72">EditImageSetting::imageOrientation</a></div><div class="ttdeci">UIImageOrientation imageOrientation</div><div class="ttdoc">Ориентация картинки </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00038">EditImageSetting.h:38</a></div></div>
-<div class="ttc" id="interface_edit_image_setting_html_a177e904354641a567842e269d5a163fa"><div class="ttname"><a href="interface_edit_image_setting.html#a177e904354641a567842e269d5a163fa">-[EditImageSetting isDidEditing]</a></div><div class="ttdeci">BOOL isDidEditing()</div><div class="ttdoc">Редактировалась ли картинка или нет </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8m_source.html#l00063">EditImageSetting.m:63</a></div></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;- (void) changeEditedImageSize:(CGSize)size;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;- (id) initFilterName:(NSString*)filterName</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        andSaturation:(CGFloat)saturation</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        andBrightness:(CGFloat)brightness</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;          andContrast:(CGFloat)contrast</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;          andCropRect:(CGRect)cropRect</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;     andRectToVisible:(CGRect)rectToVisible</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;andAutoResizingEnabled:(BOOL)autoResizeEnabled</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  andImageOrientation:(UIImageOrientation) orientation</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;andImageDefautlOrientation:(UIImageOrientation)orientationDefault;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;- (id) initSettingWithImage:(UIImage *)image;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;- (UIImage *) executeImage:(UIImage *)image;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;- (void) executeImage:(UIImage*)image withCompleteBlock:(<span class="keywordtype">void</span>(^)(UIImage *resultImage))completeBlock;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;- (void) imageDidEdided;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;- (void) clearEdited;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_edit_image_setting_html_aaa92ff6587ab156baf5b50c2b6e8de72"><div class="ttname"><a href="interface_edit_image_setting.html#aaa92ff6587ab156baf5b50c2b6e8de72">EditImageSetting::imageOrientation</a></div><div class="ttdeci">UIImageOrientation imageOrientation</div><div class="ttdoc">Ориентация картинки для редактора и отображения </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00038">EditImageSetting.h:38</a></div></div>
+<div class="ttc" id="interface_edit_image_setting_html_a177e904354641a567842e269d5a163fa"><div class="ttname"><a href="interface_edit_image_setting.html#a177e904354641a567842e269d5a163fa">-[EditImageSetting isDidEditing]</a></div><div class="ttdeci">BOOL isDidEditing()</div><div class="ttdoc">Редактировалась ли картинка или нет </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8m_source.html#l00076">EditImageSetting.m:76</a></div></div>
 <div class="ttc" id="interface_edit_image_setting_html_a6dd6db7791c3151ad5b65b6c8068a33f"><div class="ttname"><a href="interface_edit_image_setting.html#a6dd6db7791c3151ad5b65b6c8068a33f">EditImageSetting::isAutoResizing</a></div><div class="ttdeci">BOOL isAutoResizing</div><div class="ttdoc">Включана ли автозаполнение по сетке </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00036">EditImageSetting.h:36</a></div></div>
 <div class="ttc" id="interface_edit_image_setting_html"><div class="ttname"><a href="interface_edit_image_setting.html">EditImageSetting</a></div><div class="ttdoc">Объект настройки редактора фотографии. Содержит в себе настройки фильтра, поворота, яркости, контраста, освещенности. Данный объект не применяет фильтры, контрасты к картинке </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00025">EditImageSetting.h:25</a></div></div>
-<div class="ttc" id="interface_edit_image_setting_html_a494c7fe77292c7f40b32c59e4a9cb2a7"><div class="ttname"><a href="interface_edit_image_setting.html#a494c7fe77292c7f40b32c59e4a9cb2a7">-[EditImageSetting changeSetupDefault]</a></div><div class="ttdeci">void changeSetupDefault()</div><div class="ttdoc">Устанавливаем значения по-умолчанию </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8m_source.html#l00074">EditImageSetting.m:74</a></div></div>
+<div class="ttc" id="interface_edit_image_setting_html_a494c7fe77292c7f40b32c59e4a9cb2a7"><div class="ttname"><a href="interface_edit_image_setting.html#a494c7fe77292c7f40b32c59e4a9cb2a7">-[EditImageSetting changeSetupDefault]</a></div><div class="ttdeci">void changeSetupDefault()</div><div class="ttdoc">Устанавливаем значения по-умолчанию </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8m_source.html#l00092">EditImageSetting.m:92</a></div></div>
 <div class="ttc" id="interface_edit_image_setting_html_a27250bae36d196b65e3b372925987555"><div class="ttname"><a href="interface_edit_image_setting.html#a27250bae36d196b65e3b372925987555">EditImageSetting::contrastValue</a></div><div class="ttdeci">CGFloat contrastValue</div><div class="ttdoc">значение контраста </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00031">EditImageSetting.h:31</a></div></div>
+<div class="ttc" id="interface_edit_image_setting_html_a62277904f6993d6e0a7a3071dd0c0431"><div class="ttname"><a href="interface_edit_image_setting.html#a62277904f6993d6e0a7a3071dd0c0431">EditImageSetting::editedImageSize</a></div><div class="ttdeci">CGSize editedImageSize</div><div class="ttdoc">Размер картинки после увеличения, используется в конструкторе альбомов </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00041">EditImageSetting.h:41</a></div></div>
+<div class="ttc" id="interface_edit_image_setting_html_a3714535f84a10b351c0d38fbc0123b26"><div class="ttname"><a href="interface_edit_image_setting.html#a3714535f84a10b351c0d38fbc0123b26">EditImageSetting::imageDefaultOrientation</a></div><div class="ttdeci">UIImageOrientation imageDefaultOrientation</div><div class="ttdoc">Ориентация картинки, которая была при сохранении, нужно для правильного вращения на сервере ...</div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00039">EditImageSetting.h:39</a></div></div>
 <div class="ttc" id="interface_edit_image_setting_html_ad0a6698e20bb40881bb03051998403fd"><div class="ttname"><a href="interface_edit_image_setting.html#ad0a6698e20bb40881bb03051998403fd">EditImageSetting::filterName</a></div><div class="ttdeci">NSString * filterName</div><div class="ttdoc">Фильтр примененный к картинке </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00027">EditImageSetting.h:27</a></div></div>
 <div class="ttc" id="interface_edit_image_setting_html_a042f970b99f5c3f52619ab159bf697cd"><div class="ttname"><a href="interface_edit_image_setting.html#a042f970b99f5c3f52619ab159bf697cd">EditImageSetting::brightnessValue</a></div><div class="ttdeci">CGFloat brightnessValue</div><div class="ttdoc">Значения brightness. </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00030">EditImageSetting.h:30</a></div></div>
 <div class="ttc" id="interface_edit_image_setting_html_a82be1f925ecd31590b3362250d1a025d"><div class="ttname"><a href="interface_edit_image_setting.html#a82be1f925ecd31590b3362250d1a025d">EditImageSetting::rectToVisibleEditor</a></div><div class="ttdeci">CGRect rectToVisibleEditor</div><div class="ttdoc">Размеры и позиция imageView в редакторе, для правильной позиционирования </div><div class="ttdef"><b>Definition:</b> <a href="_edit_image_setting_8h_source.html#l00034">EditImageSetting.h:34</a></div></div>
@@ -166,7 +188,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+Документация по PhotoHouse. Последние изменения: Чт 4 Фев 2016 00:57:57. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

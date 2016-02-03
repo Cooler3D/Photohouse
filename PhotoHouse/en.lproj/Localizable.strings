@@ -1,0 +1,198 @@
+/* Меню */
+"store" = "Store";
+"shopcart" = "Shopping Cart";
+"historyorders" = "History Orders";
+"options" = "Options";
+"support" = "Support";
+"about" = "About";
+"profile" = "Profile";
+
+
+/* Магазин */
+"Магазин" = "Store";
+"Фотопечать" = "PhotoPrints";
+"Чехлы и магниты" = "Cases and magnits";
+"Сувениры и подарки" = "Souvenirs and gifts";
+"Альбомы" = "Albums";
+"Спец.предложения" = "Special";
+
+
+/* Покупки */
+"Кружка" = "Mug";
+"Футболка" = "T-Shirt";
+"Коврик для мыши" = "Mouse Mat";
+"Чехол для iPhone 5" = "IPhone5 Case";
+"Чехол для iPhone 6" = "IPhone6 Case";
+"Альбом" = "Album";
+"Магнит" = "Magnet";
+"Брелок" = "Trinket";
+"Часы стеклянные" = "Watch Glass";
+"Холст" = "Canvas";
+"Тарелка" = "Plate";
+"Доставка" = "Delivery";
+
+
+
+/* Стили Альбомов */
+"birthday" = "Birthday";
+"jubilee" = "Jubilee";
+"wedding" = "Wedding";
+"vacation" = "Vacation";
+"love" = "Love Story";
+"family" = "Family";
+"corporate" = "Corporate";
+"children" = "Children";
+"other" = "Other";
+"orange_minimalism" = "Orange Minimalism";
+"dark_chocolate" = "Dark Chocolate";
+"green_minimalism" = "Green Minimalism";
+"red_square" = "Red Square";
+"turquoise_minimalism" = "Turquoise Minimalism";
+"red_gray" = "Red Gray";
+"pink_checkered" = "Pink Checkered";
+"turquoise_lined" = "Turquoise Lined";
+"turquoise_travel" = "Turquoise Travel";
+
+
+"configurator_title" = "PhotoBook Set-Up";
+"configurator_style" = "Album Style";
+"configurator_cover" = "Album Cover";
+"configurator_uturns" = "Album number of turns";
+"configurator_size" = "Album Size";
+"configurator_comment" = "Album comments";
+
+"price" = "Price";
+"next" = "Next";
+
+"frosted" = "Cover mat";
+"gloss" = "Cover gloss";
+
+
+"constructor" = "Constructor Album";
+"design" = "Design Album";
+
+
+
+"flip" = "Flip";
+
+
+"continue" = "Continue";
+"delete" = "Delete";
+"warning" = "Warning";
+"try_else" = "Try else";
+
+"This_photo_is_fail" = "This photo can't read";
+"need_access_to_photolibrary" = "you are closed access to photo library. Open access to the library, you can phone settings";
+
+
+/* Настройка альбомов */
+"style_configurator_description" = "Selecting the general style photobooks. The style determines the color scheme and the set of available turns.";
+"choose_style" = "Choose Style";
+"you_have_not_saved_the" = "You have not saved the";
+"do_you_wnat_continue_editing?" = "Do you want continue editing?";
+
+
+/* ShowCase and Constructor*/
+"add_to_cart" = "to Cart";
+"choose_photo" = "Choose Photo";
+"if_you_come_back_your" = "If you come back, your";
+"will_removed" = "will removed";
+"do_you_want_come_back" = "Do you want come back";
+"yes" = "Yes";
+"no" = "No";
+"save_to_shop_cart" = "Saving in shopcart";
+"please_wait_when_selected_images_will_be_saved" = "Please, wailt, when selected images will be saved";
+
+"processing" = "Processing...";
+
+/* Выбор фото */
+"device_btn" = "Device";
+"choose_photo_title" = "Choose Photo";
+
+
+/* Cart */
+"Cancel" = "Cancel";
+"remove_all_message" = "Are you sure want remove all from shopping cart?";
+"remove_all" = "Remove All";
+"shop_cart_title" = "Your cart";
+"error" = "Error";
+"internet_not_found" = "No internet connection";
+"total_price" = "Total:";
+"send_button" = "Send";
+"detail_shop" = "Images";
+
+
+/* Shipping Delivery */
+"delivery_title" = "Delivery";
+"input_firstname" = "Input your firstname";
+"input_lastname" = "Input your lastname";
+"input_adsress" = "Input address";
+"input_phone" = "Input phone number: +X (XXX) XXX XX-XX";
+"input_address_is_too_short" = "Address is too short";
+
+"the_select_type_of_payment:" = "The select type of payment:";
+"select_the_type_of_payment" = "Select the type of payment";
+"select_the_type_of_delivery_for" = "Select the type of delivery for";
+
+"choose_delivery_city_btn" = "Choose city for delivery";
+
+"upload_to_server" = "Upload Images to server";
+"send_order" = "Send Order";
+"cancel_upload" = "Cancel upload";
+"do_you_want_cancel_upload" = "Do you want cancel upload?";
+"your_order_was_delivered_information_about_your_order_sent_on_email" = "Your order was delivered. Information about your order sent on e-mail.";
+"synchonize_to_cart" = "Synchonization";
+
+
+/* Настройки */
+"options_title" = "Options";
+"cache_photo_title" = "Cache photo";
+"cache_photo_description" = "All photos of social networks will be cached for faster downloads. The app does not save your pictures.";
+
+
+/* Поддержка */
+"support_title" = "FeedBack";
+"complete" = "Complete";
+"your_message_is_did_delivered" = "Your message is did delivered to PhotoHouse";
+"input_email" = "Input e-mail";
+"sending_message" = "Sending message";
+"support_default_message" = "Your message";
+
+
+/* About */
+"about_title" = "About";
+"about_text" = "Create unique gifts with PhotoHouse.\nApply any image you like at present and we'll create it for you, and our couriers will deliver.\n\nOpportunities:\nOrder photo printing, photo books and photo gifts directly from your phone.\nPhotography books of the highest quality, retain the most memorable moments.\nData processing and editing photos directly from the application.\n\n\nBenefits:\nThe highest quality printed products.\nSelecting photos from both the phone as well as from social networks.\nIndividual treatment of each order by professional designers.\n\nYou can order a print on:\nPhotographs\nPhoto\nT-shirt\nAs well as many other things!\n";
+"version" = "Version";
+
+
+/* Profile */
+"profile_title" = "Profile";
+"profile_firstname:" = "Firstname:";
+"profile_lastname:" = "Lastname:";
+"profile_email:" = "E-mail:";
+"profile_date_reg:" = "Date of registration:";
+"profile_logount" = "logout";
+
+
+/* SignIn */
+"signin_title" = "LogIn";
+"input_password" = "Password";
+"signin_btn" = "LogIn";
+"signin_forgot_btn" = "Forgot password";
+
+
+/* SignUp */
+"singup_title" = "Sign Up";
+"is_too_short" = "is too short";
+"firstname" = "Firstname";
+"lastname" = "Lastname";
+"email" = "Email";
+"password" = "Password";
+"passwords_is_not_equal" = "Passwords is not equal";
+
+
+/* Forgot password */
+"forgot_password_title" = "Forgot Password";
+"sending" = "Sending";
+"message_is_did_sended_to" = "Message is did sended to";
+"email_is_too_short" = "Email is too short";

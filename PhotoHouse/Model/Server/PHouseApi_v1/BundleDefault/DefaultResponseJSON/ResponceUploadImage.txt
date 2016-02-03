@@ -1,0 +1,1 @@
+{"code":0,"code_desc":null,"time":1435236542,"result":{"0":{"url":"uploads\/1435236542_70c68b1fe7d015fb.png","mimeType":"image\/png","mimeData":{"byteSize":83686448,"gis":{"Height":4862,"Width":9725,"Depth":8,"Channels":null,"MimeType":"image\/png"}},"upload":{"upload_id":0,"user_id":0}},"act":"upload_files","api":"1.1"}}

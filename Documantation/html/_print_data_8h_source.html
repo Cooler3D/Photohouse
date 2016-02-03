@@ -160,7 +160,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;- (void) createMergedImageWithPreview:(UIImage *)previewImage andCompleteBlock:(<span class="keywordtype">void</span>(^)(NSArray *<a class="code" href="interface_print_data.html#a39afdbcbee951fd00c0861ce54015449">images</a>))completeBlock;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;- (void) createMergedImageWithPreview:(UIImage *)previewImage andCompleteBlock:(<span class="keywordtype">void</span>(^)(NSArray *<a class="code" href="interface_print_data.html#a39afdbcbee951fd00c0861ce54015449">images</a>))completeBlock andProgressBlock:(<span class="keywordtype">void</span>(^)(CGFloat progress))progressBlock;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
@@ -189,7 +189,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="ttc" id="interface_print_data_html_a987583b6e84e1dcf9c062c5f18cb3253"><div class="ttname"><a href="interface_print_data.html#a987583b6e84e1dcf9c062c5f18cb3253">-[PrintData imagesNames]</a></div><div class="ttdeci">NSArray * imagesNames()</div><div class="ttdoc">Массив адресов картинок в библиотеке и адреса загрузки </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00169">PrintData.m:169</a></div></div>
 <div class="ttc" id="interface_print_data_html_a3b094dd8686199230b9394adda1125c8"><div class="ttname"><a href="interface_print_data.html#a3b094dd8686199230b9394adda1125c8">-[PrintData count]</a></div><div class="ttdeci">NSUInteger count()</div><div class="ttdoc">Количество копий, изменяется в корзине </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00095">PrintData.m:95</a></div></div>
 <div class="ttc" id="interface_print_data_html_a7499ed6f0999cc594a3142b86241edcf"><div class="ttname"><a href="interface_print_data.html#a7499ed6f0999cc594a3142b86241edcf">-[PrintData nameCategory]</a></div><div class="ttdeci">NSString * nameCategory()</div><div class="ttdoc">Имя категории, Альбомы, Сувениры и подарки и тд </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00157">PrintData.m:157</a></div></div>
-<div class="ttc" id="interface_print_image_html"><div class="ttname"><a href="interface_print_image.html">PrintImage</a></div><div class="ttdoc">Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00028">PrintImage.h:28</a></div></div>
+<div class="ttc" id="interface_print_image_html"><div class="ttname"><a href="interface_print_image.html">PrintImage</a></div><div class="ttdoc">Объект-картинка, содержит в себе данные о редактровании EditImageSetting, маленькую иконку(50х50) для...</div><div class="ttdef"><b>Definition:</b> <a href="_print_image_8h_source.html#l00027">PrintImage.h:27</a></div></div>
 <div class="ttc" id="interface_print_data_html_a39afdbcbee951fd00c0861ce54015449"><div class="ttname"><a href="interface_print_data.html#a39afdbcbee951fd00c0861ce54015449">-[PrintData images]</a></div><div class="ttdeci">NSArray * images()</div><div class="ttdoc">Все картинки и скленные и обычные </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00100">PrintData.m:100</a></div></div>
 <div class="ttc" id="interface_print_data_html_a51aa2101e6f3843a3e9893a4b5ad7de4"><div class="ttname"><a href="interface_print_data.html#a51aa2101e6f3843a3e9893a4b5ad7de4">-[PrintData nameType]</a></div><div class="ttdeci">NSString * nameType()</div><div class="ttdoc">Имя типа,. </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00151">PrintData.m:151</a></div></div>
 <div class="ttc" id="interface_print_data_html_a8470f14d912d207e6e2cdc7a0569f55c"><div class="ttname"><a href="interface_print_data.html#a8470f14d912d207e6e2cdc7a0569f55c">-[PrintData unique_print]</a></div><div class="ttdeci">NSInteger unique_print()</div><div class="ttdoc">Уникальный идентификатор, для поиска в CoreDataShopCart. </div><div class="ttdef"><b>Definition:</b> <a href="_print_data_8m_source.html#l00130">PrintData.m:130</a></div></div>
@@ -200,7 +200,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по PhotoHouse. Последние изменения: Вс 9 Авг 2015 03:12:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+Документация по PhotoHouse. Последние изменения: Чт 4 Фев 2016 00:57:57. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
